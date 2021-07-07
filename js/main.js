@@ -305,6 +305,10 @@ $(document).ready(function(){
 
 
 
+
+
+
+
 	if( $(".nav .menu li.active").length ){
    		var anchor = $(".nav .menu li.active").offset().left;	
    		$('.nav .menu').scrollLeft( anchor + 20);
