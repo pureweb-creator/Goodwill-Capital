@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Bold.otf");src:url("fonts/Montserrat-Bold.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Bold.woff") format("woff"),url("fonts/Montserrat-Bold.woff2") format("woff2"),url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>PRODUCTS | Goodwill Capital</title>
+</head>
+<body class="page-products">
+    <header class="hero profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-2 offset-4 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#">RU</a></li>
+                        <li><a class="active" href="#">ENG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-2 offset-md-1 offset-2">
+                    <div class="profile d-flex align-items-center">
+                        <img src="img/Profile_photo.png" alt="Avatar" class="profile__avatar lazy">
+                        <span class="profile__name">Konstantin Konstantinopolsky</span>
+                        <img src="img/arrow.svg" alt="arrow" class="profile__arrow">
+
+
+                        <div class="profile-dropdown">
+                            <h5 class="profile-dropdown__title">Account</h5>
+                            <span class="name">Konstantin Konstantinopolsky</span>
+
+                            <ul class="options">
+                                <li><a href="#">Option 1</a></li>
+                                <li><a href="#">Option 2</a></li>
+                                <li><a href="#">Option 3</a></li>
+                                <li><a href="#">Option 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <ul class="menu d-flex align-items-center">
+                            <li><a href="#">Main</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li class="active"><a href="#">Products</a></li>
+                            <li><a href="#">Operations</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title page-products__title">Products</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9 col-12">
+                    <ul class="filters d-flex">
+                        <li><a class="active" href="#">All</a></li>
+                        <li><a href="#">Consumer goods</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Technologies</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Renewable energy</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- loop start -->
+            <div class="row products align-items-stretch">
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="product-card">
+                        <h3 class="product-card__title">
+                            Cybersecurity Utd
+                        </h3>
+                        <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/desktop_windows.svg" class="icon-right" alt="">Technologies</a>
+                        <p class="product-card__desc">
+                            SPAC builds on promising cyber security companies and a team of specialists with years of experience.
+                        </p>
+                        <div class="product-card-details">
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Status</h4>
+                                <div class="product-card-details__value">Funding</div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Funds needed / raised</h4>
+                                <div class="product-card-details__value">
+                                    <div class="progress-values">
+                                        <span class="progress-values__value color-profit">$3 500 00</span>
+                                        <span class="progress-values__max">$5 000 000</span>
+                                    </div>
+                                    <div class="progress product-card__progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value progress__value_profit" data-value="3500000"data-max="5000000"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Minimum investment</h4>
+                                <div class="product-card-details__value">$10 000</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-center">Invest</a>
+                        <a href="#" class="btn product-card__learn-more text-center">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="product-card">
+                        <h3 class="product-card__title">
+                            Healthcare Int
+                        </h3>
+                        <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_hospital.svg" class="icon-right" alt="">Helath care</a>
+                        <p class="product-card__desc">
+                            А revolutionary project investing in the implementation of advanced technologies in modern medicine.
+                        </p>
+                        <div class="product-card-details">
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Status</h4>
+                                <div class="product-card-details__value">Funding</div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Funds needed / raised</h4>
+                                <div class="product-card-details__value">
+                                    <div class="progress-values">
+                                        <span class="progress-values__value color-profit">$1 000 00</span>
+                                        <span class="progress-values__max">$5 000 000</span>
+                                    </div>
+                                    <div class="progress product-card__progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value progress__value_profit" data-value="1"data-max="5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Minimum investment</h4>
+                                <div class="product-card-details__value">$20 000</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-center">Invest</a>
+                        <a href="#" class="btn product-card__learn-more text-center">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <div class="product-card">
+                        <h3 class="product-card__title">
+                            Hyperqube Int
+                        </h3>
+                        <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_police.svg" class="icon-right" alt="">Cybersecurity</a>
+                        <p class="product-card__desc">
+                            “Cyber range as a service” offering that enables  enterprises to quickly and easily build an exact  copy of any IT infrastructure.
+                        </p>
+                        <div class="product-card-details">
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Status</h4>
+                                <div class="product-card-details__value">Funding</div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Funds needed / raised</h4>
+                                <div class="product-card-details__value">
+                                    <div class="progress-values">
+                                        <span class="progress-values__value color-profit">$2 500 00</span>
+                                        <span class="progress-values__max">$7 500 000</span>
+                                    </div>
+                                    <div class="progress product-card__progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value progress__value_profit" data-value="2500000"data-max="7500000"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-details__item">
+                                <h4 class="product-card-details__title">Minimum investment</h4>
+                                <div class="product-card-details__value">$50 000</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-center">Invest</a>
+                        <a href="#" class="btn product-card__learn-more text-center">Learn more</a>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- loop end -->
+
+            <a href="#" class="btn load-more">load more</a>
+           
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12">
+                    <a href="/" class="logo"><img src="img/LOGO.svg" alt=""></a>
+                </div>
+                <div class="rights2 col-12">
+                    © 2021 Goodwill Foundation
+                </div>
+                <div class="col-md-5 col-12 offset-md-1 offset-0">
+                    <ul class="menu d-flex">
+                        <li><a href="#">About Goodwill</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rights">
+                        © 2021 Goodwill Foundation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>

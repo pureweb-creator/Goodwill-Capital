@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>RESEND SMS CODE | Goodwill Capital</title>
+</head>
+<body class="auth-page">
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center hero__line">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-4 offset-lg-0 col-md-4 col-2 offset-4 offset-md-1 d-none d-md-block">
+                    <ul class="login-buttons d-flex">
+                        <li><a href="#">Login</a></li>
+                        <li><a class="active" href="#">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-2 col-1 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#">RU</a></li>
+                        <li><a class="active" href="#">EN</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-2 offset-2 offset-md-1 offset-lg-0">
+                    <div class="burger">
+                        <span class="burger_line up_line"></span>
+                        <span class="burger_line center_line"></span>
+                        <span class="burger_line down_line"></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="nav_screen">
+            <div class="container nav_container d-flex">
+                <ul class="menu_body">
+                    <span class="menu_decor">
+                        menu
+                    </span>
+                    <li class="menu_item active">
+                        <img class="menu_arrow" src="img/arrow-right.svg" alt="">
+                        <a href="/en/" class="menu_link">Main</a>
+                    </li>
+                    <li class="menu_item">
+                        <img class="menu_arrow" src="img/arrow-right.svg" alt="">
+                        <a href="/en/whoweare/" class="menu_link">Who we are?</a>
+                    </li>
+                    <li class="menu_item">
+                        <img class="menu_arrow" src="img/arrow-right.svg" alt="">
+                        <a href="/en/whatwedo/" class="menu_link">What we do?</a>
+                    </li>
+                    <li class="menu_item">
+                        <img class="menu_arrow" src="img/arrow-right.svg" alt="">
+                        <a href="/en/forinvestors/" class="menu_link">For investors</a>
+                    </li>
+                    <li class="menu_item">
+                        <img class="menu_arrow" src="img/arrow-right.svg" alt="">
+                        <a href="/en/contactus/" class="menu_link">Contact us</a>
+                    </li>
+                </ul>
+                <div class="clone_info">
+                    <div class="additional_links hidden_additional_links">
+                        <a href="#" class="invest">invest</a>
+                        <a href="#" class="login">login</a>
+                    </div>
+                    <div class="social d-flex">
+                        <a href="#" class="social_link">Facebook</a>
+                        <a href="#" class="social_link">Instagram</a>
+                        <a href="#" class="social_link">Twitter</a>
+                    </div>
+                </div>
+                <div class="nav_screen__lang nav_screen__lang_hidden_group  d-flex">
+                    <a href="/ru/" class="ru lang_general lang_hidden ">ru</a>
+                    <a href="/en/" class="eng_hidden eng lang_general lang_hidden  active">eng</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row auth-wrap">
+                <div class="col-12">
+                    <span class="general-title">
+                        welcome
+                    </span>
+                </div>
+            </div>
+            <div class="row auth-inner">
+                <div class="col-lg-5">
+                   <div class="auth-links">
+                        <a href="sign-in.html" class="auth-link"><img src="img/arrow-right.svg" alt="">Log in</a>
+                        <a href="sign-up.html" class="auth-link"><img src="img/arrow-right.svg" alt="">Registration</a>
+                   </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 ml-auto">
+                    <form action="#" method="POST" class="resend-smscode-form">
+                        <p class="form-desription input-group">
+                            Enter the SMS code sent to <span>+7 (123) 456-78-90</span>
+                            <br>
+                            <span class="resend-code">
+                                Resend code after 
+                            <span id="time"></span>
+                            </span>
+                        </p>
+                        <div class="input-group">
+                            <input type="text" name="smscode" id="smscode" class="input-group__input" required>
+                            <label for="smscode" class="input-group__label">
+                                Sms code
+                                <span class="input-group__help"></span>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <button name="do_send_smscode" type="button" id="resendSmsCodeBtn" class="btn_style1 btn_disabled d-iflex align-items-center">
+                                <span>Continue</span>
+                                <svg width="50" class="btn__icon" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.3474 24.5097L29.5776 14.6484L28.8672 15.3522L37.4444 24.0098H12V25.0098H37.4444L28.8672 33.6672L29.5776 34.371L39.3474 24.5097Z" fill="#DDBC62"/>
+                                    <circle cx="25" cy="25" r="24.5" stroke="#DDBC62"/>
+                                </svg>
+                            </button>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>
