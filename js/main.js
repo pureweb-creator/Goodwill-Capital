@@ -146,7 +146,7 @@ $(document).ready(function(){
 			var phone = $('.input-group__input[name="phone"]').val();
 					
 			if( phone == "" ){
-				$('#phone').focus().parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
+				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
 				$("#recoveryPassBtn").addClass('btn_disabled');
 			}
 			else{
@@ -169,7 +169,7 @@ $(document).ready(function(){
 			var smscode = $('.input-group__input[name="smscode"]').val();
 
 			if( smscode == "" ){
-				$('#smscode').focus().parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
+				$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
 				$('#smscode').addClass('error');
 				$("#smsCodeBtn").addClass('btn_disabled');
 			} 
@@ -272,7 +272,7 @@ $(document).ready(function(){
 					var smscode = $('.input-group__input[name="smscode"]').val();
 
 					if( smscode == "" ){
-						$('#smscode').focus().parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
+						$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
 						$('#smscode').addClass('error');
 						$("#smsCodeBtn").addClass('btn_disabled');
 					} 
