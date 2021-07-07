@@ -1,0 +1,199 @@
+$main1: #BA9245;
+$main2: #DDBC62;
+$main3: #7F2253;
+
+$text_main: #231F20;
+$text2: #6D6E70;
+$text3: #A6A8AB;
+$text4: #D0D2D3;
+$text6: #FAFAFA;
+
+$color_profit: #1EAB68;
+$color_loss: #F02D3A;
+
+
+::selection{
+	background: $main2;
+	color: #fff
+}
+
+
+body{
+	font-family: "Montserrat";
+	font-style: normal;
+	font-size: 12px;
+	color: $text2; 
+	background: #fafafa;
+}
+
+h1{
+	color: $main2;
+	font-size: 6em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+h2,h3,h4,h5,h6{
+	color: $text_main;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	font-size: 3em;
+}
+
+h3{
+	font-size: 1.3333333333333333em;
+}
+
+a{
+	text-decoration: none;
+	transition: all .3s ease;
+}
+
+a{
+	color: $text3;
+	display: block;
+}
+
+
+input,button{
+	border: none;
+	background: transparent;
+}
+
+.small-title{
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	color: $main2;
+}
+
+.general-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #D0D2D3;
+}
+
+.d-iflex{
+	display: inline-flex;
+}
+
+.container{
+	padding: 0 !important;
+}
+
+.icon-left{
+	margin-left: 8px;
+}
+
+.icon-right{
+	margin-right: 8px;
+}
+
+.flex-direction-column{
+	flex-direction: column
+}
+
+.btn{
+	text-transform: uppercase;
+	color: $main2;
+	cursor: pointer;
+	padding: 15px 60px;
+	border: 1px solid $main2;
+	transition: all .3s ease;
+	letter-spacing: .1em;
+
+	&:hover{
+		background: $main2;
+		color: #fff
+	}
+}
+
+.btn_style1{
+	color: $main2;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: 12px;
+	span{
+		position: relative;
+	}
+	span::after{
+		content: "";
+		display: block;
+		height: 1px;
+		width: 100%;
+		background: $main2;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		transition: all .3s ease
+	}
+	span:hover::after{
+		width: 100%;
+	}
+	.btn__icon{
+		margin-left: 12px;
+	}
+	img{
+		margin-left: 16px;
+	}
+}
+
+.btn_disabled{
+    color: $text3;
+    cursor: not-allowed;
+
+    span:hover::after{
+    	width: 0;
+    }
+
+    .btn__icon{
+    	circle{
+    		stroke: $text3;
+    	}
+    	path{
+    		fill: $text3;
+    	}
+    }
+}
+
+.dropdown-select{
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+   	-moz-appearance: none;
+   	appearance: none;  
+}
+
+.color-profit{
+	color: $color_profit;
+}
+
+.color-loss{
+	color: $color_loss;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.btn_style2{
+	background: $main2;
+	color: #fff;
+	&:hover{
+		background: $main1;
+	}
+}

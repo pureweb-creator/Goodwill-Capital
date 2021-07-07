@@ -1,0 +1,171 @@
+.page-portfolio__title{
+	margin-bottom: 48px;
+	font-size: 36px;
+	line-height: 1em;
+}
+
+.main-title_text-lowercase{
+	text-transform: unset;
+}
+
+.short-view{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto 1fr;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.short-view__item{
+	padding: 30px 0 30px 48px;
+	background: #fff;
+	font-weight: 500;
+}
+
+.short-view__item_first{
+	grid-column: 1/3;
+	background: $main2;
+
+	.short-view__caption{
+		color: #fff;
+	}
+
+	.short-view__content{
+		font-size: 36px;
+		line-height: 36px;
+		color: #fff;
+		font-weight: 400;
+	}
+}
+
+.short-view__caption{
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+	letter-spacing: .1em;
+	color: $main2;
+	line-height: 12px;
+}
+
+.short-view__content{
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.actions{
+	width: 100%;
+	padding-top: 24px;
+	padding-left: 24px;
+	padding-bottom: 74px;
+	font-size: 16px;
+	color: $text_main;
+	border: 1px solid #DDBC62;
+
+
+	&__icon{
+		width: 48px;
+		height: 48px;
+		margin-bottom: 24px;
+		background: linear-gradient(135deg, #DDBC62 0%, #BA9245 96.88%);
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.actions-title,.table__title{
+	text-transform: uppercase;
+	font-size: 12px;
+	color: $main2;
+}
+
+.table__title{
+	margin-bottom: 30px;
+}
+
+.table_portfolio{
+	margin-top: 80px;
+}
+
+.table_portfolio__head{
+	padding-right: 24px;
+}
+
+.table_portfolio__table-name{
+	font-size: 16px;
+	font-weight: 700;
+	margin-right: 24px;
+}
+
+.table__desc{
+	font-size: 14px;
+	color: $text3
+}
+
+.table__expand{
+	margin-left: auto;
+	transition: all  .3s ease;
+	transform: rotate(180deg);
+	&.active{
+		transform: rotate(0deg);
+	}
+}
+
+.table__view-more{
+	padding: 7px 16px;
+	color: $main2;
+	border: 1px solid $main2;
+	border-radius: 100px;
+	font-size: 10px;
+	margin-left: 16px;
+	transition: all .3s ease;
+
+	&:hover{
+		background: $main2;
+		color: #fff
+	}
+}
+
+.table-details{
+	margin-top: 24px;
+	margin-left: 32px;
+	display: none;
+	&__title{
+		color: $text2;
+		span{
+			display: inline-block;
+			margin-left: 12px;
+		}
+	}
+}
+
+.table__totals{
+	font-weight: 700;
+}
+
+.progress{
+	position: relative;
+	width: 240px;
+	margin-top: 12px;
+
+	&__bar{
+		background: #E6E7E8;
+	}
+
+	&__bar, &__value{
+		height: 4px;
+		border-radius: 2px;
+	}
+	&__value_profit{
+		background: $color_profit;
+		position: relative;
+		top: -4px
+	}
+	&__value_loss{
+		background: $color_loss;
+		position: relative;
+		top: -4px
+	}
+}

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Bold.otf");src:url("fonts/Montserrat-Bold.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Bold.woff") format("woff"),url("fonts/Montserrat-Bold.woff2") format("woff2"),url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal; font-display: swap;}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>PORTFOLIO | Goodwill Capital</title>
+</head>
+<body class="page-portfolio">
+    <header class="hero profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-2 offset-4 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#">RU</a></li>
+                        <li><a class="active" href="#">ENG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-2 offset-md-1 offset-2">
+                    <div class="profile d-flex align-items-center">
+                        <img src="img/Profile_photo.png" alt="Avatar" class="profile__avatar lazy">
+                        <span class="profile__name">Konstantin Konstantinopolsky</span>
+                        <img src="img/arrow.svg" alt="arrow" class="profile__arrow">
+
+
+                        <div class="profile-dropdown">
+                            <h5 class="profile-dropdown__title">Account</h5>
+                            <span class="name">Konstantin Konstantinopolsky</span>
+
+                            <ul class="options">
+                                <li><a href="#">Option 1</a></li>
+                                <li><a href="#">Option 2</a></li>
+                                <li><a href="#">Option 3</a></li>
+                                <li><a href="#">Option 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <ul class="menu d-flex align-items-center">
+                            <li><a href="#">Main</a></li>
+                            <li class="active"><a href="#">Portfolio</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Operations</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title page-portfolio__title main-title_text-lowercase">Your account</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-12">
+                    <div class="short-view">
+                        <div class="short-view__item short-view__item_first">
+                            <div class="short-view__caption">All assets</div>
+                            <div class="short-view__content">$24 681,63</div>
+                        </div>
+                        <div class="short-view__item">
+                            <div class="short-view__caption">Financial result</div>
+                            <div class="short-view__content color-profit">$243,86</div>
+                        </div>
+                        <div class="short-view__item">
+                            <div class="short-view__caption">Directions</div>
+                            <div class="short-view__content color-profit">4,00%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-6 d-flex flex-direction-column justify-content-between">
+                    <span class="actions-title">Actions</span>
+                    <a href="#" class="actions">
+                        <div class="actions__icon">
+                            <img src="img/icon-invest-white.svg" alt="">
+                        </div>
+                        Investing
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6 col-6 d-flex align-items-end">
+                    <a href="#" class="actions">
+                        <div class="actions__icon">
+                            <img src="img/icon-withdrawal-white.svg" alt="">
+                        </div>
+                        Withdrawal
+                    </a>
+                </div>
+            </div>
+            
+
+            <!-- Desktop table -->
+            <div class="table table_desktop table_portfolio">
+                <h3 class="table__title">Portfolio</h3>
+                
+                <!-- Heading -->
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            SPAC’s
+                        </h4>
+                        <p class="table__desc">
+                            Cost is as of  June 10, 2021
+                        </p>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                    <div class="row table__head">
+                        <div class="col-4">Name</div>
+                        <div class="col-2">Value of assets</div>
+                        <div class="col-2">Portfolio share</div>
+                        <div class="col-2">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                        <div class="col-2">Financial result</div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="table__body">
+                    <!-- Table row -->
+                    <div class="row table__row align-items-start">
+                        <!-- Table cell -->
+                        <div class="col-4">
+                            <div class="d-flex align-items-center">
+                                <img class="table__icon" src="img/desktop_windows.svg" alt="">
+                                Cybersecurity  Utd <a href="#!" class="table__view-more">View details</a>
+                            </div>
+
+                            <div class="table-details">
+                                <p class="table-details__title">Exit stage:  <span class="color-profit">3/6</span> </p>
+                                <div class="progress">
+                                    <div class="progress__bar"></div>
+                                    <div class="progress__value progress__value_profit" data-value="3" data-max="6"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center">$12 340,63</div>
+                        <div class="col-2 d-flex align-items-center">52,43%</div>
+                        <div class="col-2 d-flex align-items-center color-profit">
+                            17,68%
+                        </div>
+                        <div class="col-2 d-flex align-items-center color-profit">$1 498,86</div>
+                    </div>
+                    <div class="row table__row align-items-start">
+                        <div class="col-4">
+                            <div class="d-flex align-items-center">
+                                <img class="table__icon" src="img/local_hospital.svg" alt="">
+                                Healthcare Int <a href="#!" class="table__view-more">View details</a>
+                            </div>
+
+                            <div class="table-details">
+                                <p class="table-details__title d-flex">
+                                    Exit stage:  <span class="color-loss">2/6</span>
+                                    <img src="img/close.svg" class="icon-left" alt="">
+                                </p>
+                                <div class="progress">
+                                    <div class="progress__bar"></div>
+                                    <div class="progress__value progress__value_loss" data-value="2" data-max="6"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center">$12 340,63</div>
+                        <div class="col-2 d-flex align-items-center">52,43%</div>
+                        <div class="col-2 d-flex align-items-center color-loss">
+                            17,68%
+                        </div>
+                        <div class="col-2 d-flex align-items-center color-loss">$1 498,86</div>
+                    </div>
+                    <div class="row table__row align-items-center table__totals">
+                        <div class="col-4">
+                            Total
+                        </div>
+                        <div class="col-2">$23 681,26</div>
+                        <div class="col-2">100,00%</div>
+                        <div class="col-2 color-profit">4,00%</div>
+                        <div class="col-2 color-profit">$243,86</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table table_desktop table_portfolio">
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            Currency
+                        </h4>
+                        <p class="table__desc">
+                            Cost is as of  June 10, 2021
+                        </p>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                    <div class="row table__head">
+                        <div class="col-4">Name</div>
+                        <div class="col-2">Value of assets</div>
+                        <div class="col-2">Portfolio share</div>
+                        <div class="col-2">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                        <div class="col-2">Financial result</div>
+                    </div>
+                </div>
+
+                <div class="table__body">
+                    <div class="row table__row align-items-start">
+                        <div class="col-4">
+                            <div class="d-flex align-items-center">
+                                <img class="table__icon" src="img/currency_dollar.svg" alt="">
+                                USD
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center">$1 000,00</div>
+                        <div class="col-2 d-flex align-items-center">2,00%</div>
+                        <div class="col-2 d-flex align-items-center">
+                            —
+                        </div>
+                        <div class="col-2 d-flex align-items-center color-profit">—</div>
+                    </div>
+                    <div class="row table__row table__totals align-items-center">
+                        <div class="col-4">
+                            Total
+                        </div>
+                        <div class="col-2">$1 000,00</div>
+                        <div class="col-2">2,00%</div>
+                        <div class="col-2">—</div>
+                        <div class="col-2">—</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Mobile table -->
+            <div class="table table_mobile table_portfolio">
+                <h3 class="table__title">Portfolio</h3>
+                <!-- Heading -->
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            SPAC's
+                        </h4>
+                        <p class="table__desc">
+                            Cost is as of  June 10, 2021
+                        </p>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                </div>
+
+                <div class="table__body">
+                    <!-- Items -->
+                    <div class="table__row">
+                        <div class="table_mobile__item_title">
+                            <img class="table__icon" src="img/desktop_windows.svg" alt="">
+                            Cybersecurity Utd <a href="#!" class="table__view-more">View details</a>
+                        </div>
+                        <div class="table-details">
+                            <p class="table-details__title">Exit stage:  <span class="color-profit">3/6</span> </p>
+                            <div class="progress">
+                                <div class="progress__bar"></div>
+                                <div class="progress__value progress__value_profit" data-value="3" data-max="6"></div>
+                            </div>
+                        </div>
+                        <div class="table-content">
+                            <div class="table-content__item">
+                                <div class="table-content__key">Value of assets</div>
+                                <div class="table-content__value">$12 340,63</div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Portfolio share</div>
+                                <div class="table-content__value">
+                                    52,43%
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key d-flex">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                                <div class="table-content__value">
+                                    <span class="color-profit">17,68%</span>
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Financial result</div>
+                                <div class="table-content__value"><span class="color-profit">$1 498,86</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table__row">
+                        <div class="table_mobile__item_title">
+                            <img class="table__icon" src="img/local_hospital.svg" alt="">
+                            Healthcare Int <a href="#!" class="table__view-more">View details</a>
+                        </div>
+                        <div class="table-details">
+                            <p class="table-details__title">Exit stage:  <span class="color-loss">2/6</span> </p>
+                            <div class="progress">
+                                <div class="progress__bar"></div>
+                                <div class="progress__value progress__value_loss" data-value="2" data-max="6"></div>
+                            </div>
+                        </div>
+
+                        <div class="table-content">
+                            <div class="table-content__item">
+                                <div class="table-content__key">Value of assets</div>
+                                <div class="table-content__value">$11 340,63</div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Portfolio share</div>
+                                <div class="table-content__value">
+                                    47,57%
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key d-flex">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                                <div class="table-content__value">
+                                    <span class="color-loss">-13,68%</span>
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Financial result</div>
+                                <div class="table-content__value"><span class="color-loss">-$1 225,86</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table__row table__totals">
+                        <div class="table_mobile__item_title">
+                            Total
+                        </div>
+
+                        <div class="table-content">
+                            <div class="table-content__item">
+                                <div class="table-content__key">Value of assets</div>
+                                <div class="table-content__value">$23 681,26</div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Portfolio share</div>
+                                <div class="table-content__value">
+                                    100,00%
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key d-flex">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                                <div class="table-content__value">
+                                    <span class="color-profit">4,00</span>
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Financial result</div>
+                                <div class="table-content__value"><span class="color-profit">243,86</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table table_mobile table_portfolio">
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            Currency
+                        </h4>
+                        <p class="table__desc">
+                            Cost is as of  June 10, 2021
+                        </p>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                </div>
+
+                <div class="table__body">
+                    <div class="table__row">
+                        <div class="table_mobile__item_title">
+                            <img class="table__icon" src="img/currency_dollar.svg" alt="">
+                            USD
+                        </div>
+
+                        <div class="table-content">
+                            <div class="table-content__item">
+                                <div class="table-content__key">Value of assets</div>
+                                <div class="table-content__value">$1000,00</div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Portfolio share</div>
+                                <div class="table-content__value">
+                                    2,00%
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key d-flex">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                                <div class="table-content__value">
+                                    <span class="color-profit">—</span>
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Financial result</div>
+                                <div class="table-content__value"><span class="color-profit">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table__row table__totals">
+                        <div class="table_mobile__item_title">
+                            Total
+                        </div>
+
+                        <div class="table-content">
+                            <div class="table-content__item">
+                                <div class="table-content__key">Value of assets</div>
+                                <div class="table-content__value">1000,00</div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Portfolio share</div>
+                                <div class="table-content__value">
+                                    2,00%
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key d-flex">Directions <img src="img/error.svg" class="icon-left" alt=""></div>
+                                <div class="table-content__value">
+                                    <span class="color-profit">—</span>
+                                </div>
+                            </div>
+                            <div class="table-content__item">
+                                <div class="table-content__key">Financial result</div>
+                                <div class="table-content__value"><span class="color-profit">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12">
+                    <a href="/" class="logo"><img src="img/LOGO.svg" alt=""></a>
+                </div>
+                <div class="rights2 col-12">
+                    © 2021 Goodwill Foundation
+                </div>
+                <div class="col-md-5 col-12 offset-md-1 offset-0">
+                    <ul class="menu d-flex">
+                        <li><a href="#">About Goodwill</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rights">
+                        © 2021 Goodwill Foundation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>
