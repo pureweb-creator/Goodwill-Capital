@@ -35,6 +35,8 @@ $(document).ready(function(){
 	// REGISTRATION FORM
 	if($('.sign-up-form').length){
 
+		$("#registerBtn").addClass('btn_disabled');
+
 		// show and hide password
 		$('.input-group__pass-status').on('click', function(){
 			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
@@ -93,6 +95,9 @@ $(document).ready(function(){
 
 	// LOGIN FORM
 	if($('.login-form').length){
+
+		$("#loginBtn").addClass('btn_disabled');
+
 		$('.input-group__pass-status').on('click', function(){
 			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
 				return attr == 'text' ? 'password' : 'text';
@@ -133,21 +138,16 @@ $(document).ready(function(){
 
 	// RECOVERY PASSWORD FORM
 	if($('.recovery-password-form').length){
-		$('.input-group__pass-status').on('click', function(){
-			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
-				return attr == 'text' ? 'password' : 'text';
-			});
 
-			$(this).toggleClass('input-group__pass-status_show');
-		});
+		$("#recoveryPassBtn").addClass('btn_disabled');
 
-
-		$('.recovery-password-form, #recoveryPassBtn').on('input click', function(){
+		$('.recovery-password-form, #recoveryPassBtn').on('change click', function(){
 			var phone = $('.input-group__input[name="phone"]').val();
-					
+
 			if( phone == "" ){
 				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
 				$("#recoveryPassBtn").addClass('btn_disabled');
+				return false;
 			}
 			else{
 				$('.input-group__help').css('display', 'none');
@@ -164,6 +164,8 @@ $(document).ready(function(){
 
 	// GET SMS CODE FORM
 	if($('.smscode-form').length){
+
+		$("#smsCodeBtn").addClass('btn_disabled');
 
 		$('.smscode-form, #smsCodeBtn').on('input click', function(){
 			var smscode = $('.input-group__input[name="smscode"]').val();
@@ -188,6 +190,8 @@ $(document).ready(function(){
 
 	// CREATE NEW PASSWORD FORM
 	if($('.new-pass-form').length){
+
+		$("#newPassBtn").addClass('btn_disabled');
 
 		// show and hide password
 		$('.input-group__pass-status').on('click', function(){
@@ -234,6 +238,9 @@ $(document).ready(function(){
 
 	// RESEND SMS CODE FORM
 	if ( $('#time').length ){
+		
+		$("#smsCodeBtn").addClass('btn_disabled');
+
 		function startTimer(duration, display) {
 		    var timer = duration, minutes, seconds;
 
