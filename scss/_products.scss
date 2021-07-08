@@ -196,7 +196,7 @@
 	&__item{
 		position: relative;
 		z-index: 1;
-		background: url('../img/timeline-list-bullet.svg') no-repeat left 6px / 16px 16px;
+		background: url('../img/timeline-list-bullet.svg') no-repeat left 5px / 16px 16px;
 		margin-bottom: 30px;
 
 		.status__title{
@@ -259,7 +259,7 @@
 		}
 
 		&.done{
-			background: url('../img/timeline-list-bullet-active.svg') no-repeat left 8px / 16px 16px;
+			background: url('../img/timeline-list-bullet-active.svg') no-repeat left 5px / 16px 16px;
 
 			.status__number{
 				color: $color_profit
