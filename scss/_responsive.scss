@@ -564,3 +564,14 @@
 		}
 	}
 }
+
+
+@media (max-width: 371px){
+	.input-group__label_phone{
+		flex-wrap: wrap;
+		span{
+			margin-left: 0;
+			margin-top: 5px;
+		}
+	}
+}

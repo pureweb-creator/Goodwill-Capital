@@ -48,9 +48,9 @@ $(document).ready(function(){
 
 		// check for a valid
 		$('.sign-up-form, #registerBtn, input').on('input click change paste keyup', function(){
-			var phone = $('.input-group__input[name="phone"]').val();
-			var pass = $('.input-group__input[name="password"]').val();
-			var passrepeat = $('.input-group__input[name="password-repeat"]').val();
+			var phone = $('.input-group__input[name="phone"]').val().trim();
+			var pass = $('.input-group__input[name="password"]').val().trim();
+			var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
 			var checkbox = $('.custom-checkbox__input');
 
 			if( !phone.trim().length ){
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
 				$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
 			}
-			else if ( passrepeat == 0 ){
+			else if ( passrepeat.length == 0 ){
 				$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
 				$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
 			}
@@ -107,8 +107,8 @@ $(document).ready(function(){
 
 
 		$('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
-			var phone = $('.input-group__input[name="phone"]').val();
-			var pass = $('.input-group__input[name="password"]').val();
+			var phone = $('.input-group__input[name="phone"]').val().trim();
+			var pass = $('.input-group__input[name="password"]').val().trim();
 
 			if( phone == "" ){
 				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
@@ -141,7 +141,7 @@ $(document).ready(function(){
 		$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
 
 		$('.recovery-password-form, #recoveryPassBtn, input').on('change click input paste keyup', function(){
-			var phone = $('.input-group__input[name="phone"]').val();
+			var phone = $('.input-group__input[name="phone"]').val().trim();
 
 			if( phone == "" ){
 				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
@@ -167,7 +167,7 @@ $(document).ready(function(){
 		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
 		$('.smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
-			var smscode = $('.input-group__input[name="smscode"]').val();
+			var smscode = $('.input-group__input[name="smscode"]').val().trim();
 
 			if( smscode == "" ){
 				$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
@@ -203,8 +203,8 @@ $(document).ready(function(){
 
 		// check for a valid
 		$('.new-pass-form, #newPassBtn input').on('input click change keyup paste', function(){
-			var pass = $('.input-group__input[name="password"]').val();
-			var passrepeat = $('.input-group__input[name="password-repeat"]').val();
+			var pass = $('.input-group__input[name="password"]').val().trim();
+			var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
 
 			if ( pass.length == 0 ){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
@@ -214,7 +214,7 @@ $(document).ready(function(){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
 				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
 			}
-			else if ( passrepeat == 0 ){
+			else if ( passrepeat.length == 0 ){
 				$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
 				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
 			}
@@ -240,6 +240,7 @@ $(document).ready(function(){
 
 		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
+		// Timer
 		function startTimer(duration, display) {
 		    var timer = duration, minutes, seconds;
 
@@ -275,7 +276,7 @@ $(document).ready(function(){
 				$("#resendSmsCodeBtn").removeClass('btn_disabled');
 
 				$('.resend-smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
-					var smscode = $('.input-group__input[name="smscode"]').val();
+					var smscode = $('.input-group__input[name="smscode"]').val().trim();
 
 					if( smscode == "" ){
 						$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
