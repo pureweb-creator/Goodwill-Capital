@@ -93,9 +93,12 @@ $(document).ready(function(){
 	}
 
 	// LOGIN FORM
-	$('#password').focus();
+	
 
 	if($('.login-form').length){
+		
+		$('#password').focus();
+
 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
 
 		var phone = $('.input-group__input[name="phone"]').val().trim();
