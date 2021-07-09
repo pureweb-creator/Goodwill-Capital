@@ -1,0 +1,22 @@
+.filters{
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+	& li:first-child a{
+		margin-bottom: 20px;
+	}
+	a{
+		padding: 12px 24px;
+		display: block;
+		font-weight: 500;
+		text-transform: uppercase;
+		background: rgba(221, 188, 98, 0.15);
+		border-radius: 100px;
+		color: $main2;
+		transition: all .3s ease;
+		margin-right: 24px;
+		&.active,&:hover{
+			background: $main2;
+			color: #fff
+		}
+	}
+}

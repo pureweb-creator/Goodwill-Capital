@@ -52,9 +52,6 @@ h3{
 a{
 	text-decoration: none;
 	transition: all .3s ease;
-}
-
-a{
 	color: $text3;
 	display: block;
 }
@@ -151,6 +148,14 @@ input,button{
 	}
 }
 
+.btn_style2{
+	background: $main2;
+	color: #fff;
+	&:hover{
+		background: $main1;
+	}
+}
+
 .btn_disabled{
     color: $text3;
     cursor: not-allowed;
@@ -169,12 +174,27 @@ input,button{
     }
 }
 
+.main-title{
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.main-title_text-lowercase{
+	text-transform: unset;
+}
+
+.load-more{
+	margin-top: 80px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+}
+
 .dropdown-select{
 	background: transparent;
 	border: none;
 	cursor: pointer;
-	-webkit-appearance: none;
-   	-moz-appearance: none;
    	appearance: none;  
 }
 
@@ -188,12 +208,4 @@ input,button{
 
 .text-center{
 	text-align: center;
-}
-
-.btn_style2{
-	background: $main2;
-	color: #fff;
-	&:hover{
-		background: $main1;
-	}
 }

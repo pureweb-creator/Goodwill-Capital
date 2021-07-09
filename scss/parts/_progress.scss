@@ -1,0 +1,24 @@
+.progress{
+	position: relative;
+	width: 240px;
+	margin-top: 12px;
+
+	&__bar{
+		background: #E6E7E8;
+	}
+
+	&__bar, &__value{
+		height: 4px;
+		border-radius: 2px;
+	}
+	&__value_profit{
+		background: $color_profit;
+		position: relative;
+		top: -4px
+	}
+	&__value_loss{
+		background: $color_loss;
+		position: relative;
+		top: -4px
+	}
+}

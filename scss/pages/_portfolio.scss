@@ -4,10 +4,6 @@
 	line-height: 1em;
 }
 
-.main-title_text-lowercase{
-	text-transform: unset;
-}
-
 .short-view{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -81,10 +77,6 @@
 	color: $main2;
 }
 
-.table__title{
-	margin-bottom: 30px;
-}
-
 .table_portfolio{
 	margin-top: 80px;
 }
@@ -97,75 +89,4 @@
 	font-size: 16px;
 	font-weight: 700;
 	margin-right: 24px;
-}
-
-.table__desc{
-	font-size: 14px;
-	color: $text3
-}
-
-.table__expand{
-	margin-left: auto;
-	transition: all  .3s ease;
-	transform: rotate(180deg);
-	&.active{
-		transform: rotate(0deg);
-	}
-}
-
-.table__view-more{
-	padding: 7px 16px;
-	color: $main2;
-	border: 1px solid $main2;
-	border-radius: 100px;
-	font-size: 10px;
-	margin-left: 16px;
-	transition: all .3s ease;
-
-	&:hover{
-		background: $main2;
-		color: #fff
-	}
-}
-
-.table-details{
-	margin-top: 24px;
-	margin-left: 32px;
-	display: none;
-	&__title{
-		color: $text2;
-		span{
-			display: inline-block;
-			margin-left: 12px;
-		}
-	}
-}
-
-.table__totals{
-	font-weight: 700;
-}
-
-.progress{
-	position: relative;
-	width: 240px;
-	margin-top: 12px;
-
-	&__bar{
-		background: #E6E7E8;
-	}
-
-	&__bar, &__value{
-		height: 4px;
-		border-radius: 2px;
-	}
-	&__value_profit{
-		background: $color_profit;
-		position: relative;
-		top: -4px
-	}
-	&__value_loss{
-		background: $color_loss;
-		position: relative;
-		top: -4px
-	}
 }

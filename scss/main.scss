@@ -1,15 +1,22 @@
-@import "reset";
-@import "specification";
-@import "header";
-@import "content";
-@import "article";
-@import "sidebar";
+// Common
+@import "common/reset";
+@import "common/specification";
+
+// parts
+@import "parts/table";
+@import "parts/progress";
+@import "parts/article";
+@import "parts/header";
+@import "parts/sidebar";
+@import "parts/card";
+@import "parts/product-card";
+@import "parts/filters";
+@import "parts/management-line";
+@import "parts/footer";
 
 // pages
-@import "operations";
-@import "portfolio";
-@import "products";
+@import "pages/portfolio";
+@import "pages/products";
 @import "pages/auth";
 
-@import "footer";
-@import "responsive";
+@import "common/responsive";

@@ -1,0 +1,127 @@
+.table{
+	width: 100%;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 0 15px;
+	margin-bottom: 80px;
+	
+	&-top{
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+	}
+
+	&__head{
+		text-align: left;
+		background: #fff;
+		color: $text3;
+		font-weight: 400;
+		padding: 16px 0 16px 24px;
+		&:first-child{
+			border-bottom: 1px solid #E6E7E8;
+		}
+		& > *{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__title{
+		margin-bottom: 30px;
+	}
+
+	&.table_operations .table__head{
+		margin-bottom: 30px;
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+		border-bottom: 0;
+	}
+
+	&__expand{
+		margin-left: auto;
+		transition: all  .3s ease;
+		transform: rotate(180deg);
+		&.active{
+			transform: rotate(0deg);
+		}
+	}
+
+	&-details{
+		margin-top: 24px;
+		margin-left: 32px;
+		display: none;
+		&__title{
+			color: $text2;
+			span{
+				display: inline-block;
+				margin-left: 12px;
+			}
+		}
+	}
+
+	&__view-more{
+		padding: 7px 16px;
+		color: $main2;
+		border: 1px solid $main2;
+		border-radius: 100px;
+		font-size: 10px;
+		margin-left: 16px;
+		transition: all .3s ease;
+
+		&:hover{
+			background: $main2;
+			color: #fff
+		}
+	}
+
+	&__totals{
+		font-weight: 700;
+	}
+
+	&__desc{
+		font-size: 14px;
+		color: $text3
+	}
+
+	.date{
+		color: $text3;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__body{
+		padding-left: 24px;
+	}
+
+	&__item{
+		margin-bottom: 48px;
+	}
+
+	&__row{
+		padding-top: 24px;
+		padding-bottom: 24px;
+		border-bottom: 1px solid #E6E7E8;
+		color: $text_main;
+	}
+
+	&__icon{
+		margin-right: 8px;
+	}
+
+	.account-currency{
+		display: block;
+	}
+
+	.transaction-currency{
+		display: block;
+		margin-top: 8px;
+		font-size: 12px;
+		color: $text3;
+	}
+
+	.view{
+		text-decoration: underline;
+		color: $text_main;
+	}
+}
+
+.table_mobile{
+	display: none;
+}
