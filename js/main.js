@@ -98,9 +98,6 @@ $(document).ready(function(){
 
 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
 
-		var phone = $('.input-group__input[name="phone"]').val().trim();
-		var pass = $('.input-group__input[name="password"]').val().trim();
-
 		$('.input-group__pass-status').on('click', function(){
 			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
 				return attr == 'text' ? 'password' : 'text';
@@ -112,7 +109,10 @@ $(document).ready(function(){
 
 		$('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
 
-			if( phone == "" ){
+			var phone = $('.input-group__input[name="phone"]').val().trim();
+			var pass = $('.input-group__input[name="password"]').val().trim();
+
+			if( phone.length == 0 ){
 				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
 				$('.country-phone').addClass('error');
 				$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
@@ -121,7 +121,7 @@ $(document).ready(function(){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
 				$("#loginBtn").addClass('btn_disabled');
 			}
-			else if ( pass.length < 12 && pass.length > 0){
+			else if ( pass.length < 12 && pass.length > 0 ){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
 				$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
 			}
