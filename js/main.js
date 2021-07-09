@@ -28,7 +28,7 @@ $(document).ready(function(){
 	            preferCo: 'ru'
 	        });
 	    });
-	    $('#phone').mask('(999) 999-99-99');
+	    // $('#phone').mask('(999) 999-99-99');
 	}
 
 	// REGISTRATION FORM
@@ -142,10 +142,10 @@ $(document).ready(function(){
 
 		$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
 
-		$('.recovery-password-form, #recoveryPassBtn, input').on('change click input paste keyup', function(){
+		$('.recovery-password-form, #recoveryPassBtn, input').on('input click change paste keyup', function(){
 			var phone = $('.input-group__input[name="phone"]').val().trim();
 
-			if( phone == "" ){
+			if( phone.length == 0){
 				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
 				$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
 				return false;
@@ -301,10 +301,6 @@ $(document).ready(function(){
 
 		}, 61000);
 	}
-
-
-
-
 
 
 
