@@ -220,18 +220,20 @@
     left: 64px;
     bottom: 0;
 }
-.country-phone-selected span{ display: flex; align-items: center; margin-right: 5px; width: max-content;}
+
+.country-phone-selected > span{ display: flex; align-items: center; margin-right: 5px; width: max-content;}
 .country-phone-selected {padding: 0px 0 5px 0px; font-size: 16px;}
-.country-phone-selected img {margin: 0px 40px 1px 0;}
+.country-phone-selected .flag {margin: 0px 40px 1px 0;}
 .country-phone-selected {background-position: 40px}
 .country-phone-option {display: flex; align-items: center;}
 .country-phone-option span {display: flex; align-items: center;}
-.country-phone-option img {margin-right: 12px;}
+.country-phone-option .flag {margin-right: 12px; max-width: 32px !important; min-width: 0 !important}
 
-.flag {
-    width: 32px;
+.flag{
+    width: 32px !important;
     height: 32px;
-    background:url('../img/flags.png') no-repeat
+    display: inline-block !important;
+    background:url('../img/flags.png') no-repeat;
 }
 
 .country-phone-search-label {position: absolute; margin: -20px 0 0 4px; color: #999 !important; font-size: 13px !important;}
