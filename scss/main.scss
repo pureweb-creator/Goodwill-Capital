@@ -12,11 +12,14 @@
 @import "parts/product-card";
 @import "parts/filters";
 @import "parts/management-line";
+@import "parts/sidemenu";
+@import "parts/tabs";
 @import "parts/footer";
 
 // pages
 @import "pages/portfolio";
 @import "pages/products";
 @import "pages/auth";
+@import "pages/help";
 
 @import "common/responsive";

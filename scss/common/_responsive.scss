@@ -200,6 +200,11 @@
 			font-size: 10px;
 		}
 	}
+
+	// PAGE HELP
+	.help__sidemenu{
+		margin-bottom: 50px;
+	}
 }
 
 
@@ -535,6 +540,37 @@
 	}
 	.product-card__learn-more{
 		margin-top: 20px;
+	}
+
+
+	// HELP PAGE
+	.help{
+		margin-bottom: 40px;
+	}
+	.help .sidebar{
+		display: block;
+	}
+	.help__sidemenu{
+		display: none;
+	}
+	.help__item{
+		display: block;
+
+		.accordion{
+			margin-bottom: 30px;
+		}
+	}
+
+	.help__item-title{
+		font-size: 16px;
+	}
+
+	.help__item:first-child{
+		margin-top: 40px;
+	}
+
+	.help__item-head{
+		margin-bottom: 16px;
 	}
 
 

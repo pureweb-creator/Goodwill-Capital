@@ -534,9 +534,9 @@ $(document).ready(function(){
 
 
 
+	/* PAGE LITTLE SCRIPTS */
 
-
-	// Other
+	// Menu links
 	if( $(".nav .menu li.active").length ){
    		var anchor = $(".nav .menu li.active").offset().left;	
    		$('.nav .menu').scrollLeft( anchor + 20);
@@ -557,6 +557,7 @@ $(document).ready(function(){
 		$('.status .progress-title span').text(width + '%')
 	});
 
+   	// tables
 	$('.table_desktop .table_portfolio__head').on('click', function(){
 
 		$(this).parent().parent().find('.table__body').slideToggle();
@@ -575,14 +576,14 @@ $(document).ready(function(){
    		$(this).parent().parent().find('.table-details').slideToggle();
    	});
 
-   	// Accordion  	
+   	// Accordion
   	$(".accordion .accordion__text").hide().prev().click(function() {
 		$(this).parents(".accordion").find(".accordion__text").not(this).slideUp().prev().parent().removeClass("active");
 		$(this).next().not(":visible").slideDown().prev().parent().addClass("active");
 	});
-	$(".accordion__text").first().slideDown();
+	$(".accordion__item:first-child .accordion__text").slideDown();
 
-
+	// Burger
     $('.burger').click(function() {
         $('.nav_screen').toggleClass('active');
     });
@@ -594,6 +595,35 @@ $(document).ready(function(){
     $('.burger').click(function() {
         $('.hero').toggleClass('active');
     });
+
+    // Tabs    
+	if( $('.help').length && $(window).width() >= 768){
+
+		$('.help__item-head').on('click', function(){
+			$(this).parent().find('.accordion').slideToggle();
+			$(this).find('.table__expand').toggleClass('active');
+		});
+
+		$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+			$(this)
+			  .addClass('active').siblings().removeClass('active')
+			  .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+		});
+	} 
+
+	if ( $('.help').length && $(window).width() < 768 ){
+
+		$('.help__item-head').on('click', function(){
+			$('.help__item-head').parent().find('.accordion').slideUp();
+			$('.help__item-head').find('.table__expand').removeClass('active');
+
+
+			if( !$(this).next().is(":visible") ){
+				$(this).next().slideDown();
+				$(this).find('.table__expand').addClass('active');
+			}
+		});
+	}
 });
 
 
