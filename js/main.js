@@ -21,6 +21,8 @@ searchInputLabel = currentLang == 'ru' ? 'Поиск по странам' : 'Sea
 
 console.log(searchInputLabel);
 
+var countryCache;
+var countryRequesting = false;
 !(function (h) {
     h.widget("custom.phonecode", {
         data: [],
@@ -40,40 +42,39 @@ console.log(searchInputLabel);
         },
         _loadData: function () {
             var o = this;
-
-            if( currentLang == 'ru' ){
-	            countryCache || countryRequesting
-	                ? countryCache
-	                    ? ((this.data = countryCache), o._initSelector())
-	                    : countryRequesting &&
-	                      countryRequesting.done(function (e) {
-	                          (o.data = e), (countryCache = o.data), o._initSelector();
-	                      })
-	                : (countryRequesting = h
-	                      .getJSON("js/countries-ru_RU.json", {})
-	                      .done(function (e) {
-	                          (o.data = e), (countryCache = o.data), o._initSelector();
-	                      })
-	                      .fail(function (e, t, n) {
-	                          (o.data = countries), (countryCache = o.data), o._initSelector();
-	                      }));
-	        } else if ( currentLang == 'en' ){
-	        	countryCache || countryRequesting
-	                ? countryCache
-	                    ? ((this.data = countryCache), o._initSelector())
-	                    : countryRequesting &&
-	                      countryRequesting.done(function (e) {
-	                          (o.data = e), (countryCache = o.data), o._initSelector();
-	                      })
-	                : (countryRequesting = h
-	                      .getJSON("js/countries-en_GB.json", {})
-	                      .done(function (e) {
-	                          (o.data = e), (countryCache = o.data), o._initSelector();
-	                      })
-	                      .fail(function (e, t, n) {
-	                          (o.data = countries), (countryCache = o.data), o._initSelector();
-	                      }));
-	        } 
+            if (currentLang == "en"){
+            countryCache || countryRequesting
+                ? countryCache
+                    ? ((this.data = countryCache), o._initSelector())
+                    : countryRequesting &&
+                      countryRequesting.done(function (e) {
+                          (o.data = e), (countryCache = o.data), o._initSelector();
+                      })
+                : (countryRequesting = h
+                      .getJSON("js/countries-en_GB.json", {})
+                      .done(function (e) {
+                          (o.data = e), (countryCache = o.data), o._initSelector();
+                      })
+                      .fail(function (e, t, n) {
+                          (o.data = countries), (countryCache = o.data), o._initSelector();
+                      }));
+            } else if (currentLang == "ru"){
+            	countryCache || countryRequesting
+                ? countryCache
+                    ? ((this.data = countryCache), o._initSelector())
+                    : countryRequesting &&
+                      countryRequesting.done(function (e) {
+                          (o.data = e), (countryCache = o.data), o._initSelector();
+                      })
+                : (countryRequesting = h
+                      .getJSON("js/countries-ru_RU.json", {})
+                      .done(function (e) {
+                          (o.data = e), (countryCache = o.data), o._initSelector();
+                      })
+                      .fail(function (e, t, n) {
+                          (o.data = countries), (countryCache = o.data), o._initSelector();
+                      }));
+            }
         },
         _initSelector: function () {
             var o = this.container.find(".country-phone-options"),
@@ -110,10 +111,10 @@ console.log(searchInputLabel);
                 0 == r && (t = this.data[r]);
                 var a = this.data[r],
                     c = a.co.toLowerCase(),
-                    l = h('<div data-phone="' + a.ph + '" data-co="' + c.toLowerCase() + '" class="country-phone-option"><span><span class="flag flag-' + a.co.toLowerCase() + '"></span>+' + a.ph + "</span>" + a.na + "</div>");
+                    l = h('<div data-phone="' + a.ph + '" data-co="' + c.toLowerCase() + '" class="country-phone-option"><span><div class="flag flag-' + a.co.toLowerCase() + '"></div>+' + a.ph + "</span>" + a.na + "</div>");
                 h(l).appendTo(o), this.options.preferCo && null != this.options.preferCo ? c == this.options.preferCo && (t = a) : a.ph == this.options.default_prefix && (t = a);
             }
-            t && this.container.find(".country-phone-selected").html('<span><span class="flag flag-' + t.co.toLowerCase() + '"></span>+' + t.ph + "</span>"),
+            t && this.container.find(".country-phone-selected").html('<span><img src="img/blank.gif" class="flag flag-' + t.co.toLowerCase() + '">+' + t.ph + "</span>"),
                 h(e).bind("click", function (e) {
                     i._toggleSelector();
                 }),
