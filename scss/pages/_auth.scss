@@ -31,6 +31,7 @@
 
 .country-phone{
     margin-top: 4px;
+    color: $text_main;
 }
 
 .country-phone-search{
@@ -39,6 +40,10 @@
 
 #arrowDown{
 	margin-right: 19px;
+}
+
+.input-group__input{
+    font-size: 16px;
 }
 
 .input-group{
@@ -58,6 +63,7 @@
     left: 0;
     bottom: 12px;
     line-height: 1;
+    font-size: 16px;
 }
 
 .input-group__help{
@@ -93,7 +99,8 @@
 }
 
 .input-group__input:focus ~ .input-group__label,
-.input-group__input:valid:not(:placeholder-shown) ~ .input-group__label{
+.input-group__input:valid:not(:placeholder-shown) ~ .input-group__label,
+.input-group__input:valid ~ .input-group__label{
     transform: translateY(-27px);
     color: $text_main;
 }
@@ -189,7 +196,7 @@
 }
 
 // Country phones
-.country-phone-options {background: #fff; box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06); display: none; padding: 16px 0px 24px 0px; position: absolute; width: 400px; min-height: 253px; max-height: 253px; overflow-y: scroll; margin-top: 6px; z-index: 600;}
+.country-phone-options {color: $text_main;font-size: 14px;background: #fff; box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06); display: none; padding: 16px 0px 24px 0px; position: absolute; width: 100%; max-width: 400px; min-height: 253px; max-height: 253px; overflow-y: scroll; margin-top: 6px; z-index: 600;}
 .country-phone-options::-webkit-scrollbar{width: 7px;}
 .country-phone-options::-webkit-scrollbar-thumb{ background: #A6A8AB; border-radius: 4px;}
 .country-phone-options::-webkit-scrollbar-track{background: #E6E7E8}

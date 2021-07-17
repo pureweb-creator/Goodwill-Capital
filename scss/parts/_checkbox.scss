@@ -1,0 +1,67 @@
+.switcher{
+	cursor: pointer;
+}
+
+.switcher_2way-auth{
+	color: $text_main;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.switcher__slider{
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: 24px;
+	margin-right: 12px;
+}
+
+.switcher__input{
+	display: none;
+}
+
+.switcher__input:checked + .switcher__track{
+	background: rgba(30,171,104,.3);
+}
+
+.switcher__input:checked ~ .switcher__circle{
+	background: $color_profit;
+	left: 16px;
+}
+
+.switcher__track{
+	background: #e6e7e8;
+	border-radius: 12px;
+	width: 32px;
+	height: 12px;
+	display: block;
+	bottom: 0;
+}
+
+.switcher__circle{
+	background: #fff;
+	width: 16px;
+	height: 16px;
+	border-radius: 50px;
+	display: block;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+	position: absolute;	
+	top: 50%;
+	left: 0;
+	transition: left .3s ease;
+	transform: translateY(-50%);
+}
+
+.switcher__status{
+	margin-left: 12px;
+	color: #A6A8AB;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 12px;
+	line-height: 1em;
+	font-weight: 500;
+}
+
+.switcher__status_on{
+	color: $color_profit
+}

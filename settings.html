@@ -77,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="main-title">Profile</h1>
+                    <h1 class="main-title">Settings</h1>
                 </div>
             </div>
 
@@ -85,28 +85,24 @@
                 <div class="col-lg-3">
                     <aside class="sidebar">
                         <form action="/" method="POST" class="upload-avatar-form" enctype="multipart/form-data">
-
                             <figure class="profile__avatar">
                                 <img src="img/avatar-abstract.png" alt="User avatar" id="avatar-thumbnail" class="profile__thumbnail">
                             </figure>
-
                             <label for="upload_avatar">
                                 <span class="profile__button profile__button_choose"><img src="img/pen.svg" alt="icon"></span>
                                 <input type="file" name="upload_avatar" id="upload_avatar" onchange="document.getElementById('avatar-thumbnail').src = window.URL.createObjectURL(this.files[0])">
                             </label>
-
                             <button type="submit" class="profile__button profile__button_upload">
                                 <img src="img/check.svg" alt="icon">
                             </button>
                         </form>
 
                         <h3 class="profile__username">Konstantin Konstantinopolsky</h3>
-
                         <ul class="sidemenu profile__sidemenu">
-                            <li class="sidemenu__item active">
+                            <li class="sidemenu__item">
                                 <a href="profile.html" class="sidemenu__link">Main<img src="img/angle-right.svg" alt=""></a>
                             </li>
-                            <li class="sidemenu__item">
+                            <li class="sidemenu__item active">
                                 <a href="settings.html" class="sidemenu__link">Settings<img src="img/angle-right.svg" alt=""></a>
                             </li>
                         </ul>
@@ -114,42 +110,72 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1 offset-md-0">
                     <form action="/" method="POST" name="update-data" class="update-data-form" role="form" aria-label="Change data">
-                        <h2 class="profile__title">Main</h2>
+                        <h2 class="profile__title">Settings</h2>
+                        <div class="input-group">
+                            <div class="input-group__label input-group__label--profile">
+                                <h3 class="subtitle input-group__subtitle">Change password</h3>
+                                <p class="form-desription input-group__form-description form-desription_change-pass">Make up a long password of letters and numbers that is easy for you to remember and hard for others to guess.</p>
+                            </div>
+
+                            <input type="password" autocomplete="current-password" name="password" id="password" class="input-group__input" required>
+
+                            <label for="password" class="input-group__label">
+                                Password
+                                <span class="input-group__help"></span>
+                            </label>
+                            <a href="#!" class="input-group__pass-status"></a>
+                        </div>
+
+                        <div class="input-group">
+                            
+                            <input type="password" autocomplete="new-password" name="new-password" id="new-password" class="input-group__input" required>
+                            <label for="new-password" class="input-group__label">
+                                New password
+                                <span class="input-group__help"></span>
+                            </label>
+                            <a href="#!" class="input-group__pass-status"></a>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" autocomplete="new-password" name="new-password-repeat" id="new-password-repeat" class="input-group__input" required>
+                            <label for="new-password-repeat" class="input-group__label">
+                                Password Repeat
+                                <span class="input-group__help"></span>
+                            </label>
+                            <a href="#!" class="input-group__pass-status"></a>
+                        </div>
 
                         <div class="input-group">
                             <div class="input-group__label input-group__label--profile">
-                                <h3 class="subtitle input-group__subtitle">Phone</h3>
-                                <p class="form-desription input-group__form-description">You need to use your phone to authorize and confirm transactions</p>
+                                <h3 class="subtitle input-group__subtitle">Two Way Authentication</h3>
+                            </div>
+                            
+                            <label for="switcher_2way-auth" class="switcher switcher_2way-auth d-flex align-items-center">
+                                <span class="switcher__title">Set Two Way Authentication</span>
+
+                                <div class="switcher__slider">
+                                    <input type="checkbox" class="switcher__input" id="switcher_2way-auth" checked>
+                                    <span class="switcher__track"></span>
+                                    <span class="switcher__circle"></span>
+
+                                    <span class="switcher__status switcher__status_on">on</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group__label input-group__label--profile">
+                                <h3 class="input-group__label-title">Two Way Authentication e-mail</h3>
                              </div>
-                            <input type="text" id="phone" autocomplete="username" name="phone" placeholder="(123) 456-78-90" autofocus="true" value="977-344-43-53" class="input-group__input input-group__input_phone">
+                            <input type="email" readonly id="email" autocomplete="email" name="email" value="konstantinopolsky@gmail.com" class="input-group__input">
                             <p class="form-desription input-group__form-description">
-                                To change your phone number, please contact GC support<br>
-                                <a href="mailto:support@goodwillcapital.io">support@goodwillcapital.io</a>
+                                To change e-mail for Two Way Authentication, go to the "Main" section of your profile
                             </p>
-                        </div>
-
-
-                        <div class="input-group">
-                            <div class="input-group__label input-group__label--profile">
-                                <h3 class="subtitle input-group__subtitle">E-mail</h3>
-                                <p class="form-desription input-group__form-description">E-mail is used for information and reporting</p>
-                            </div>
-                            <input type="email" id="email" readonly autocomplete="email" name="email" value="konstantinopolsky@gmail.com" class="input-group__input">
-                            <a href="#change-email-modal" class="input-group__change-button"></a>
-                        </div>
-
-                        <div class="input-group">
-                            <div class="input-group__label input-group__label--profile">
-                                <h3 class="subtitle input-group__subtitle">Address</h3>
-                                <p class="form-desription input-group__form-description">The adress is needed to send you dociments and correspondence</p>
-                            </div>
-                            <input type="text" id="address" autocomplete="address-level1" name="email" value="Abhu Dhabi, 193231, Abhu Dhabi, Shaikh Farhad street, 76-xx" class="input-group__input">
-                            <a href="#!" class="input-group__change-button"></a>
                         </div>
 
                         <div class="input-group d-flex flex-wrap">
                             <button type="submit" name="do_update" class="btn btn_style2 input-group__submit-button">save</button>
-                            <button type="button" class="btn" id="updateDataCancel">cancel</button>
+                            <button type="button" class="btn" id="settingsDataCancel">cancel</button>
                         </div>
                     </form>
 
@@ -221,7 +247,6 @@
     </div>
 
     <div data-remodal-id="change-email-done-modal" class="success-modal">
-        
         <h2>Done!</h2>
         <p>A confirmation e-mail has been sent</p>
     </div>

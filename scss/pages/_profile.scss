@@ -1,0 +1,162 @@
+.main {
+	.upload-avatar-form{
+		position: relative;
+		display: inline-block;
+		label{
+			cursor: pointer;
+		}
+	}
+
+	.profile__thumbnail{
+		border-radius: 100px;
+		overflow: hidden;
+		width: 165px;
+		height: 165px;
+		object-fit: cover;
+
+	}
+
+	.profile__button{
+		width: 48px;
+		height: 48px;
+		display: inline-block;
+		background: #fff;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+		padding: 14.4px;
+		border-radius: 50px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
+
+		img{
+			width: 100%;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	.profile__button_upload{
+		right: -58px;
+		display: none;
+	}
+
+	.profile__button_cancel{
+		right: -116px
+	}
+
+	#upload_avatar{
+		display: none;
+	}
+
+	.profile__username{
+		font-weight: 700;
+		color: $text_main;
+		font-size: 20px;
+		line-height: 1.25em;
+		margin-top: 16px;
+	}
+
+	.profile__sidemenu{
+		margin-top: 24px;
+	}
+
+	.profile__title{
+		font-weight: 700;
+		color: $main2;
+		font-size: 20px;
+		line-height: 1;
+		margin-bottom: 48px;
+	}
+
+	.update-data-form{
+		.input-group{
+			max-width: 100%;
+			&:last-child{
+				margin-bottom: 60px;
+			}
+		}
+	}
+
+	.input-group__label--profile{
+		position: static;
+		display: block;
+	}
+
+	.input-group__subtitle{
+		margin-bottom: 24px;
+	}
+
+	.input-group__label-title{
+		color: $text_main;
+		font-size: 16px;
+		margin-bottom: 12px;
+	}
+
+	.input-group__form-description{
+		line-height: 1.5;
+		margin-bottom: 24px;
+		margin-top: 24px;
+	}
+
+	.form-desription_change-pass{
+		margin-bottom: 54px;
+	}
+
+	.input-group__change-button{
+		position: absolute;
+	    right: 0;
+	    width: 24px;
+	    height: 24px;
+	    bottom: 8px;
+	    background: url('../img/pen.svg') no-repeat center center / 12px 12px;
+	}
+
+	.input-group__submit-button{
+		margin-right: 30px;
+	}
+}
+
+.change-email-form{
+	.subtitle{
+		margin-bottom: 54px;
+	}
+	.input-group{
+		// margin-bottom: 30px;
+	}
+
+	.input-group__exclamation{
+		font-size: 14px;
+		line-height: 1.25em;
+		margin-bottom: 48px;
+		color: $text2;
+		text-align-last: left;
+		background: url('../img/error.svg') no-repeat left top / 16px 16px;
+		padding-left: 28px;
+	}
+
+	.input-group__submit-button{
+		margin-right: 30px;
+	}
+}
+
+.success-modal{
+	h2{
+		font-size: 36px;
+		line-height: 1em;
+		margin-bottom: 30px;
+		font-weight: 400;
+		margin-top: 160px
+	}
+	p{
+		font-size: 20px;
+		color: $text2;
+		line-height: 1em;
+		margin-bottom: 52px;
+	}
+}
+
+
+.switcher{
+
+}

@@ -1,3 +1,6 @@
+// Libs
+@import "libs/remodal";
+
 // Common
 @import "common/reset";
 @import "common/specification";
@@ -14,6 +17,7 @@
 @import "parts/management-line";
 @import "parts/sidemenu";
 @import "parts/tabs";
+@import "parts/checkbox";
 @import "parts/footer";
 
 // pages
@@ -21,5 +25,6 @@
 @import "pages/products";
 @import "pages/auth";
 @import "pages/help";
+@import "pages/profile";
 
 @import "common/responsive";

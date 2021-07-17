@@ -1,4 +1,7 @@
 @media (max-width: 992px){
+	main.main{
+		margin-bottom: 40px;
+	}
 	.sort-settings{
 		margin-left: 0;
 		width: 100%;
@@ -143,12 +146,11 @@
 	}
 
 	.products-single__return-back{
-		margin-bottom: 40px;
 		width: 100%;
 	}
 
 		// AUTHENTICATION
-	.auth-page{
+	// .auth-page{
 		.auth-inner,.auth-wrap{
 			margin-top: 0;
 		}
@@ -184,14 +186,19 @@
 		.input-group{
 			margin-bottom: 45px;
 		}
-		.input-group,.country-phone-selected{
+		.input-group,.country-phone-selected, .input-group__input{
+			font-size: 13px;
+		}
+		.input-group__label{
 			font-size: 13px;
 		}
 		.input-group__input{
 			padding-bottom: 8px;
 		}
 		.input-group__pass-status{
-			bottom: 6px
+			bottom: 9px;
+			width: 22px;
+			height: 15px;
 		}
 		.custom-checkbox{
 			font-size: 10px;
@@ -199,7 +206,12 @@
 		.btn_style1{
 			font-size: 10px;
 		}
+
+	.input-group__input:focus ~ .input-group__label,
+	.input-group__input:valid:not(:placeholder-shown) ~ .input-group__label{
+	    transform: translateY(-17px);
 	}
+	// }
 
 	// PAGE HELP
 	.help__sidemenu{
@@ -260,13 +272,17 @@
 
 	.btn{
 		padding: 12px 0 12px 0;
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-bottom: 20px;
 		text-align: center;
 		font-size: 10px;
 		line-height: 1;
 		letter-spacing: .1em;
 	}
 
-	.profile{
+	.profile-header .profile{
 		&__name{
 			display: none;
 		}
@@ -308,7 +324,6 @@
 	.load-more{
 		width: 100%;
 		margin-top: 40px;
-		margin-bottom: 40px;
 	}
 
 	.article-heading__title{
@@ -339,11 +354,6 @@
 		width: 100%;
 	}
 
-	.sidebar{
-		display: none;
-	}
-
-
 	// table PAGE
 	.management-line{
 		margin-bottom: 40px;
@@ -368,9 +378,6 @@
 			margin-bottom: 16px;
 
 		}
-	}
-	.table{
-		margin-bottom: 40px;
 	}
 
 	.table_desktop{
@@ -544,12 +551,7 @@
 
 
 	// HELP PAGE
-	.help{
-		margin-bottom: 40px;
-	}
-	.help .sidebar{
-		display: block;
-	}
+
 	.help__sidemenu{
 		display: none;
 	}
@@ -571,6 +573,92 @@
 
 	.help__item-head{
 		margin-bottom: 16px;
+	}
+
+	// PROFILE
+	.upload-avatar-form{
+		display: table !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.profile__username{
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.sidemenu{
+		font-size: 13px;
+	}
+
+	.sidemenu__link{
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	.main .profile__sidemenu{
+		margin-bottom: 40px;
+	}
+
+	.main .profile__title{
+		margin-bottom: 30px;
+		font-size: 16px;
+	}
+
+	.main .input-group__form-description{
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.main .form-desription_change-pass{
+		margin-bottom: 37px;
+	}
+
+	.profile{
+		.form-desription{
+			font-size: 13px;
+			a{
+				font-size: 13px;
+			}
+		}
+
+		.input-group{
+			margin-bottom: 30px;
+		}
+	}
+
+
+	.country-phone::after {
+	    width: calc(100% - 70px);
+	}
+
+	.subtitle{
+		font-size: 10px;
+	}
+
+	.main .update-data-form .input-group:last-child{
+		margin-bottom: 0;
+	}
+
+	.switcher_2way-auth,
+	.main .input-group__label-title{
+		font-size: 13px;
+	}
+
+
+	// REMODAL
+	.remodal{
+		padding: 15px;
+	}
+
+	.change-email-form .input-group__exclamation{
+		font-size: 11px;
+		text-align: left;
+		margin-bottom: -15px;
+	}
+
+	.success-modal p{
+		font-size: 14px;
 	}
 
 

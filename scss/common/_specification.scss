@@ -17,8 +17,6 @@ $color_loss: #F02D3A;
 	color: #fff
 }
 
-
-
 body{
 	font-family: "Montserrat";
 	font-style: normal;
@@ -61,6 +59,19 @@ a{
 input,button{
 	border: none;
 	background: transparent;
+}
+
+main.main{
+	margin-bottom: 80px;
+}
+
+.subtitle{
+	color: $main2;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
 
 .small-title{
@@ -189,7 +200,6 @@ input,button{
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 80px;
 }
 
 .dropdown-select{
@@ -209,4 +219,8 @@ input,button{
 
 .text-center{
 	text-align: center;
+}
+
+.text-left{
+	text-align: left;
 }
