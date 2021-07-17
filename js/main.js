@@ -435,8 +435,8 @@ $(document).ready(function(){
 	}
 
 	// Upload avatar
-	$('#upload_avatar').on('click', function () {
-		$('.profile__button_upload').show();
+	$('#upload_avatar').on('change', function () {
+		$('.upload-avatar-form').submit();
 	});
 
 	// Update data profile form
