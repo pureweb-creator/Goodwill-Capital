@@ -29,6 +29,21 @@
 	}
 }
 
+.phone-readonly{
+    .country-phone-selected{
+        background: unset;
+        .flag{
+            margin-right: 16px;
+        }
+    }
+    .country-phone::after{
+        left: 48px;
+    }
+    .country-phone-options{
+        display: none !important;
+    }
+}
+
 .country-phone{
     margin-top: 4px;
     color: $text_main;

@@ -32,6 +32,11 @@ $(document).ready(function(){
 	    // $('#phone').mask('(999) 999-99-99');
 	}
 
+	if( typeof($('#phone').attr('readonly')) !== false && typeof($('#phone').attr('readonly')) !== 'undefined'){
+		$('#phone').parent().addClass('phone-readonly');
+		// console.log("readonly");
+	}
+
 	// show and hide password
 	$('.input-group__pass-status').on('click', function(){
 		$(this).parent().find('.input-group__input').attr('type', function(index, attr){
