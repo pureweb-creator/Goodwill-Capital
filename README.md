@@ -12,6 +12,6 @@
 [RESEND CODE](https://pureweb-creator.github.io/Goodwill-Capital/resend-code.html)\
 [NEW PASSWORD](https://pureweb-creator.github.io/Goodwill-Capital/new-password.html)
 
-[HELP](https://pureweb-creator.github.io/Goodwill-Capital/help.html))\
-[PROFILE](https://pureweb-creator.github.io/Goodwill-Capital/profile.html))\
-[SETTINGS](https://pureweb-creator.github.io/Goodwill-Capital/settings.html))
+[HELP](https://pureweb-creator.github.io/Goodwill-Capital/help.html)\
+[PROFILE](https://pureweb-creator.github.io/Goodwill-Capital/profile.html)\
+[SETTINGS](https://pureweb-creator.github.io/Goodwill-Capital/settings.html)
