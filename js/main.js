@@ -107,7 +107,6 @@ $(document).ready(function(){
 			$(this).toggleClass('input-group__pass-status_show');
 		});
 
-
 		$('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
 
 			var phone = $('.input-group__input[name="phone"]').val().trim();
@@ -240,7 +239,7 @@ $(document).ready(function(){
 	}
 
 
-	// CHANGE THE PASSWORD FORM
+	// CHANGE PASSWORD FORM
 	if($('.update-data-form').length){
 
 		// check for a valid
@@ -251,15 +250,19 @@ $(document).ready(function(){
 
 			if ( pass.length == 0 ){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
+				return false;
 			}
 			else if ( pass.length < 12 && pass.length > 0){
 				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
+				return false;
 			}
 			else if ( newpass.length == 0 ){
 				$('#new-password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
+				return false;
 			}
 			else if ( passrepeat != pass ){
 				$('#new-password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
+				return false;
 			}
 			else{
 				$('.input-group__help').css('display', 'none');
