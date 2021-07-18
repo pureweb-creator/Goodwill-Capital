@@ -449,12 +449,12 @@ $(document).ready(function(){
 
 	// Update data profile form
 	if( $('.update-data-form').length ){
-		var phone = $('#phone').val();
+		// var phone = $('#phone').val();
 		var email = $('#email').val();
 		var address = $('#address').val();
 
 		$('#updateDataCancel').on('click', function(){
-			$('#phone').val(phone);
+			// $('#phone').val(phone);
 			$('#email').val(email);
 			$('#address').val(address);
 		});
