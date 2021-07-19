@@ -94,12 +94,15 @@
                                 <span class="profile__button profile__button_choose"><img src="img/pen.svg" alt="icon"></span>
                                 <input type="file" name="upload_avatar" id="upload_avatar" onchange="document.getElementById('avatar-thumbnail').src = window.URL.createObjectURL(this.files[0]);">
                             </label>
-                      <!--       <button type="submit" class="profile__button profile__button_upload">
-                                <img src="img/check.svg" alt="icon">
-                            </button> -->
+
                         </form>
 
                         <h3 class="profile__username">Konstantin Konstantinopolsky</h3>
+
+                        <a href="verification.html" class="profile__verif-status verif-status verif-status_rejected">
+                            <img src="img/reject.svg" alt="icon" class="verif-status__icon">
+                            Account is not verified
+                        </a>
 
                         <ul class="sidemenu profile__sidemenu">
                             <li class="sidemenu__item active">

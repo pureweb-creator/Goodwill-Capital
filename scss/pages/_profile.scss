@@ -55,6 +55,7 @@
 		font-size: 20px;
 		line-height: 1.25em;
 		margin-top: 16px;
+		margin-bottom: 16px;
 	}
 
 	.profile__sidemenu{
@@ -157,6 +158,26 @@
 }
 
 
-.switcher{
+.verif-status{
+	padding: 11px 16px 11px 20px;
+	font-size: 14px;
+	line-height: 1em;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 100px;
+}
 
+.verif-status__icon{
+	margin-right: 12px;
+	width: 12px;
+}
+
+.verif-status_rejected{
+	background: rgba(240, 45, 58, .1);
+	color: $color_loss;
+}
+
+.verif-status_accepted{
+	background: rgba(30, 171, 104, .1);
+	color: $color_profit;
 }

@@ -582,9 +582,11 @@
 		margin-right: auto;
 	}
 
-	.profile__username{
+	.main .profile__username{
 		font-size: 16px;
 		text-align: center;
+		margin-bottom: 12px;
+
 	}
 
 	.sidemenu{
@@ -598,6 +600,7 @@
 
 	.main .profile__sidemenu{
 		margin-bottom: 40px;
+		margin-top: 16px;
 	}
 
 	.main .profile__title{
@@ -643,6 +646,21 @@
 	.switcher_2way-auth,
 	.main .input-group__label-title{
 		font-size: 13px;
+	}
+
+	.profile__verif-status{
+		display: table;
+		margin-left: auto;
+		margin-right: auto;	
+	}
+
+	.verif-status{
+		font-size: 11px;
+	}
+
+	.verif-status__icon{
+		width: 8px;
+		margin-right: 7px;
 	}
 
 
