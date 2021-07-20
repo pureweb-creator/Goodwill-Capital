@@ -284,7 +284,7 @@ $(document).ready(function(){
 	// RESEND SMS CODE FORM
 	if ( $('#time').length ){
 
-		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+		$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
 		// Timer
 		function startTimer(duration, display) {
@@ -301,14 +301,14 @@ $(document).ready(function(){
 
 		        if (--timer < 0) {
 		            timer = 0;
-		            $('.resend-code').html('<a href="resend-code.html">Send code</a>');
+		            $('.resend-code').hide();
 		        }
 
 		    }, 1000);
 		}
 
 		jQuery(function ($) {
-		    var oneMinute = 60,
+		    var oneMinute = 60, //60
 		        display = $('#time');
 		    startTimer(oneMinute, display);
 		});
@@ -321,13 +321,13 @@ $(document).ready(function(){
 				
 				$("#resendSmsCodeBtn").removeClass('btn_disabled');
 
-				$('.resend-smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
+				$('.resend-smscode-form, #resendSmsCodeBtn, input').on('input click change paste keyup', function(){
 					var smscode = $('.input-group__input[name="smscode"]').val().trim();
 
 					if( smscode == "" ){
 						$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
 						$('#smscode').addClass('error');
-						$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+						$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 					} 
 					else{
 						$('.input-group__help').css('display', 'none');
@@ -335,7 +335,7 @@ $(document).ready(function(){
 						$("#resendSmsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
 						
 						//  form submit
-						$("#smsCodeBtn").on('click', function(){
+						$("#resendSmsCodeBtn").on('click', function(){
 							$('.resend-smscode-form').submit();
 						});
 					}

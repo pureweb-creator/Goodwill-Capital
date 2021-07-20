@@ -2,6 +2,21 @@
 	main.main{
 		margin-bottom: 40px;
 	}
+
+	.profile-header .profile{
+		justify-content: flex-end;
+		&__name{
+			display: none;
+		}
+		&__arrow{
+			display: none;
+		}
+	}
+	.profile-dropdown{
+		width: 184px;
+	}
+
+
 	.sort-settings{
 		margin-left: 0;
 		width: 100%;
@@ -307,17 +322,7 @@
 		}
 	}
 
-	.profile-header .profile{
-		&__name{
-			display: none;
-		}
-		&__arrow{
-			display: none;
-		}
-	}
-	.profile-dropdown{
-		width: 184px;
-	}
+	
 	.nav .menu{
 		padding: 0 31px;
 		li:not(:first-child){

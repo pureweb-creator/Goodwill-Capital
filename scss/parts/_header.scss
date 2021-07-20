@@ -6,6 +6,8 @@
 			width: 30px;
 			height: 30px;
 			overflow: hidden;
+			object-fit: cover;
+			border-radius: 100px
 		}
 	}
 
@@ -27,7 +29,7 @@
 			.profile-dropdown{
 				opacity: 1;
 				visibility: visible;
-				top: 40px;
+				top: 54px;
 			}
 		}
 		.profile-dropdown{
@@ -36,7 +38,7 @@
 			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
 			padding: 24px;
 			z-index: 2;
-			top: 60px;
+			top: 70px;
 			transition: all .3s ease;
 			opacity: 0;
 			visibility: hidden;
