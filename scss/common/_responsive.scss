@@ -282,6 +282,31 @@
 		letter-spacing: .1em;
 	}
 
+
+	.hero .profile .profile-dropdown{
+		padding: 16px;
+		min-width: 184px;
+
+		&__title{
+			font-size: 10px;
+			margin-bottom: 8px;
+			line-height: 1em;
+		}
+
+		.name{
+			display: block;
+		}
+
+		.options{
+			li:not(:last-child){
+				margin-bottom: 12px;
+			}
+			a{
+				font-size: 11px;
+			}
+		}
+	}
+
 	.profile-header .profile{
 		&__name{
 			display: none;
@@ -622,6 +647,7 @@
 			font-size: 13px;
 			a{
 				font-size: 13px;
+				display: inline;
 			}
 		}
 
