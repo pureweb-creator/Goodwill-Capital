@@ -301,7 +301,7 @@ $(document).ready(function(){
 
 		        if (--timer < 0) {
 		            timer = 0;
-		            $('.resend-code').hide();
+		            // $('.resend-code');
 		        }
 
 		    }, 1000);
