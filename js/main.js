@@ -248,43 +248,43 @@ $(document).ready(function(){
 	if($('.update-data-form').length){
 
 		// check for a valid
-		$('button[name="do_update"]').on('click', function(){
-			var pass = $('.input-group__input[name="password"]').val().trim();
-			var newpass = $('.input-group__input[name="new-password"]').val().trim();
-			var passrepeat = $('.input-group__input[name="new-password-repeat"]').val().trim();
+		// $('button[name="do_update"]').on('click', function(){
+		// 	var pass = $('.input-group__input[name="password"]').val().trim();
+		// 	var newpass = $('.input-group__input[name="new-password"]').val().trim();
+		// 	var passrepeat = $('.input-group__input[name="new-password-repeat"]').val().trim();
 
-			if ( pass.length == 0 ){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-				return false;
-			}
-			else if ( pass.length < 12 && pass.length > 0){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-				return false;
-			}
-			else if ( newpass.length == 0 ){
-				$('#new-password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
-				return false;
-			}
-			else if ( passrepeat != pass ){
-				$('#new-password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
-				return false;
-			}
-			else{
-				$('.input-group__help').css('display', 'none');
-				$('input').removeClass('error');
+		// 	if ( pass.length == 0 ){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
+		// 		return false;
+		// 	}
+		// 	else if ( pass.length < 12 && pass.length > 0){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
+		// 		return false;
+		// 	}
+		// 	else if ( newpass.length == 0 ){
+		// 		$('#new-password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
+		// 		return false;
+		// 	}
+		// 	else if ( passrepeat != pass ){
+		// 		$('#new-password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
+		// 		return false;
+		// 	}
+		// 	else{
+		// 		$('.input-group__help').css('display', 'none');
+		// 		$('input').removeClass('error');
 
-				// Do submit
-				$('button[name="do_update"]').on('click', function(){
-					$('.update-data-form').submit();					
-				});
-			}
-		});
+		// 		// Do submit
+		// 		$('button[name="do_update"]').on('click', function(){
+		// 			$('.update-data-form').submit();					
+		// 		});
+		// 	}
+		// });
 	}
 
 	// RESEND SMS CODE FORM
 	if ( $('#time').length ){
 
-		$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+		// $("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
 		// Timer
 		function startTimer(duration, display) {
@@ -316,30 +316,30 @@ $(document).ready(function(){
 		window.setTimeout(function(){
 
 			// RESEND SMS CODE FORM
-			if($('.resend-smscode-form').length){
+			// if($('.resend-smscode-form').length){
 				
-				$("#resendSmsCodeBtn").removeClass('btn_disabled');
+			// 	$("#resendSmsCodeBtn").removeClass('btn_disabled');
 
-				$('.resend-smscode-form, #resendSmsCodeBtn, input').on('input click change paste keyup', function(){
-					var smscode = $('.input-group__input[name="smscode"]').val().trim();
+			// 	$('.resend-smscode-form, #resendSmsCodeBtn, input').on('input click change paste keyup', function(){
+			// 		var smscode = $('.input-group__input[name="smscode"]').val().trim();
 
-					if( smscode == "" ){
-						$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
-						$('#smscode').addClass('error');
-						$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
-					} 
-					else{
-						$('.input-group__help').css('display', 'none');
-						$('.input-group__input, .country-phone').removeClass('error');
-						$("#resendSmsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
+			// 		if( smscode == "" ){
+			// 			$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
+			// 			$('#smscode').addClass('error');
+			// 			$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+			// 		} 
+			// 		else{
+			// 			$('.input-group__help').css('display', 'none');
+			// 			$('.input-group__input, .country-phone').removeClass('error');
+			// 			$("#resendSmsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
 						
-						//  form submit
-						$("#resendSmsCodeBtn").on('click', function(){
-							$('.resend-smscode-form').submit();
-						});
-					}
-				});
-			}
+			// 			//  form submit
+			// 			$("#resendSmsCodeBtn").on('click', function(){
+			// 				$('.resend-smscode-form').submit();
+			// 			});
+			// 		}
+			// 	});
+			// }
 
 		}, 61000);
 	}
