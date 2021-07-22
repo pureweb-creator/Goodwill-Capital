@@ -102,7 +102,7 @@ $(document).ready(function(){
 
 		$('#password').focus();
 
-		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
+		// $("#loginBtn").addClass('btn_disabled').prop('disabled', true);
 
 		$('.input-group__pass-status').on('click', function(){
 			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
@@ -112,93 +112,93 @@ $(document).ready(function(){
 			$(this).toggleClass('input-group__pass-status_show');
 		});
 
-		$('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
+		// $('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
 
-			var phone = $('.input-group__input[name="phone"]').val().trim();
-			var pass = $('.input-group__input[name="password"]').val().trim();
+		// 	var phone = $('.input-group__input[name="phone"]').val().trim();
+		// 	var pass = $('.input-group__input[name="password"]').val().trim();
 
-			if( phone.length == 0 ){
-				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
-				$('.country-phone').addClass('error');
-				$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else if ( pass.length == 0 ){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-				$("#loginBtn").addClass('btn_disabled');
-			}
-			else if ( pass.length < 12 && pass.length > 0 ){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-				$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else{
-				$('.input-group__help').css('display', 'none');
-				$('.input-group__input, .country-phone').removeClass('error');
-				$("#loginBtn").removeClass('btn_disabled').prop('disabled', false);
+		// 	if( phone.length == 0 ){
+		// 		$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
+		// 		$('.country-phone').addClass('error');
+		// 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else if ( pass.length == 0 ){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
+		// 		$("#loginBtn").addClass('btn_disabled');
+		// 	}
+		// 	else if ( pass.length < 12 && pass.length > 0 ){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
+		// 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else{
+		// 		$('.input-group__help').css('display', 'none');
+		// 		$('.input-group__input, .country-phone').removeClass('error');
+		// 		$("#loginBtn").removeClass('btn_disabled').prop('disabled', false);
 				
-				$("#loginBtn").on('click', function(){
-					$('.login-form').submit();
-				});
-			}
-		});
+		// 		$("#loginBtn").on('click', function(){
+		// 			$('.login-form').submit();
+		// 		});
+		// 	}
+		// });
 	}
 
 	// RECOVERY PASSWORD FORM
 	if($('.recovery-password-form').length){
 
-		$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// $("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
 
-		$('.recovery-password-form, #recoveryPassBtn, input').on('input click change paste keyup', function(){
-			var phone = $('.input-group__input[name="phone"]').val().trim();
+		// $('.recovery-password-form, #recoveryPassBtn, input').on('input click change paste keyup', function(){
+		// 	var phone = $('.input-group__input[name="phone"]').val().trim();
 
-			if( phone.length == 0){
-				$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
-				$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
-				return false;
-			}
-			else{
-				$('.input-group__help').css('display', 'none');
-				$('.input-group__input, .country-phone').removeClass('error');
-				$("#recoveryPassBtn").removeClass('btn_disabled').prop('disabled', false);
+		// 	if( phone.length == 0){
+		// 		$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
+		// 		$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// 		return false;
+		// 	}
+		// 	else{
+		// 		$('.input-group__help').css('display', 'none');
+		// 		$('.input-group__input, .country-phone').removeClass('error');
+		// 		$("#recoveryPassBtn").removeClass('btn_disabled').prop('disabled', false);
 				
-				//  form submit
-				$("#recoveryPassBtn").on('click', function(){
-					$('.recovery-password-form').submit();
-				});
-			}
-		});
+		// 		//  form submit
+		// 		$("#recoveryPassBtn").on('click', function(){
+		// 			$('.recovery-password-form').submit();
+		// 		});
+		// 	}
+		// });
 	}
 
 	// GET SMS CODE FORM
 	if($('.smscode-form').length){
 
-		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+		// $("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
-		$('.smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
+		// $('.smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
 			
-			var smscode = $('.input-group__input[name="smscode"]').val().trim();
+		// 	var smscode = $('.input-group__input[name="smscode"]').val().trim();
 
-			if( smscode == "" ){
-				$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
-				$('#smscode').addClass('error');
-				$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
-			} 
-			else{
-				$('.input-group__help').css('display', 'none');
-				$('.input-group__input, .country-phone').removeClass('error');
-				$("#smsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
+		// 	if( smscode == "" ){
+		// 		$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
+		// 		$('#smscode').addClass('error');
+		// 		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	} 
+		// 	else{
+		// 		$('.input-group__help').css('display', 'none');
+		// 		$('.input-group__input, .country-phone').removeClass('error');
+		// 		$("#smsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
 				
-				//  form submit
-				$("#smsCodeBtn").on('click', function(){
-					$('.smscode-form').submit();
-				});
-			}
-		});
+		// 		//  form submit
+		// 		$("#smsCodeBtn").on('click', function(){
+		// 			$('.smscode-form').submit();
+		// 		});
+		// 	}
+		// });
 	}
 
 	// CREATE NEW PASSWORD FORM
 	if($('.new-pass-form').length){
 
-		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// $("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
 
 		// show and hide password
 		$('.input-group__pass-status').on('click', function(){
@@ -210,37 +210,37 @@ $(document).ready(function(){
 		});
 
 		// check for a valid
-		$('.new-pass-form, #newPassBtn input').on('input click change keyup paste', function(){
-			var pass = $('.input-group__input[name="password"]').val().trim();
-			var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
+		// $('.new-pass-form, #newPassBtn input').on('input click change keyup paste', function(){
+		// 	var pass = $('.input-group__input[name="password"]').val().trim();
+		// 	var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
 
-			if ( pass.length == 0 ){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else if ( pass.length < 12 && pass.length > 0){
-				$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else if ( passrepeat.length == 0 ){
-				$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
-				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else if ( passrepeat != pass ){
-				$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
-				$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-			}
-			else{
-				$('.input-group__help').css('display', 'none');
-				$("#newPassBtn").removeClass('btn_disabled').prop('disabled', false);
+		// 	if ( pass.length == 0 ){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
+		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else if ( pass.length < 12 && pass.length > 0){
+		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
+		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else if ( passrepeat.length == 0 ){
+		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
+		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else if ( passrepeat != pass ){
+		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
+		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
+		// 	}
+		// 	else{
+		// 		$('.input-group__help').css('display', 'none');
+		// 		$("#newPassBtn").removeClass('btn_disabled').prop('disabled', false);
 
 
-				// Do submit
-				$("#newPassBtn").on('click', function(){
-					$('.new-pass-form').submit();					
-				});
-			}
-		});
+		// 		// Do submit
+		// 		$("#newPassBtn").on('click', function(){
+		// 			$('.new-pass-form').submit();					
+		// 		});
+		// 	}
+		// });
 	}
 
 
@@ -313,7 +313,6 @@ $(document).ready(function(){
 		    startTimer(oneMinute, display);
 		});
 
-
 		window.setTimeout(function(){
 
 			// RESEND SMS CODE FORM
@@ -345,6 +344,92 @@ $(document).ready(function(){
 		}, 61000);
 	}
 
+
+
+	/* VERIFICATION */
+
+
+	var current_fs, next_fs, previous_fs; //fieldsets
+	var left, opacity, scale; //fieldset properties which we will animate
+	var animating; //flag to prevent quick multi-click glitches
+
+	var fs_height = $('fieldset').outerHeight();
+	
+	// console.log(fs_height);
+
+	// $('fieldset:not(:first-of-type)').css("margin-top","-"+fs_height);
+
+	$(".next").click(function(){
+		if(animating) return false;
+		animating = true;
+		
+		current_fs = $(this).parent().parent().parent().parent();
+		next_fs = $(this).parent().parent().parent().parent().next();
+		
+		//activate next step on progressbar using the index of next_fs
+		$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+		
+		//show the next fieldset
+		next_fs.show(); 
+		//hide the current fieldset with style
+		current_fs.animate({opacity: 0}, {
+			step: function(now, mx) {
+				//as the opacity of current_fs reduces to 0 - stored in "now"
+				//1. scale current_fs down to 80%
+				scale = 1 - (1 - now) * 0.2;
+				//2. bring next_fs from the right(50%)
+				left = (now * 50)+"%";
+				//3. increase opacity of next_fs to 1 as it moves in
+				opacity = 1 - now;
+				current_fs.css({
+	        'transform': 'scale('+scale+')'
+	      });
+				next_fs.css({'left': left, 'opacity': opacity});
+			}, 
+			duration: 800, 
+			complete: function(){
+				// current_fs.hide();
+				animating = false;
+			}, 
+			//this comes from the custom easing plugin
+			easing: 'easeInOutBack'
+		});
+	});
+
+	$(".prev").click(function(){
+		if(animating) return false;
+		animating = true;
+		
+		current_fs = $(this).parent().parent().parent().parent();
+		previous_fs = $(this).parent().parent().parent().parent().prev();
+		
+		//de-activate current step on progressbar
+		$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+		
+		//show the previous fieldset
+		previous_fs.show(); 
+		//hide the current fieldset with style
+		current_fs.animate({opacity: 0}, {
+			step: function(now, mx) {
+				//as the opacity of current_fs reduces to 0 - stored in "now"
+				//1. scale previous_fs from 80% to 100%
+				scale = 0.8 + (1 - now) * 0.2;
+				//2. take current_fs to the right(50%) - from 0%
+				left = ((1-now) * 50)+"%";
+				//3. increase opacity of previous_fs to 1 as it moves in
+				opacity = 1 - now;
+				current_fs.css({'left': left});
+				previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+			}, 
+			duration: 800, 
+			complete: function(){
+				// current_fs.hide();
+				animating = false;
+			}, 
+			//this comes from the custom easing plugin
+			easing: 'easeInOutBack'
+		});
+	});
 
 	/* PAGE LITTLE SCRIPTS */
 
@@ -497,7 +582,7 @@ $(document).ready(function(){
 				$('[data-remodal-id=change-email-done-modal]').remodal().open();
 			},
 			error: function(){
-				$('[data-remodal-id=change-email-done-modal]').remodal().open();
+				// $('[data-remodal-id=change-email-done-modal]').remodal().open();
 			}
 		});
 	});
@@ -513,7 +598,6 @@ $(document).ready(function(){
 			}
 		});
 	}
-
 });
 
 
