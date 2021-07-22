@@ -46,6 +46,7 @@ h2{
 
 h3{
 	font-size: 1.3333333333333333em;
+	line-height: 1em;
 }
 
 a{
@@ -56,13 +57,64 @@ a{
 }
 
 
+fieldset{
+	border: none;
+	padding: 0;
+	margin: 0;
+	// position: relative;
+}
+
+
 input,button{
 	border: none;
 	background: transparent;
 }
 
+input[type=date]{
+	text-transform: uppercase;
+	position: relative;
+	top: 2px;
+	padding-bottom: 7px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: .3;
+	cursor: pointer;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+input[type=date]:invalid::-webkit-datetime-edit{
+	color: $text3;
+}
+
 main.main{
 	margin-bottom: 80px;
+}
+
+.fadeInLeft{
+	animation: fadeInLeft .5s ease;
+}
+
+@keyframes fadeInLeft{
+	from{
+		left: 50px;
+		opacity: 0
+	}
+	to{
+		left: 0;
+		opacity: 1
+	}
+}
+
+.ui-effects-wrapper{
+	width: 100% !important;
 }
 
 .subtitle{

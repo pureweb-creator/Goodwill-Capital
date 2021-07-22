@@ -18,6 +18,7 @@
 @import "parts/sidemenu";
 @import "parts/tabs";
 @import "parts/checkbox";
+@import "parts/timeline";
 @import "parts/footer";
 
 // pages
@@ -26,5 +27,6 @@
 @import "pages/auth";
 @import "pages/help";
 @import "pages/profile";
+@import "pages/verification";
 
 @import "common/responsive";

@@ -17,6 +17,234 @@ var countries = [{"na":"Afghanistan","ph":"93","co":"AF"},{"na":"Albania","ph":"
 // PHONE CODE
 var searchInputLabel,countryCache,countryRequesting=!1,currentLang=$("html").attr("lang");searchInputLabel="ru"==currentLang?"Поиск по странам":"Search country",console.log(searchInputLabel);countryRequesting=!1;!function(e){e.widget("custom.phonecode",{data:[],container:null,prefixField:null,searchTimeout:null,suggestTimeout:null,hideTimeout:null,options:{default_prefix:"7",prefix:"",preferCo:"ru"},_create:function(){this._loadData(),this.element.wrap('<div class="country-phone">');var t=this.element.parent(".country-phone"),n=e('<div class="country-phone-selector"><div class="country-phone-selected"></div><div class="country-phone-options"></div></div>');e(n).prependTo(t),n=this.options.prefix||"__phone_prefix",n=e('<input type="hidden" name="'+n+'" value="'+this.options.default_prefix+'">'),e(n).appendTo(t),this.container=t,this.prefixField=n},_loadData:function(){var t=this;"en"==currentLang?countryCache||countryRequesting?countryCache?(this.data=countryCache,t._initSelector()):countryRequesting&&countryRequesting.done(function(e){t.data=e,countryCache=t.data,t._initSelector()}):countryRequesting=e.getJSON("js/countries-en_GB.json",{}).done(function(e){t.data=e,countryCache=t.data,t._initSelector()}).fail(function(e,n,o){t.data=countries,countryCache=t.data,t._initSelector()}):"ru"==currentLang&&(countryCache||countryRequesting?countryCache?(this.data=countryCache,t._initSelector()):countryRequesting&&countryRequesting.done(function(e){t.data=e,countryCache=t.data,t._initSelector()}):countryRequesting=e.getJSON("js/countries-ru_RU.json",{}).done(function(e){t.data=e,countryCache=t.data,t._initSelector()}).fail(function(e,n,o){t.data=countries,countryCache=t.data,t._initSelector()}))},_initSelector:function(){var t=this.container.find(".country-phone-options"),n=this.container.find(".country-phone-selected"),o=null,i=this,s=e('<input type="search" class="country-phone-search" value="" placeholder="'+searchInputLabel+'">');e(s).appendTo(t);var r=e("");e(r).on("click",function(){e(this).hide(),e(s).focus()}).insertAfter(s),e(r).hide().show(),e(s).bind("keyup",function(n){i.suggestTimeout&&window.clearTimeout(i.suggestTimeout);var o=this,s=n;i.suggestTimeout=window.setTimeout(function(){var n=e(o).val().toLowerCase();i.suggestCountry(n),40==s.keyCode&&i._moveSuggestDown(t),38==s.keyCode&&i._moveSuggestUp(t),13==s.keyCode&&((n=e(t).find(".hovered:visible")).length&&(e(n).hasClass("country-phone-search")||(i.setElementSelected(n),i._toggleSelector())),s.stopPropagation(),s.preventDefault())},100),""==e(this).val()?e(r).show():e(r).hide()}).bind("keypress",function(e){if(13==e.keyCode)return e.stopPropagation(),e.preventDefault(),!1});for(var a=0;a<this.data.length;a++){0==a&&(o=this.data[a]);var c=this.data[a],u=c.co.toLowerCase(),l=e('<div data-phone="'+c.ph+'" data-co="'+u.toLowerCase()+'" class="country-phone-option"><span><div class="flag flag-'+c.co.toLowerCase()+'"></div>+'+c.ph+"</span>"+c.na+"</div>");e(l).appendTo(t),this.options.preferCo&&null!=this.options.preferCo?u==this.options.preferCo&&(o=c):c.ph==this.options.default_prefix&&(o=c)}o&&this.container.find(".country-phone-selected").html('<span><img src="img/blank.gif" class="flag flag-'+o.co.toLowerCase()+'">+'+o.ph+"</span>"),e(n).bind("click",function(e){i._toggleSelector()}),e(t).find(".country-phone-option").bind("click",function(){i.setElementSelected(this),i._toggleSelector()}),e(t).hover(function(){i.hideTimeout&&window.clearTimeout(i.hideTimeout)},function(){i.hideTimeout=window.setTimeout(i._mouseOverHide,1e3,this,i)}),this._initInput()},_mouseOverHide:function(t,n){var o;n.container&&(o=n.container.find(".country-phone-search"),e(o).is(":focus")?n.hideTimeout=window.setTimeout(n._mouseOverHide,1e3,t,n):e(t).hide())},_moveSuggestDown:function(t){var n,o=null,i=e(t).find(".hovered:visible");!i.length||((n=e(i).next(":visible")).length||(n=e(i).nextUntil(":visible").last().next()).length)&&(o=n),(o=o||e(t).find(".country-phone-option:visible").first())&&(e(t).find(".country-phone-option").add(".country-phone-search").removeClass("hovered"),e(o).addClass("hovered"))},_moveSuggestUp:function(t){var n,o=null,i=e(t).find(".hovered:visible");!i.length||((n=e(i).prev(":visible")).length||(n=e(i).prevUntil(":visible").last().prev()).length)&&(o=n),(o=o||e(t).find(".country-phone-option:visible").last())&&(e(t).find(".country-phone-option").add(".country-phone-search").removeClass("hovered"),e(o).addClass("hovered"))},suggestCountry:function(t,n){var o=this.container.find(".country-phone-options"),i=this;e(o).find(".country-phone-option").each(function(){var o;t?("россия"==t&&(t="росси"),0<=e(this).text().toLowerCase().indexOf(t)?(e(this).show(),n&&null!=n&&(o=e(this).data("phone"),i.prefixField.val()==o&&i.setElementSelected(this))):n||e(this).hide()):e(this).show()})},_toggleSelector:function(){var t=this.container.find(".country-phone-options");e(t).is(":visible")?(e(t).hide("fast"),e(t).find(".country-phone-search").val("").blur(),this.element.focus(),this.suggestCountry("")):(e(t).show("fast"),window.setTimeout(function(){var n=e(t).find(".country-phone-search");e(n).val("").focus()},300))},setElementSelected:function(t){var n=this.container.find(".country-phone-selected"),o=e(t).data("phone");t=(t=e(t).html()).split("</span>");return e(n).html(t[0]+"</span>"),this.prefixField.val(o),o},_initInput:function(){var t=this;this.element.bind("keyup",function(){var n,o,i=e(this).val();1<i.length&&"+"==i[0]&&(n=i.substring(1),t.searchTimeout&&window.clearTimeout(t.searchTimeout),o=this,window.setTimeout(function(){var s=t.searchCountryCode(n);s&&(i=(i=e(o).val()).replace("+"+s,""),e(o).val(i))},1e3))}),this.initInputVal()},initInputVal:function(){var e=this.element.val();if(1<e.length&&"+"==e[0])for(var t=6;1<=t;t--){var n=e.substring(1,t);if(n=this.searchCountryCode(n)){e=(e=this.element.val()).replace("+"+n,""),this.element.val(e);break}}else 1==e.length&&"+"==e[0]&&this.element.val("")},searchCountryCode:function(t){var n=this.container.find(".country-phone-options"),o=t,i=this,s=!1,r=[];if(e(n).find(".country-phone-option").each(function(){o==e(this).data("phone")&&r.push({co:e(this).data("co"),el:this})}),1==r.length)s=i.setElementSelected(r[0].el);else if(1<r.length){for(var a=0;a<r.length;a++){if(!i.options.preferCo){s=i.setElementSelected(r[a].el);break}if(i.options.preferCo==r[a].co){s=i.setElementSelected(r[a].el);break}}s=s||i.setElementSelected(r[0].el)}return s}})}(jQuery);
 
+// COUNTRY DROPDOWN LIST
+var searchInputLabel,
+    countryCache,
+    countryRequesting = !1,
+    currentLang = $("html").attr("lang");
+(searchInputLabel = "ru" == currentLang ? "Поиск по странам" : "Search country"), console.log(searchInputLabel);
+countryRequesting = !1;
+
+!(function (e) {
+    e.widget("custom.countrylist", {
+        data: [],
+        container: null,
+        prefixField: null,
+        searchTimeout: null,
+        suggestTimeout: null,
+        hideTimeout: null,
+        options: { default_prefix: "7", prefix: "", preferCo: "ru" },
+        _create: function () {
+            this._loadData(), this.element.wrap('<div class="country-phone fs__country-phone">');
+            var t = this.element.parent(".country-phone"),
+                n = e('<div class="country-phone-selector"><div class="country-phone-options fs__country-phone-options"></div></div>');
+            e(n).prependTo(t), e(n).appendTo(t), (this.container = t), (this.prefixField = n);
+        },
+        _loadData: function () {
+            var t = this;
+            "en" == currentLang
+                ? countryCache || countryRequesting
+                    ? countryCache
+                        ? ((this.data = countryCache), t._initSelector())
+                        : countryRequesting &&
+                          countryRequesting.done(function (e) {
+                              (t.data = e), (countryCache = t.data), t._initSelector();
+                          })
+                    : (countryRequesting = e
+                          .getJSON("js/countries-en_GB.json", {})
+                          .done(function (e) {
+                              (t.data = e), (countryCache = t.data), t._initSelector();
+                          })
+                          .fail(function (e, n, o) {
+                              (t.data = countries), (countryCache = t.data), t._initSelector();
+                          }))
+                : "ru" == currentLang &&
+                  (countryCache || countryRequesting
+                      ? countryCache
+                          ? ((this.data = countryCache), t._initSelector())
+                          : countryRequesting &&
+                            countryRequesting.done(function (e) {
+                                (t.data = e), (countryCache = t.data), t._initSelector();
+                            })
+                      : (countryRequesting = e
+                            .getJSON("js/countries-ru_RU.json", {})
+                            .done(function (e) {
+                                (t.data = e), (countryCache = t.data), t._initSelector();
+                            })
+                            .fail(function (e, n, o) {
+                                (t.data = countries), (countryCache = t.data), t._initSelector();
+                            })));
+        },
+        _initSelector: function () {
+            var t = this.container.find(".country-phone-options"),
+                n = this.container.find(".country-phone-selected"),
+                o = null,
+                i = this,
+                s = e('<input type="search" class="country-phone-search" value="" placeholder="' + searchInputLabel + '">');
+            e(s).appendTo(t);
+            var r = e("");
+            e(r)
+                .on("click", function () {
+                    e(this).hide(), e(s).focus();
+                })
+                .insertAfter(s),
+                e(r).hide().show(),
+                e(s)
+                    .bind("keyup", function (n) {
+                        i.suggestTimeout && window.clearTimeout(i.suggestTimeout);
+                        var o = this,
+                            s = n;
+                        (i.suggestTimeout = window.setTimeout(function () {
+                            var n = e(o).val().toLowerCase();
+                            i.suggestCountry(n),
+                                40 == s.keyCode && i._moveSuggestDown(t),
+                                38 == s.keyCode && i._moveSuggestUp(t),
+                                13 == s.keyCode && ((n = e(t).find(".hovered:visible")).length && (e(n).hasClass("country-phone-search") || (i.setElementSelected(n), i._toggleSelector())), s.stopPropagation(), s.preventDefault());
+                        }, 100)),
+                            "" == e(this).val() ? e(r).show() : e(r).hide();
+                    })
+                    .bind("keypress", function (e) {
+                        if (13 == e.keyCode) return e.stopPropagation(), e.preventDefault(), !1;
+                    });
+            for (var a = 0; a < this.data.length; a++) {
+                0 == a && (o = this.data[a]);
+                var c = this.data[a],
+                    u = c.co.toLowerCase(),
+                    l = e('<div data-phone="' + c.ph + '" data-co="' + u.toLowerCase() + '" class="country-phone-option fs__country-phone-option"><span><div class="flag flag-' + c.co.toLowerCase() + '"></div>' + "</span><span class='country-name'>" + c.na + "</span></div>");
+                e(l).appendTo(t), this.options.preferCo && null != this.options.preferCo ? u == this.options.preferCo && (o = c) : c.ph == this.options.default_prefix && (o = c);
+            }
+            o && $("#country-name").val(c.na),
+                $('#country-name').bind("click", function (e) {
+                    i._toggleSelector();
+                }),
+                e(t)
+                    .find(".country-phone-option")
+                    .bind("click", function () {
+                        $('#country-name').val($(this).find('.country-name').text()), i._toggleSelector();
+                        // console.log($(this).text());
+                    }),
+                e(t).hover(
+                    function () {
+                        i.hideTimeout && window.clearTimeout(i.hideTimeout);
+                    },
+                    function () {
+                        i.hideTimeout = window.setTimeout(i._mouseOverHide, 1e3, this, i);
+                    }
+                ),
+                this._initInput();
+        },
+        _mouseOverHide: function (t, n) {
+            var o;
+            n.container && ((o = n.container.find(".country-phone-search")), e(o).is(":focus") ? (n.hideTimeout = window.setTimeout(n._mouseOverHide, 1e3, t, n)) : e(t).hide());
+        },
+        _moveSuggestDown: function (t) {
+            var n,
+                o = null,
+                i = e(t).find(".hovered:visible");
+            !i.length || (((n = e(i).next(":visible")).length || (n = e(i).nextUntil(":visible").last().next()).length) && (o = n)),
+                (o = o || e(t).find(".country-phone-option:visible").first()) && (e(t).find(".country-phone-option").add(".country-phone-search").removeClass("hovered"), e(o).addClass("hovered"));
+        },
+        _moveSuggestUp: function (t) {
+            var n,
+                o = null,
+                i = e(t).find(".hovered:visible");
+            !i.length || (((n = e(i).prev(":visible")).length || (n = e(i).prevUntil(":visible").last().prev()).length) && (o = n)),
+                (o = o || e(t).find(".country-phone-option:visible").last()) && (e(t).find(".country-phone-option").add(".country-phone-search").removeClass("hovered"), e(o).addClass("hovered"));
+        },
+        suggestCountry: function (t, n) {
+            var o = this.container.find(".country-phone-options"),
+                i = this;
+            e(o)
+                .find(".country-phone-option")
+                .each(function () {
+                    var o;
+                    t
+                        ? ("россия" == t && (t = "росси"),
+                          0 <= e(this).text().toLowerCase().indexOf(t) ? (e(this).show(), n && null != n && ((o = e(this).data("phone")), i.prefixField.val() == o && i.setElementSelected(this))) : n || e(this).hide())
+                        : e(this).show();
+                });
+        },
+        _toggleSelector: function () {
+            var t = this.container.find(".country-phone-options");
+            e(t).is(":visible")
+                ? (e(t).hide("fast"), e(t).find(".country-phone-search").val("").blur(), this.element.focus(), this.suggestCountry(""))
+                : (e(t).show("fast"),
+                  window.setTimeout(function () {
+                      var n = e(t).find(".country-phone-search");
+                      e(n).val("").focus();
+                  }, 300));
+        },
+        setElementSelected: function (t) {
+            var n = this.container.find(".country-phone-selected"),
+                o = e(t).data("phone");
+            t = (t = e(t).html()).split("</span>");
+            return e(n).html(t[0] + "</span>"), this.prefixField.val(o), o;
+        },
+        _initInput: function () {
+            var t = this;
+            this.element.bind("keyup", function () {
+                var n,
+                    o,
+                    i = e(this).val();
+                1 < i.length &&
+                    "+" == i[0] &&
+                    ((n = i.substring(1)),
+                    t.searchTimeout && window.clearTimeout(t.searchTimeout),
+                    (o = this),
+                    window.setTimeout(function () {
+                        var s = t.searchCountryCode(n);
+                        s && ((i = (i = e(o).val()).replace("+" + s, "")), e(o).val(i));
+                    }, 1e3));
+            }),
+                this.initInputVal();
+        },
+        initInputVal: function () {
+            var e = this.element.val();
+            if (1 < e.length && "+" == e[0])
+                for (var t = 6; 1 <= t; t--) {
+                    var n = e.substring(1, t);
+                    if ((n = this.searchCountryCode(n))) {
+                        (e = (e = this.element.val()).replace("+" + n, "")), this.element.val(e);
+                        break;
+                    }
+                }
+            else 1 == e.length && "+" == e[0] && this.element.val("");
+        },
+        searchCountryCode: function (t) {
+            var n = this.container.find(".country-phone-options"),
+                o = t,
+                i = this,
+                s = !1,
+                r = [];
+            if (
+                (e(n)
+                    .find(".country-phone-option")
+                    .each(function () {
+                        o == e(this).data("phone") && r.push({ co: e(this).data("co"), el: this });
+                    }),
+                1 == r.length)
+            )
+                s = i.setElementSelected(r[0].el);
+            else if (1 < r.length) {
+                for (var a = 0; a < r.length; a++) {
+                    if (!i.options.preferCo) {
+                        s = i.setElementSelected(r[a].el);
+                        break;
+                    }
+                    if (i.options.preferCo == r[a].co) {
+                        s = i.setElementSelected(r[a].el);
+                        break;
+                    }
+                }
+                s = s || i.setElementSelected(r[0].el);
+            }
+            return s;
+        },
+    });
+})(jQuery);
+
+
+
 // LAZY LOAD
 !function(t,e){"use strict";function r(r,a,i,u,l){function f(){L=t.devicePixelRatio>1,i=c(i),a.delay>=0&&setTimeout(function(){s(!0)},a.delay),(a.delay<0||a.combined)&&(u.e=v(a.throttle,function(t){"resize"===t.type&&(w=B=-1),s(t.all)}),u.a=function(t){t=c(t),i.push.apply(i,t)},u.g=function(){return i=n(i).filter(function(){return!n(this).data(a.loadedName)})},u.f=function(t){for(var e=0;e<t.length;e++){var r=i.filter(function(){return this===t[e]});r.length&&s(!1,r)}},s(),n(a.appendScroll).on("scroll."+l+" resize."+l,u.e))}function c(t){var i=a.defaultImage,o=a.placeholder,u=a.imageBase,l=a.srcsetAttribute,f=a.loaderAttribute,c=a._f||{};t=n(t).filter(function(){var t=n(this),r=m(this);return!t.data(a.handledName)&&(t.attr(a.attribute)||t.attr(l)||t.attr(f)||c[r]!==e)}).data("plugin_"+a.name,r);for(var s=0,d=t.length;s<d;s++){var A=n(t[s]),g=m(t[s]),h=A.attr(a.imageBaseAttribute)||u;g===N&&h&&A.attr(l)&&A.attr(l,b(A.attr(l),h)),c[g]===e||A.attr(f)||A.attr(f,c[g]),g===N&&i&&!A.attr(E)?A.attr(E,i):g===N||!o||A.css(O)&&"none"!==A.css(O)||A.css(O,"url('"+o+"')")}return t}function s(t,e){if(!i.length)return void(a.autoDestroy&&r.destroy());for(var o=e||i,u=!1,l=a.imageBase||"",f=a.srcsetAttribute,c=a.handledName,s=0;s<o.length;s++)if(t||e||A(o[s])){var g=n(o[s]),h=m(o[s]),b=g.attr(a.attribute),v=g.attr(a.imageBaseAttribute)||l,p=g.attr(a.loaderAttribute);g.data(c)||a.visibleOnly&&!g.is(":visible")||!((b||g.attr(f))&&(h===N&&(v+b!==g.attr(E)||g.attr(f)!==g.attr(F))||h!==N&&v+b!==g.css(O))||p)||(u=!0,g.data(c,!0),d(g,h,v,p))}u&&(i=n(i).filter(function(){return!n(this).data(c)}))}function d(t,e,r,i){++z;var o=function(){y("onError",t),p(),o=n.noop};y("beforeLoad",t);var u=a.attribute,l=a.srcsetAttribute,f=a.sizesAttribute,c=a.retinaAttribute,s=a.removeAttribute,d=a.loadedName,A=t.attr(c);if(i){var g=function(){s&&t.removeAttr(a.loaderAttribute),t.data(d,!0),y(T,t),setTimeout(p,1),g=n.noop};t.off(I).one(I,o).one(D,g),y(i,t,function(e){e?(t.off(D),g()):(t.off(I),o())})||t.trigger(I)}else{var h=n(new Image);h.one(I,o).one(D,function(){t.hide(),e===N?t.attr(C,h.attr(C)).attr(F,h.attr(F)).attr(E,h.attr(E)):t.css(O,"url('"+h.attr(E)+"')"),t[a.effect](a.effectTime),s&&(t.removeAttr(u+" "+l+" "+c+" "+a.imageBaseAttribute),f!==C&&t.removeAttr(f)),t.data(d,!0),y(T,t),h.remove(),p()});var m=(L&&A?A:t.attr(u))||"";h.attr(C,t.attr(f)).attr(F,t.attr(l)).attr(E,m?r+m:null),h.complete&&h.trigger(D)}}function A(t){var e=t.getBoundingClientRect(),r=a.scrollDirection,n=a.threshold,i=h()+n>e.top&&-n<e.bottom,o=g()+n>e.left&&-n<e.right;return"vertical"===r?i:"horizontal"===r?o:i&&o}function g(){return w>=0?w:w=n(t).width()}function h(){return B>=0?B:B=n(t).height()}function m(t){return t.tagName.toLowerCase()}function b(t,e){if(e){var r=t.split(",");t="";for(var a=0,n=r.length;a<n;a++)t+=e+r[a].trim()+(a!==n-1?",":"")}return t}function v(t,e){var n,i=0;return function(o,u){function l(){i=+new Date,e.call(r,o)}var f=+new Date-i;n&&clearTimeout(n),f>t||!a.enableThrottle||u?l():n=setTimeout(l,t-f)}}function p(){--z,i.length||z||y("onFinishedAll")}function y(t,e,n){return!!(t=a[t])&&(t.apply(r,[].slice.call(arguments,1)),!0)}var z=0,w=-1,B=-1,L=!1,T="afterLoad",D="load",I="error",N="img",E="src",F="srcset",C="sizes",O="background-image";"event"===a.bind||o?f():n(t).on(D+"."+l,f)}function a(a,o){var u=this,l=n.extend({},u.config,o),f={},c=l.name+"-"+ ++i;return u.config=function(t,r){return r===e?l[t]:(l[t]=r,u)},u.addItems=function(t){return f.a&&f.a("string"===n.type(t)?n(t):t),u},u.getItems=function(){return f.g?f.g():{}},u.update=function(t){return f.e&&f.e({},!t),u},u.force=function(t){return f.f&&f.f("string"===n.type(t)?n(t):t),u},u.loadAll=function(){return f.e&&f.e({all:!0},!0),u},u.destroy=function(){return n(l.appendScroll).off("."+c,f.e),n(t).off("."+c),f={},e},r(u,l,a,f,c),l.chainable?a:u}var n=t.jQuery||t.Zepto,i=0,o=!1;n.fn.Lazy=n.fn.lazy=function(t){return new a(this,t)},n.Lazy=n.lazy=function(t,r,i){if(n.isFunction(r)&&(i=r,r=[]),n.isFunction(i)){t=n.isArray(t)?t:[t],r=n.isArray(r)?r:[r];for(var o=a.prototype.config,u=o._f||(o._f={}),l=0,f=t.length;l<f;l++)(o[t[l]]===e||n.isFunction(o[t[l]]))&&(o[t[l]]=i);for(var c=0,s=r.length;c<s;c++)u[r[c]]=t[0]}},a.prototype.config={name:"lazy",chainable:!0,autoDestroy:!0,bind:"load",threshold:500,visibleOnly:!1,appendScroll:t,scrollDirection:"both",imageBase:null,defaultImage:"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",placeholder:null,delay:-1,combined:!1,attribute:"data-src",srcsetAttribute:"data-srcset",sizesAttribute:"data-sizes",retinaAttribute:"data-retina",loaderAttribute:"data-loader",imageBaseAttribute:"data-imagebase",removeAttribute:!0,handledName:"handled",loadedName:"loaded",effect:"show",effectTime:0,enableThrottle:!0,throttle:250,beforeLoad:e,afterLoad:e,onError:e,onFinishedAll:e},n(t).on("load",function(){o=!0})}(window);
 
@@ -29,7 +257,6 @@ $(document).ready(function(){
 	            preferCo: 'ru'
 	        });
 	    });
-	    // $('#phone').mask('(999) 999-99-99');
 	}
 
 	if( typeof($('#phone').attr('readonly')) !== false && typeof($('#phone').attr('readonly')) !== 'undefined'){
@@ -46,245 +273,8 @@ $(document).ready(function(){
 		$(this).toggleClass('input-group__pass-status_show');
 	});
 
-	// REGISTRATION FORM
-	if($('.sign-up-form').length){
-
-		// $("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-
-		// check for a valid
-		// $('.sign-up-form, #registerBtn, input').on('input click change paste keyup', function(){
-		// 	var phone = $('.input-group__input[name="phone"]').val().trim();
-		// 	var pass = $('.input-group__input[name="password"]').val().trim();
-		// 	var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
-		// 	var checkbox = $('.custom-checkbox__input');
-
-		// 	if( !phone.trim().length ){
-		// 		$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
-		// 		$('.country-phone').addClass('error');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( pass.length == 0 ){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( pass.length < 12 && pass.length > 0){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( passrepeat.length == 0 ){
-		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( passrepeat != pass ){
-		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( !checkbox.is(':checked') ){
-		// 		$('.custom-checkbox__icon').css('border-color', '#F02D3A');
-		// 		$("#registerBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$('.custom-checkbox__icon').css('border-color', '#D0D2D3;');
-		// 		$('.input-group__input, .country-phone').removeClass('error');
-		// 		$("#registerBtn").removeClass('btn_disabled').prop('disabled', false);
-
-		// 		// Do submit
-		// 		$("#registerBtn").on('click', function(){
-		// 			$('.sign-up-form').submit();					
-		// 		});
-		// 	}
-		// });
-	}
-
-	// LOGIN FORM
-	if($('.login-form').length){
-
-		$('#password').focus();
-
-		// $("#loginBtn").addClass('btn_disabled').prop('disabled', true);
-
-		$('.input-group__pass-status').on('click', function(){
-			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
-				return attr == 'text' ? 'password' : 'text';
-			});
-
-			$(this).toggleClass('input-group__pass-status_show');
-		});
-
-		// $('.login-form, #loginBtn, input').on('input click change paste keyup', function(){
-
-		// 	var phone = $('.input-group__input[name="phone"]').val().trim();
-		// 	var pass = $('.input-group__input[name="password"]').val().trim();
-
-		// 	if( phone.length == 0 ){
-		// 		$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
-		// 		$('.country-phone').addClass('error');
-		// 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( pass.length == 0 ){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-		// 		$("#loginBtn").addClass('btn_disabled');
-		// 	}
-		// 	else if ( pass.length < 12 && pass.length > 0 ){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-		// 		$("#loginBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$('.input-group__input, .country-phone').removeClass('error');
-		// 		$("#loginBtn").removeClass('btn_disabled').prop('disabled', false);
-				
-		// 		$("#loginBtn").on('click', function(){
-		// 			$('.login-form').submit();
-		// 		});
-		// 	}
-		// });
-	}
-
-	// RECOVERY PASSWORD FORM
-	if($('.recovery-password-form').length){
-
-		// $("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
-
-		// $('.recovery-password-form, #recoveryPassBtn, input').on('input click change paste keyup', function(){
-		// 	var phone = $('.input-group__input[name="phone"]').val().trim();
-
-		// 	if( phone.length == 0){
-		// 		$('#phone').parent().parent().find('.input-group__help').css('display', 'block').html('* Incorrect phone number');
-		// 		$("#recoveryPassBtn").addClass('btn_disabled').prop('disabled', true);
-		// 		return false;
-		// 	}
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$('.input-group__input, .country-phone').removeClass('error');
-		// 		$("#recoveryPassBtn").removeClass('btn_disabled').prop('disabled', false);
-				
-		// 		//  form submit
-		// 		$("#recoveryPassBtn").on('click', function(){
-		// 			$('.recovery-password-form').submit();
-		// 		});
-		// 	}
-		// });
-	}
-
-	// GET SMS CODE FORM
-	if($('.smscode-form').length){
-
-		// $("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
-
-		// $('.smscode-form, #smsCodeBtn, input').on('input click change paste keyup', function(){
-			
-		// 	var smscode = $('.input-group__input[name="smscode"]').val().trim();
-
-		// 	if( smscode == "" ){
-		// 		$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
-		// 		$('#smscode').addClass('error');
-		// 		$("#smsCodeBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	} 
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$('.input-group__input, .country-phone').removeClass('error');
-		// 		$("#smsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
-				
-		// 		//  form submit
-		// 		$("#smsCodeBtn").on('click', function(){
-		// 			$('.smscode-form').submit();
-		// 		});
-		// 	}
-		// });
-	}
-
-	// CREATE NEW PASSWORD FORM
-	if($('.new-pass-form').length){
-
-		// $("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-
-		// show and hide password
-		$('.input-group__pass-status').on('click', function(){
-			$(this).parent().find('.input-group__input').attr('type', function(index, attr){
-				return attr == 'text' ? 'password' : 'text';
-			});
-
-			$(this).toggleClass('input-group__pass-status_show');
-		});
-
-		// check for a valid
-		// $('.new-pass-form, #newPassBtn input').on('input click change keyup paste', function(){
-		// 	var pass = $('.input-group__input[name="password"]').val().trim();
-		// 	var passrepeat = $('.input-group__input[name="password-repeat"]').val().trim();
-
-		// 	if ( pass.length == 0 ){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( pass.length < 12 && pass.length > 0){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( passrepeat.length == 0 ){
-		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
-		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else if ( passrepeat != pass ){
-		// 		$('#password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
-		// 		$("#newPassBtn").addClass('btn_disabled').prop('disabled', true);
-		// 	}
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$("#newPassBtn").removeClass('btn_disabled').prop('disabled', false);
-
-
-		// 		// Do submit
-		// 		$("#newPassBtn").on('click', function(){
-		// 			$('.new-pass-form').submit();					
-		// 		});
-		// 	}
-		// });
-	}
-
-
-	// CHANGE PASSWORD FORM
-	if($('.update-data-form').length){
-
-		// check for a valid
-		// $('button[name="do_update"]').on('click', function(){
-		// 	var pass = $('.input-group__input[name="password"]').val().trim();
-		// 	var newpass = $('.input-group__input[name="new-password"]').val().trim();
-		// 	var passrepeat = $('.input-group__input[name="new-password-repeat"]').val().trim();
-
-		// 	if ( pass.length == 0 ){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password can\'t be empty');
-		// 		return false;
-		// 	}
-		// 	else if ( pass.length < 12 && pass.length > 0){
-		// 		$('#password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Password should contain at least 12 characters');
-		// 		return false;
-		// 	}
-		// 	else if ( newpass.length == 0 ){
-		// 		$('#new-password').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Repeat password');
-		// 		return false;
-		// 	}
-		// 	else if ( passrepeat != pass ){
-		// 		$('#new-password-repeat').addClass('error').parent().find('.input-group__help').css('display', 'block').html('* Passwords must match');
-		// 		return false;
-		// 	}
-		// 	else{
-		// 		$('.input-group__help').css('display', 'none');
-		// 		$('input').removeClass('error');
-
-		// 		// Do submit
-		// 		$('button[name="do_update"]').on('click', function(){
-		// 			$('.update-data-form').submit();					
-		// 		});
-		// 	}
-		// });
-	}
-
 	// RESEND SMS CODE FORM
 	if ( $('#time').length ){
-
-		// $("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
 
 		// Timer
 		function startTimer(duration, display) {
@@ -301,7 +291,6 @@ $(document).ready(function(){
 
 		        if (--timer < 0) {
 		            timer = 0;
-		            // $('.resend-code');
 		        }
 
 		    }, 1000);
@@ -314,33 +303,6 @@ $(document).ready(function(){
 		});
 
 		window.setTimeout(function(){
-
-			// RESEND SMS CODE FORM
-			// if($('.resend-smscode-form').length){
-				
-			// 	$("#resendSmsCodeBtn").removeClass('btn_disabled');
-
-			// 	$('.resend-smscode-form, #resendSmsCodeBtn, input').on('input click change paste keyup', function(){
-			// 		var smscode = $('.input-group__input[name="smscode"]').val().trim();
-
-			// 		if( smscode == "" ){
-			// 			$('#smscode').parent().parent().find('.input-group__help').css('display', 'block').html('* Sms code is not valid');
-			// 			$('#smscode').addClass('error');
-			// 			$("#resendSmsCodeBtn").addClass('btn_disabled').prop('disabled', true);
-			// 		} 
-			// 		else{
-			// 			$('.input-group__help').css('display', 'none');
-			// 			$('.input-group__input, .country-phone').removeClass('error');
-			// 			$("#resendSmsCodeBtn").removeClass('btn_disabled').prop('disabled', false);
-						
-			// 			//  form submit
-			// 			$("#resendSmsCodeBtn").on('click', function(){
-			// 				$('.resend-smscode-form').submit();
-			// 			});
-			// 		}
-			// 	});
-			// }
-
 		}, 61000);
 	}
 
@@ -348,90 +310,54 @@ $(document).ready(function(){
 
 	/* VERIFICATION */
 
-
-	var current_fs, next_fs, previous_fs; //fieldsets
-	var left, opacity, scale; //fieldset properties which we will animate
-	var animating; //flag to prevent quick multi-click glitches
+	var current_fs, next_fs, previous_fs;
+	var left, opacity, scale;
+	var animating;
 
 	var fs_height = $('fieldset').outerHeight();
-	
-	// console.log(fs_height);
 
-	// $('fieldset:not(:first-of-type)').css("margin-top","-"+fs_height);
-
-	$(".next").click(function(){
-		if(animating) return false;
-		animating = true;
-		
+	$(".next").click(function(){		
 		current_fs = $(this).parent().parent().parent().parent();
 		next_fs = $(this).parent().parent().parent().parent().next();
 		
-		//activate next step on progressbar using the index of next_fs
-		$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+		$(".timeline li").eq($("fieldset").index(next_fs)).addClass("active");
+		$(".timeline li").eq($("fieldset").index(current_fs)).addClass("done").removeClass('active');
 		
-		//show the next fieldset
-		next_fs.show(); 
-		//hide the current fieldset with style
-		current_fs.animate({opacity: 0}, {
-			step: function(now, mx) {
-				//as the opacity of current_fs reduces to 0 - stored in "now"
-				//1. scale current_fs down to 80%
-				scale = 1 - (1 - now) * 0.2;
-				//2. bring next_fs from the right(50%)
-				left = (now * 50)+"%";
-				//3. increase opacity of next_fs to 1 as it moves in
-				opacity = 1 - now;
-				current_fs.css({
-	        'transform': 'scale('+scale+')'
-	      });
-				next_fs.css({'left': left, 'opacity': opacity});
-			}, 
-			duration: 800, 
-			complete: function(){
-				// current_fs.hide();
-				animating = false;
-			}, 
-			//this comes from the custom easing plugin
-			easing: 'easeInOutBack'
-		});
+		next_fs.show().addClass('fadeInLeft'); 
+		current_fs.hide();
 	});
 
 	$(".prev").click(function(){
-		if(animating) return false;
-		animating = true;
-		
 		current_fs = $(this).parent().parent().parent().parent();
 		previous_fs = $(this).parent().parent().parent().parent().prev();
 		
-		//de-activate current step on progressbar
-		$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+		$(".timeline li").eq($("fieldset").index(current_fs)).removeClass("active").removeClass('done');
+		$(".timeline li").eq($("fieldset").index(previous_fs)).addClass("active").removeClass('done');
 		
-		//show the previous fieldset
-		previous_fs.show(); 
-		//hide the current fieldset with style
-		current_fs.animate({opacity: 0}, {
-			step: function(now, mx) {
-				//as the opacity of current_fs reduces to 0 - stored in "now"
-				//1. scale previous_fs from 80% to 100%
-				scale = 0.8 + (1 - now) * 0.2;
-				//2. take current_fs to the right(50%) - from 0%
-				left = ((1-now) * 50)+"%";
-				//3. increase opacity of previous_fs to 1 as it moves in
-				opacity = 1 - now;
-				current_fs.css({'left': left});
-				previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-			}, 
-			duration: 800, 
-			complete: function(){
-				// current_fs.hide();
-				animating = false;
-			}, 
-			//this comes from the custom easing plugin
-			easing: 'easeInOutBack'
-		});
+		previous_fs.show().addClass('fadeInLeft'); 
+		current_fs.hide();
+	});
+
+	$('.country-select').countrylist();
+
+	$('.open-fullscreen').on('click', function(e){
+		e.preventDefault;
+
+		$(this).parent().find('.fs__popup-thumbnail').toggleClass('img-fullscreen');
+	});
+
+	$('#photo_with_id').on('click', function(){
+		$('#photo_with_id_popup').addClass('active');
+	});
+
+	$('#fs__popup-close').on('click', function(){
+		$('#photo_with_id_popup').removeClass('active');
+
 	});
 
 	/* PAGE LITTLE SCRIPTS */
+
+
 
 	// Menu links
 	if( $(".nav .menu li.active").length ){

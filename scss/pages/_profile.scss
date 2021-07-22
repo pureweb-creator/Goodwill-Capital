@@ -169,7 +169,7 @@
 
 .verif-status__icon{
 	margin-right: 12px;
-	width: 12px;
+	max-width: 16px;
 }
 
 .verif-status_rejected{
@@ -180,4 +180,9 @@
 .verif-status_accepted{
 	background: rgba(30, 171, 104, .1);
 	color: $color_profit;
+}
+
+.verif-status_checking{
+	background: rgba(109, 110, 112, .1);
+	color: $text2;
 }

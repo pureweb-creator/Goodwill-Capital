@@ -1,0 +1,64 @@
+.timeline{
+	position: relative;
+	z-index: 999;
+	li{
+		padding-right: 80px;
+		color: $text3;
+		padding-bottom: 19px;
+		position: relative;
+
+		.done__icon{
+			opacity: 0;
+			position: relative;
+			left: 5px;
+			display: inline-block;
+			margin-left: 10px;
+			transition: all .3s ease;
+		}
+
+		&::after{
+			content: "";
+			display: block;
+			width: 12px;
+			height: 12px;
+			border: 2px solid $text3;
+			background: #fff;
+			transform: rotate(45deg);
+			position: absolute;
+			bottom: -6px;
+			transition: all .3s ease;
+		}
+
+
+		&.active{
+			color: $text_main;
+
+			&::after{
+				width: 18px;
+				height: 18px;
+				border-color: $color_profit;
+				bottom: -9px
+			}
+		}
+
+		&:not(:last-child){
+			border-bottom: 1px solid #E6E7E8;
+		}
+
+
+		&.done{
+			color: $text_main;
+
+			& .done__icon{
+				display: inline-block;
+				opacity: 1;
+				left: 0;
+
+			}
+
+			&::after{
+				border-color: $color_profit;
+			}
+		}
+	}
+}
