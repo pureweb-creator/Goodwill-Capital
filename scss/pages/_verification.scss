@@ -94,6 +94,7 @@
 
 .file-upload{
 	font-size: 13px;
+	display: none;
 }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -170,6 +171,10 @@ input[type="file"]::file-selector-button {
 
 .fs__row-link_view{
 	margin-top: 16px;
+}
+
+.fs__row-label{
+	display: block;
 }
 
 .fs__row-help{

@@ -313,12 +313,12 @@
                                     <div class="fs__row-help">
                                         You have sent the wrong document.
                                     </div>
-                                    <a href="img/block-3-img.jpg" class="fs__row-link fs__row-link_view">View ›</a>
+                                    <a href="img/block-3-img.jpg" id="id_photo_url" class="fs__row-link fs__row-link_view">View ›</a>
                                 </div>
 
                                 <label for="id_photo" class="fs__row-label">
                                     <input type="file" name="id_photo" id="id_photo" class="file-upload">
-                                    <button class="btn fs__row-button" id="id_photo_upload">Upload</button>
+                                    <span class="btn fs__row-button" id="id_photo_upload">Upload</span>
                                 </label>
                                 
                             </div>
@@ -359,12 +359,12 @@
                                     <div class="fs__row-help">
                                         You have sent the wrong document.
                                     </div>
-                                    <a href="img/block-3-img.jpg" class="fs__row-link fs__row-link_view">View ›</a>
+                                    <a href="#" class="fs__row-link fs__row-link_view">View ›</a>
                                 </div>
 
-                                <label for="docs_upload" class="fs__row-label">
-                                    <input type="file" name="docs" id="docs" class="file-upload">
-                                    <button class="btn fs__row-button" id="docs_upload">Attach signed documents</button>
+                                <label for="docs_contract" class="fs__row-label">
+                                    <input type="file" name="docs_contract" id="docs_contract" class="file-upload">
+                                    <span class="btn fs__row-button">Attach signed documents</span>
                                 </label>
                             </div>
                         </div>
@@ -393,10 +393,13 @@
                 </a>
             </div>
             <div class="fs__popup-content">
+                <!--  Кнопки -->
                 <a href="#!" class="open-fullscreen">
                     <img src="img/fullscreen.svg" class="open-fullscreen-icon" alt="">
                     <img src="img/close-fullscreen.svg" class="close-fullscreen-icon" alt="">
                 </a>
+
+                <!-- Картинка -->
                 <img src="img/photo_with_id.jpg" alt="Dummy image" class="fs__popup-thumbnail">
             </div>
         </div>

@@ -358,6 +358,10 @@ $(document).ready(function(){
 
 	});
 
+	$('.fs__row-label .file-upload').on('change', function(event){
+		$(this).parent().parent().find('.fs__row-link_view').attr('href', URL.createObjectURL(event.target.files[0]));
+	});
+
 	/* PAGE LITTLE SCRIPTS */
 
 
