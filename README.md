@@ -15,3 +15,5 @@
 [HELP](https://pureweb-creator.github.io/Goodwill-Capital/help.html)\
 [PROFILE](https://pureweb-creator.github.io/Goodwill-Capital/profile.html)\
 [SETTINGS](https://pureweb-creator.github.io/Goodwill-Capital/settings.html)
+
+[VERIFICATION](https://pureweb-creator.github.io/Goodwill-Capital/verification.html)\
