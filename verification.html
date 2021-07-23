@@ -259,7 +259,8 @@
                                         <img src="img/check.svg" alt="icon" class="verif-status__icon">
                                         Document is verified
                                     </div>
-                                    <a href="#!" class="fs__row-link fs__row-link_view" id="photo_with_id">View ›</a>
+
+                                    <a href="#photo_with_id_popup" class="fs__row-link fs__row-link_view">View ›</a>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +286,7 @@
                                         <img src="img/watch_later.svg" alt="icon" class="verif-status__icon">
                                         Checking
                                     </div>
-                                    <a href="#!" class="fs__row-link fs__row-link_view" id="photo_with_id">View ›</a>
+                                    <a href="#photo_o_your_id_popup" class="fs__row-link fs__row-link_view">View ›</a>
                                 </div>
 
                             </div>
@@ -385,7 +386,31 @@
         <div class="fs__popup-inner">
             <div class="fs__popup-header d-flex align-items-center justify-content-between">
                 Your photo with ID
-                <a href="#!" id="fs__popup-close">
+                <a href="#!" class="fs__popup-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.09961" y="0.685547" width="30" height="2" transform="rotate(45 2.09961 0.685547)" fill="#A6A8AB"/>
+                        <rect x="0.685547" y="21.9004" width="30" height="2" transform="rotate(-45 0.685547 21.9004)" fill="#A6A8AB"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="fs__popup-content">
+                <!--  Кнопки -->
+                <a href="#!" class="open-fullscreen">
+                    <img src="img/fullscreen.svg" class="open-fullscreen-icon" alt="">
+                    <img src="img/close-fullscreen.svg" class="close-fullscreen-icon" alt="">
+                </a>
+
+                <!-- Картинка -->
+                <img src="img/photo_with_id.jpg" alt="Dummy image" class="fs__popup-thumbnail">
+            </div>
+        </div>
+    </div>
+
+    <div class="fs__popup" id="photo_o_your_id_popup">
+        <div class="fs__popup-inner">
+            <div class="fs__popup-header d-flex align-items-center justify-content-between">
+                Photo of your ID
+                <a href="#!" class="fs__popup-close">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.09961" y="0.685547" width="30" height="2" transform="rotate(45 2.09961 0.685547)" fill="#A6A8AB"/>
                         <rect x="0.685547" y="21.9004" width="30" height="2" transform="rotate(-45 0.685547 21.9004)" fill="#A6A8AB"/>

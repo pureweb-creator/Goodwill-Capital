@@ -340,6 +340,7 @@ $(document).ready(function(){
 
 	$('.country-select').countrylist();
 
+	// fullscreen mode in modal
 	$('.open-fullscreen').on('click', function(e){
 		e.preventDefault;
 
@@ -349,13 +350,15 @@ $(document).ready(function(){
 		$('.close-fullscreen-icon').toggle();
 	});
 
-	$('#photo_with_id').on('click', function(){
-		$('#photo_with_id_popup').addClass('active');
+	// View uploaded files
+	$('.fs__row-link_view').on('click', function(){
+		var openModal = $(this).attr('href');
+		$(openModal).addClass('active');
 	});
 
-	$('#fs__popup-close').on('click', function(){
-		$('#photo_with_id_popup').removeClass('active');
-
+	// close modal
+	$('.fs__popup-close').on('click', function(){
+		$(this).parent().parent().parent().removeClass('active');
 	});
 
 	$('.fs__row-label .file-upload').on('change', function(event){
