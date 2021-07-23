@@ -344,6 +344,9 @@ $(document).ready(function(){
 		e.preventDefault;
 
 		$(this).parent().find('.fs__popup-thumbnail').toggleClass('img-fullscreen');
+		
+		$('.open-fullscreen-icon').toggle();
+		$('.close-fullscreen-icon').toggle();
 	});
 
 	$('#photo_with_id').on('click', function(){

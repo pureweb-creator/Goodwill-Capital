@@ -173,11 +173,17 @@ main.main{
 	border: 1px solid $main2;
 	transition: all .3s ease;
 	letter-spacing: .1em;
+	display: inline-block;
 
 	&:hover{
 		background: $main2;
 		color: #fff
 	}
+}
+
+.btn a{
+	color: inherit;
+	transition: unset;
 }
 
 .btn_style1{

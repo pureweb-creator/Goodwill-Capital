@@ -85,7 +85,7 @@
                     <div class="info-panel d-flex">
                         <div class="info-panel__left">
                             <h2 class="info-panel__title">Please complete all fields below and attach the appropriate documents.</h2>
-                            <svg width="26" height="36" viewBox="0 0 26 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="info-panel__icon" width="26" height="36" viewBox="0 0 26 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9749 36L25.9492 23.0256L24.5835 21.6599L13.6778 32.5656L13.6778 -6.21657e-07L11.7464 -7.19498e-07L11.7464 32.0401L1.36621 21.6599L0.000483598 23.0256L12.9749 36Z" fill="#DDBC62"/>
                             </svg>
                         </div>
@@ -227,7 +227,7 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="btn next">Next</button>
+                                <a href="#!" class="btn next">Next</a>
                             </div>
                         </div>
                     </div>   
@@ -326,8 +326,8 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="btn prev">Back</button>
-                                <button type="button" class="btn next">Proceed</button>
+                                <a href="#!" class="btn prev">Back</a>
+                                <a href="#!" class="btn next">Proceed</a>
                             </div>
                         </div>
                     </div>   
@@ -343,7 +343,7 @@
 
                         <div class="row fs__row-item fs__row-item_first">
                             <div class="col-lg-4">
-                                <a href="#" download class="fs__row-link fs__row-link_style2"><img src="img/file.svg" alt="">Download the documents</a>
+                                <a href="#" download class="fs__row-link fs__row-link_style2"><img src="img/file.svg" alt="">Download the documents ›</a>
                             </div>
                             <div class="col-lg-4">
                                 <p class="fs__row-text">
@@ -371,8 +371,8 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="btn prev">Back</button>
-                                <button type="button" class="btn next">Proceed</button>
+                                <a class="btn prev" href="#!">Back</a>
+                                <a class="btn next" href="verification-success.html">Proceed</a>
                             </div>
                         </div>
                     </div>   
@@ -394,7 +394,8 @@
             </div>
             <div class="fs__popup-content">
                 <a href="#!" class="open-fullscreen">
-                    <img src="img/fullscreen.svg" alt="">
+                    <img src="img/fullscreen.svg" class="open-fullscreen-icon" alt="">
+                    <img src="img/close-fullscreen.svg" class="close-fullscreen-icon" alt="">
                 </a>
                 <img src="img/photo_with_id.jpg" alt="Dummy image" class="fs__popup-thumbnail">
             </div>

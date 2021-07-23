@@ -7,6 +7,10 @@
 		padding-bottom: 19px;
 		position: relative;
 
+		&:last-child{
+			padding-right: 0;
+		}
+
 		.done__icon{
 			opacity: 0;
 			position: relative;
