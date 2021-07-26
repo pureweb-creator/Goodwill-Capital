@@ -83,7 +83,7 @@
         </div>
 
         <div class="verif">
-            <form action="" method="POST">
+           <form action="" method="POST" role="form" class="invest-form" aria-label="Verification investing form">
                 <fieldset class="fs fs_invest">
                    <div class="container">
                         <div class="row">
@@ -91,7 +91,6 @@
                                 <h3 class="fs__title">Agreement</h3>
                             </div>
                         </div>
-
                        <div class="row fs__row-item fs__row-item_first">
                             <div class="col-lg-4">
                                 <a href="#" download class="fs__row-link fs__row-link_style2"><img src="img/file.svg" alt="">Download documents ›</a>
@@ -106,20 +105,46 @@
                                 </p>
                             </div>
                             <div class="col-lg-4">
-                                <label for="docs_contract" class="fs__row-label">
-                                    <input type="file" name="docs_contract" id="docs_contract" class="file-upload">
+                                <label for="docs_agreegment" class="fs__row-label">
+                                    <input type="file" name="docs_agreegment" id="docs_agreegment" class="file-upload">
                                     <span class="btn fs__row-button">Attach signed documents</span>
                                 </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <a href="investing-payment.html" class="btn mb0">Next</a>
+                                <button class="btn mb0 next" type="button">Next</button>
                             </div>
                         </div>
                     </div>   
                 </fieldset>
-            </form>
+
+                <fieldset class="fs fs_invest">
+                   <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="fs__title">Payment</h3>
+                            </div>
+                        </div>
+
+                       <div class="row fs__row-item fs__row-item_first">
+                            <div class="col-lg-4">
+                                <a href="#" download class="fs__row-link fs__row-link_style2"><img src="img/file.svg" alt="">Download invoice ›</a>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="fs__row-text">
+                                    To complete the investment procedure, download the invoice and pay it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button class="btn btn_style2 mt20 mb0 sm-mt0" type="button">Make a new investment</button>
+                            </div>
+                        </div>
+                    </div>   
+                </fieldset>
+           </form>
         </div>
         
     </main>
