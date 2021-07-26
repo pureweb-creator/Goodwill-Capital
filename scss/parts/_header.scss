@@ -162,7 +162,6 @@
 .nav{
 	margin-top: 24px;
 	border-top: 1px solid #E6E7E8;
-	transition: all .3s ease;
 	border-bottom: 1px solid #E6E7E8;
 
 	&.sticky{
@@ -185,17 +184,11 @@
 	width: 100%;
 	overflow-x: scroll;
 
-
-
 	&::-webkit-scrollbar {
 	    display: none;
 	}
 
 	li{
-		padding: 20px 40px 16px 40px;
-		border-bottom: 4px solid transparent;
-		transition: all .3s ease;
-
 		&:first-child{
 			padding-left: 38px;
 		}
@@ -207,13 +200,14 @@
 
 		a{
 			text-transform: uppercase;
-			transition: all .3s ease;
+			padding: 20px 40px 16px 40px;
+			border-bottom: 4px solid transparent;
 		}
 
 		&.active,&:hover{
-			border-bottom-color: $main2;
 			a{
 				color: $main2;
+				border-bottom-color: $main2;
 			}
 		}	
 	}
@@ -223,7 +217,6 @@
 	li{
 		a{
 			text-transform: uppercase;
-			transition: all .3s ease;
 			font-weight: 500;
 			letter-spacing: .1em;
 		}	
