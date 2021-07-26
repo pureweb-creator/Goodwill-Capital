@@ -19,6 +19,5 @@
 [VERIFICATION](https://pureweb-creator.github.io/Goodwill-Capital/verification.html)
 
 [INVESTING](https://pureweb-creator.github.io/Goodwill-Capital/investing.html)\
-[INVESTING AGREEGMENT](https://pureweb-creator.github.io/Goodwill-Capital/investing-agreegment.html)\
-[INVESTING PAYMENT](https://pureweb-creator.github.io/Goodwill-Capital/investing-payment.html)
+[INVESTING AGREEGMENT](https://pureweb-creator.github.io/Goodwill-Capital/investing-agreegment.html)
 
