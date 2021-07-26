@@ -189,11 +189,11 @@
 	}
 
 	li{
-		&:first-child{
+		&:first-child a{
 			padding-left: 38px;
 		}
 
-		&:last-child{
+		&:last-child a{
 			padding-right: 30px;
 			padding-left: 30px;
 		}
@@ -202,6 +202,7 @@
 			text-transform: uppercase;
 			padding: 20px 40px 16px 40px;
 			border-bottom: 4px solid transparent;
+			line-height: 1em;
 		}
 
 		&.active,&:hover{

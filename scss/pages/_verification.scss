@@ -60,6 +60,7 @@
 .fs__title{
 	display: block;
 	margin-bottom: 30px;
+	font-size: 20px;
 }
 
 .fs__subtitle{
@@ -141,7 +142,8 @@ input[type="file"]::file-selector-button {
 
 .fs__row-link{
 	text-decoration: underline;
-	color: $main2
+	color: $main2;
+	font-size: 16px;
 }
 
 .fs__row-link_style2{
@@ -159,6 +161,16 @@ input[type="file"]::file-selector-button {
 
 .fs__row-text{
 	font-size: 14px;
+	display: flex;
+	align-items: flex-start;
+
+	img{
+		margin-right: 6px;
+	}
+}
+
+.fs__row-text:not(:first-child){
+	margin-top: 16px;
 }
 
 .fs__row-button{

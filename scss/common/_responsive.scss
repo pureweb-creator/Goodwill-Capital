@@ -328,10 +328,10 @@
 	
 	.nav .menu{
 		padding: 0 31px;
-		li:not(:first-child){
+		li:not(:first-child) a{
 			padding: 19px 18px;
 		}
-		li:first-child{
+		li:first-child a{
 			padding: 19px 18px 19px 0;
 		}
 	}
@@ -750,12 +750,15 @@
 
 
 @media (max-width: 576px){
+	.sm-mt0{
+		margin-top: 0;
+	}
 	.info-panel{
 		padding: 20px 30px;
 		margin-bottom: 40px;
 
 		&__left,&__right{
-			width: 100%;
+			width: 100% !important;
 		}
 
 		&__title{
@@ -904,6 +907,15 @@
 		a{
 			margin-bottom: 0;
 		}
+	}
+
+	.fs_invest{
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	.fs_invest .fs__row-item_first{
+		margin-bottom: 0;
 	}
 }
 

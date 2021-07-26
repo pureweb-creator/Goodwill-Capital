@@ -31,7 +31,9 @@ h1{
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: .1em;
+	line-height: 1em;
 }
+
 
 h2,h3,h4,h5,h6{
 	color: $text_main;
@@ -96,6 +98,10 @@ input[type=date]:invalid::-webkit-datetime-edit{
 
 main.main{
 	margin-bottom: 80px;
+}
+
+.mt20{
+	margin-top: 20px;
 }
 
 .fadeInLeft{
@@ -221,6 +227,8 @@ main.main{
 .btn_style2{
 	background: $main2;
 	color: #fff;
+	font-weight: 500;
+	font-size: 12px;
 	&:hover{
 		background: $main1;
 	}
