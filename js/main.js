@@ -33,7 +33,7 @@ countryRequesting = !1;
         searchTimeout: null,
         suggestTimeout: null,
         hideTimeout: null,
-        options: { default_prefix: "7", prefix: "", preferCo: "ru" },
+        options: { default_prefix: "7", prefix: "", preferCo: "af" },
         _create: function () {
             this._loadData(), this.element.wrap('<div class="country-phone fs__country-phone">');
             var t = this.element.parent(".country-phone"),
@@ -113,7 +113,7 @@ countryRequesting = !1;
                     l = e('<div data-phone="' + c.ph + '" data-co="' + u.toLowerCase() + '" class="country-phone-option fs__country-phone-option"><span><div class="flag flag-' + c.co.toLowerCase() + '"></div>' + "</span><span class='country-name'>" + c.na + "</span></div>");
                 e(l).appendTo(t), this.options.preferCo && null != this.options.preferCo ? u == this.options.preferCo && (o = c) : c.ph == this.options.default_prefix && (o = c);
             }
-            o && $("#country-name").val(c.na),
+            o && $("#country-name").val(  ),
                 $('#country-name').bind("click", function (e) {
                     i._toggleSelector();
                 }),
@@ -336,7 +336,9 @@ $(document).ready(function(){
 		current_fs.hide();
 	});
 
-	$('.country-select').countrylist();
+	$('.country-select').countrylist({
+		preferCo: 'af'
+	});
 
 	// fullscreen mode in modal
 	$('.open-fullscreen').on('click', function(e){
