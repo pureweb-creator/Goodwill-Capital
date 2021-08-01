@@ -537,7 +537,6 @@ $(document).ready(function(){
 if ( $('.nav .menu').length ){
 	window.onscroll = function() {myFunction()};
 
-	var anchor = $(".nav .menu li.active").offset().left;
 	var navbar = document.querySelector(".nav");
 	var sticky = navbar.offsetTop;
 
@@ -548,8 +547,11 @@ if ( $('.nav .menu').length ){
 	 	} else {
 	    	navbar.classList.remove("sticky");
 	    	$('.hero').css('margin-top', 0+"px");
-	    
-			$('.nav .menu').scrollLeft( anchor + 80);
-	  }
+	    	
+	    	if( $('.nav .menu li.active').length ){
+				var anchor = $(".nav .menu li.active").offset().left;
+				$('.nav .menu').scrollLeft( anchor + 80);
+	    	}
+	  	}
 	}
 }

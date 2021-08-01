@@ -183,9 +183,22 @@
 .nav .menu{
 	width: 100%;
 	overflow-x: scroll;
+	scrollbar-width: none;
+
+	&::scrollbar{
+		display: none;
+	}
 
 	&::-webkit-scrollbar {
 	    display: none;
+	}
+
+	&::-moz-scrollbar{
+		display: none;
+	}
+
+	&::-ms-scrollbar{
+		display: none;
 	}
 
 	li{

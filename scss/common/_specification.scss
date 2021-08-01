@@ -97,6 +97,23 @@ input[type=date]:invalid::-webkit-datetime-edit{
 	color: $text3;
 }
 
+input[type="date"]::inner-spin-button,
+input[type="date"]::calendar-picker-indicator {
+	opacity: .3;
+	cursor: pointer;
+}
+
+input[type=date]:required:invalid::datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::datetime-edit {
+    color: black !important;
+}
+
+input[type=date]:invalid::datetime-edit{
+	color: $text3;
+}
+
 main.main{
 	margin-bottom: 80px;
 }
