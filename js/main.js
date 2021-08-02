@@ -370,8 +370,9 @@ $(document).ready(function(){
 
 	// Menu links
 	if( $(".nav .menu li.active").length ){
-   		var anchor = $(".nav .menu li.active").offset().left;	
-   		$('.nav .menu').scrollLeft( anchor + 20);
+        var myScrollPos = $('.nav .menu li.active').offset().left + $('.nav .menu li.active').outerWidth(true) / 2 + $('.nav .menu').scrollLeft() - $('.nav .menu').width() / 2;
+
+   		$('.nav .menu').scrollLeft(myScrollPos);
    	}
 
    	$('.lazy').lazy();
@@ -549,8 +550,10 @@ if ( $('.nav .menu').length ){
 	    	$('.hero').css('margin-top', 0+"px");
 	    	
 	    	if( $('.nav .menu li.active').length ){
-				var anchor = $(".nav .menu li.active").offset().left;
-				$('.nav .menu').scrollLeft( anchor + 80);
+				var totalWidth = $(".nav").outerWidth();
+                $('.nav .menu').css('width', totalWidth);
+                var myScrollPos = $('.nav .menu li.active').offset().left + $('.nav .menu li.active').outerWidth(true) / 2 + $('.nav .menu').scrollLeft() - $('.nav .menu').width() / 2;
+                $('.nav .menu').scrollLeft(myScrollPos);
 	    	}
 	  	}
 	}

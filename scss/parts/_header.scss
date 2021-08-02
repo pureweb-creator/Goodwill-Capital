@@ -168,14 +168,33 @@
 		position: fixed;
 		margin-top: 0;
 		transition: all .3s ease;
-		z-index: 99;
 		background: #fafafa;
 		top: 0;
 		left: 0;
-		width: 100%;
 		z-index: 9999;
+		width: 100%;
+		scrollbar-width: none;
+		overflow-x: scroll;
+
+		&::scrollbar{
+			display: none;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	
+		&::-moz-scrollbar{
+			display: none;
+		}
+	
+		&::-ms-scrollbar{
+			display: none;
+		}
+		
 		.menu{
-			justify-content: center;;
+			justify-content: flex-start;
+			width: 100%;
 		}
 	}
 }
