@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Bold.otf");src:url("fonts/Montserrat-Bold.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Bold.woff") format("woff"),url("fonts/Montserrat-Bold.woff2") format("woff2"),url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal; font-display: swap;}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>DOCUMENTS | Goodwill Capital</title>
+</head>
+<body>
+    <header class="hero profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#!"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-2 offset-4 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#!">RU</a></li>
+                        <li><a class="active" href="#!">ENG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-2 offset-md-1 offset-2">
+                    <div class="profile d-flex align-items-center">
+                        <img src="img/Profile_photo.png" alt="Avatar" class="profile__avatar lazy">
+                        <span class="profile__name">Konstantin Konstantinopolsky</span>
+                        <img src="img/arrow.svg" alt="arrow" class="profile__arrow">
+
+
+                        <div class="profile-dropdown">
+                            <h5 class="profile-dropdown__title">Account</h5>
+                            <span class="name">Konstantin Konstantinopolsky</span>
+
+                            <ul class="options">
+                                <li><a href="#!">Option 1</a></li>
+                                <li><a href="#!">Option 2</a></li>
+                                <li><a href="#!">Option 3</a></li>
+                                <li><a href="#!">Option 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <ul class="menu d-flex align-items-center">
+                            <li><a href="#">Main</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="operations.html">Operations</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li class="active"><a href="help.html">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title">Documents</h1>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="search-box d-flex">
+                        <form action="/" method="GET" class="search-box__form">
+                            <input type="text" placeholder="Search" class="search-box__input">
+                            <button class="search-box__submit">
+                                <img src="img/search.svg" alt="search icon">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="col-12">
+                    <ul class="filters filters_doc d-flex">
+                        <li><a class="active" href="#">All</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Presentations</a></li>
+                        <li><a href="#">Agreegment</a></li>
+                        <li><a href="#">PDF</a></li>
+                        <li><a href="#">PPT</a></li>
+                        <li><a href="#">ENG</a></li>
+                        <li><a href="#">RUS</a></li>
+                    </ul>
+                </div>
+            </div>    
+            <div class="row docs">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <a href="download/document.html"  class="card-doc" download>
+                        <div class="card-doc__header">
+                            <span class="card-doc__type card-doc__type_pptx">
+                                PPTX
+                            </span>
+                            <figure class="card-doc__figure"><img src="img/doc.jpg" alt="Card thumbnail" class="card-doc__img"></figure>
+                            <div class="card-doc__cover">
+                                <img src="img/arrow_download.svg" alt="Icon" class="card-doc__cover-icon">
+                            </div>
+                        </div>
+                        <div class="card-doc__body">
+                            <h2 class="card-doc__title">
+                                Goodwill Capital Presentation.pptx
+                            </h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <a href="download/document.html"  class="card-doc" download>
+                        <div class="card-doc__header">
+                            <span class="card-doc__type card-doc__type_pdf">
+                                PDF
+                            </span>
+                            <figure class="card-doc__figure"><img src="img/doc.jpg" alt="Card thumbnail" class="card-doc__img"></figure>
+                            <div class="card-doc__cover">
+                                <img src="img/arrow_download.svg" alt="Icon" class="card-doc__cover-icon">
+                            </div>
+                        </div>
+                        <div class="card-doc__body">
+                            <h2 class="card-doc__title">
+                                Goodwill Capital Presentation.pdf
+                            </h2>
+                        </div>
+                    </a>
+                </div>
+            </div>    
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12">
+                    <a href="/" class="logo"><img src="img/LOGO.svg" alt=""></a>
+                </div>
+                <div class="rights2 col-12">
+                    © 2021 Goodwill Foundation
+                </div>
+                <div class="col-md-5 col-12 offset-md-1 offset-0">
+                    <ul class="menu d-flex">
+                        <li><a href="#!">About Goodwill</a></li>
+                        <li><a href="#!">Disclaimer</a></li>
+                        <li><a href="#!">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rights">
+                        © 2021 Goodwill Foundation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>

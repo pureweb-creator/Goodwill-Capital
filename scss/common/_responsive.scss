@@ -325,14 +325,20 @@
 		}
 	}
 
-	
+	.nav{
+		margin-top: 24px;
+	}
+
 	.nav .menu{
 		padding: 0 31px;
-		li:not(:first-child) a{
-			padding: 19px 18px;
-		}
+		padding-left: 0;
+	
 		li:first-child a{
-			padding: 19px 18px 19px 0;
+			padding: 18px 18px 11px 0
+		}
+
+		li:not(:first-child) a{
+			padding: 18px 18px 11px 0
 		}
 	}
 
@@ -922,6 +928,25 @@
 
 	.fs_invest .fs__row-item_first{
 		margin-bottom: 0;
+	}
+
+	.filters_doc{
+		margin-bottom: 13px;
+		margin-top: 30px;
+	}
+
+	.card-doc__type{
+		font-size: 10px;
+		top: 8px;
+		left: 8px;
+	}
+
+	.card-doc__body{
+		padding: 12px;
+	}
+
+	.card-doc__title{
+		font-size: 11px;
 	}
 }
 

@@ -14,6 +14,7 @@
 		color: $main2;
 		transition: all .3s ease;
 		margin-right: 24px;
+		letter-spacing: .1em;
 		&.active,&:hover{
 			background: $main2;
 			color: #fff
