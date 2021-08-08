@@ -516,7 +516,7 @@ $(document).ready(function(){
 				$('[data-remodal-id=change-email-done-modal]').remodal().open();
 			},
 			error: function(){
-				// $('[data-remodal-id=change-email-done-modal]').remodal().open();
+				$('[data-remodal-id=change-email-done-modal]').remodal().open();
 			}
 		});
 	});
