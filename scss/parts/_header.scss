@@ -202,7 +202,10 @@
 
 .nav .menu{
 	width: 100%;
-	overflow-x: scroll;
+	position: relative;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 	scrollbar-width: none;
 
 	&::scrollbar{
