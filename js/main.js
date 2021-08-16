@@ -489,6 +489,8 @@ $(document).ready(function(){
 		});
 	}
 
+	$('[data-remodal-id=congrat-modal]').remodal().open();
+
 	// Change email
 	$('#change-email-button').on('click', function(){
 		var newEmail = $('#new-email').val();

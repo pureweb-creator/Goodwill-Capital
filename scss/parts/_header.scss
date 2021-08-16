@@ -16,12 +16,6 @@
 		padding: 16px 0;
 	}
 
-	&.active{
-		.lang, .login-buttons{
-			display: none !important;
-		}
-	}
-
 	.profile{
 		position: relative;
 		cursor: pointer;
@@ -116,7 +110,6 @@
 
 .burger {
     width: 30px;
-    height: 46px;
     margin-left: auto;
     cursor: pointer;
     position: relative;
@@ -143,13 +136,11 @@
 
 .burger.active .up_line {
     position: absolute;
-    top: 20px;
     transform: rotate(135deg);
 }
 
 .burger.active .down_line {
     position: absolute;
-    bottom: 23px;
     transform: rotate(45deg);
 }
 
@@ -260,6 +251,15 @@
 	}
 }
 
+.lang_hidden_group{
+	top: 0;
+    right: 15px;
+    bottom: auto;
+    position: absolute;
+	z-index: 15px;
+	font-size: 12px;	
+}
+
 
 
 // POPUP MENU
@@ -305,7 +305,6 @@
 
 	.menu_item {
 	    margin-bottom: 60px;
-	    margin-left: -25px;
 	    cursor: pointer;
 
 	    display: flex;
@@ -392,7 +391,7 @@
 	    line-height: 100%;
 	    letter-spacing: 0.1em;
 	    text-transform: uppercase;
-	    color: #A6A8AB;
+	    color: #6D6E70;
 	    margin-right: 46px;
 	    transition: color .5s ease;
 	    &:hover{

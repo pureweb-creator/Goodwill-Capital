@@ -149,7 +149,7 @@
                                 <p class="form-desription input-group__form-description">The adress is needed to send you dociments and correspondence</p>
                             </div>
                             <input type="text" id="address" autocomplete="address-level1" name="email" value="Abhu Dhabi, 193231, Abhu Dhabi, Shaikh Farhad street, 76-xx" class="input-group__input">
-                            <a href="#!" class="input-group__change-button"></a>
+                            <a href="#change-address-modal" class="input-group__change-button"></a>
                         </div>
 
                         <div class="input-group d-flex flex-wrap">
@@ -191,9 +191,56 @@
     </footer>
 
 
+
+    <div class="remodal" data-remodal-id="change-address-modal">
+        <form action="" method="POST" role="form" aria-label="Change address" class="change-address-form change-form">
+            <h3 class="subtitle text-left">Address</h3>
+
+            <div class="form-group d-flex flex-wrap">
+                <div class="input-group input-group_county country-select">
+                    <input type="text" autocomplete="country-name" name="country-name" id="country-name" class="input-group__input" required>
+
+                    <label for="country-name" class="input-group__label">
+                        Country
+                        <span class="input-group__help"></span>
+                    </label>
+                </div>
+
+                <div class="input-group input-group_city">
+                    <input type="text" autocomplete="address-level2" name="city" id="city" class="input-group__input" required>
+                    <label for="city" class="input-group__label">
+                        City
+                        <span class="input-group__help"></span>
+                    </label>
+                </div>
+
+                <div class="input-group input-group_address">
+                     <input type="text" autocomplete="street-address" name="street" id="street" class="input-group__input" required>
+                     <label for="street" class="input-group__label">
+                         Address
+                         <span class="input-group__help"></span>
+                     </label>
+                 </div>
+
+                 <div class="input-group input-group_postal-code">
+                      <input type="text" autocomplete="postal-code" name="postal-code" id="postal-code" class="input-group__input" required>
+                      <label for="postal-code" class="input-group__label">
+                          Postal code
+                          <span class="input-group__help"></span>
+                      </label>
+                  </div>
+            </div>
+          
+            <div class="d-flex flex-wrap">
+                <button type="button" class="btn btn_style2 input-group__submit-button" id="change-email-button">Save</button>
+                <button data-remodal-action="cancel" class="btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
     <div class="remodal" data-remodal-id="change-email-modal">
 
-      <form action="" method="POST" role="form" aria-label="Change email" class="change-email-form">
+      <form action="" method="POST" role="form" aria-label="Change email" class="change-email-form change-form">
         <h3 class="subtitle text-left">Enter a new e-mail</h3>
 
         <div class="input-group">
@@ -229,6 +276,25 @@
         
         <h2>Done!</h2>
         <p>A confirmation e-mail has been sent</p>
+    </div>
+
+    <div data-remodal-id="congrat-modal" class="success-modal congrat-modal">
+        <h2>Congratulations!</h2>
+        <p>
+            You now have your own Goodwill Capital account. You will soon be able to invest in your first SPAC, but first you need to complete a few formal steps - verify and sign the necessary agreements.
+        </p>
+        <p>
+            All navigation in the personal account is done via the top menu. If you encounter any difficulties, you can always go to the "Help" section. 
+        </p>
+        <p>
+            So, let's get started.
+        </p>
+        <a href="{{ url('verification') }}" class="btn mt20 btn_style2 verify-now">
+            Go to verification page
+        </a>
+        <a href="#" class="btn pb0 btn_style3 verify-later" data-remodal-action="cancel"> 
+            Verify later
+        </a>
     </div>
 
     <script defer src="js/main.min.js"></script>

@@ -118,7 +118,8 @@
 	}
 }
 
-.change-email-form{
+.change-email-form,
+.change-address-form{
 	.subtitle{
 		margin-bottom: 54px;
 	}
@@ -141,6 +142,31 @@
 	}
 }
 
+.change-address-form{
+	.country-select{
+		max-width: 229px
+	}
+	.input-group_city{
+		max-width: 199px;
+		margin-left: auto;
+	}
+	.input-group_address{
+		max-width: 289px
+	}
+	.input-group_postal-code{
+		max-width: 139px;
+		margin-left: auto;
+	}
+}
+
+.input-group_county + .country-phone-selector{
+	.country-phone-options{
+		width: 180%;
+		right: unset;
+		left: 0;
+	}
+}
+
 .success-modal{
 	h2{
 		font-size: 36px;
@@ -154,6 +180,18 @@
 		color: $text2;
 		line-height: 1em;
 		margin-bottom: 52px;
+	}
+}
+
+.congrat-modal{
+	h2{
+		margin-top: 0;
+	}
+	p{
+		line-height: 1.5;
+		color: $text_main;
+		font-size: 16px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -192,3 +230,4 @@
 	max-width: unset;
 	margin-right: 8px;
 }
+

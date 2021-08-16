@@ -16,7 +16,6 @@
 	font-size: 36px;
 	color: $text4;
 	margin-bottom: 60px;
-	margin-left: -60px;
     line-height: 1;
 
 	img{
@@ -25,7 +24,6 @@
 
 	&.current-link, &:hover{
 		color: $main2;
-		padding-left: 157px;
 	}
 }
 

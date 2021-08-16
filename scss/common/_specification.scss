@@ -126,6 +126,10 @@ main.main{
 	margin-bottom: 0 !important;
 }
 
+.pb0{
+	padding-bottom: 0 !important;
+}
+
 .fadeInLeft{
 	animation: fadeInLeft .5s ease;
 }
@@ -253,6 +257,18 @@ main.main{
 	font-size: 12px;
 	&:hover{
 		background: $main1;
+	}
+}
+
+.btn_style3{
+	border: unset;
+	padding-top: 30px;
+	transition: unset;
+	padding-bottom: 30px;
+	&:hover{
+		text-decoration: underline;
+		background: unset;
+		color: $main1
 	}
 }
 

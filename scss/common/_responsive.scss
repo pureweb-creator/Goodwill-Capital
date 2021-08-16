@@ -224,6 +224,7 @@
 		}
 		.input-group__input{
 			padding-bottom: 8px;
+			padding-right: 30px;
 		}
 		.input-group__pass-status{
 			bottom: 9px;
@@ -739,13 +740,40 @@
 
 	// REMODAL
 	.remodal{
-		padding: 15px;
+		padding: 30px 15px;
 	}
 
 	.change-email-form .input-group__exclamation{
 		font-size: 11px;
 		text-align: left;
 		margin-bottom: -15px;
+	}
+
+	.change-address-form{
+		.form-group{
+			flex-direction: column;
+		}
+		.input-group_city,
+		.input-group_postal-code{
+			margin-left: 0;
+		}
+		
+		.input-group_county + .country-phone-selector{
+			.country-phone-options{
+				width: 100%;
+			}
+		}
+	}
+
+	.change-form{
+		.subtitle{
+			font-size: 12px;
+			margin-bottom: 37px;
+		}
+		.input-group{
+			max-width: 100%;
+			margin-bottom: 37px;
+		}
 	}
 
 	.success-modal p{
@@ -972,6 +1000,28 @@
 
 	.card-doc__cover-icon{
 		width: 30px;
+	}
+
+	.congrat-modal{
+		padding-top: 48px;
+	}
+
+	.congrat-modal h2{
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	.congrat-modal p{
+		font-size: 13px;
+	}
+
+	.verify-later{
+		padding-top: 0;
+		margin-bottom: 15px;
+	}
+
+	.verify-now{
+		margin-top: 10px;
 	}
 }
 
