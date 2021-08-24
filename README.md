@@ -1,3 +1,5 @@
+# Goodwill Capital
+
 [NEWS](https://pureweb-creator.github.io/Goodwill-Capital/news.html)\
 [NEWS DETAILED](https://pureweb-creator.github.io/Goodwill-Capital/article.html)\
 [OPERATIONS](https://pureweb-creator.github.io/Goodwill-Capital/operations.html)\
