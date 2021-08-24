@@ -5,13 +5,20 @@
 /* Hide scroll bar */
 
 html.remodal-is-locked {
-  overflow: hidden;
-
+  overflow-y: hidden;
   touch-action: none;
+  .nav.sticky{
+    left: -4px
+  }
+}
+
+@media (max-width:576px){
+  html.remodal-is-locked .nav.sticky{
+    left: 0
+  }
 }
 
 /* Anti FOUC */
-
 .remodal,
 [data-remodal-id] {
   display: none;

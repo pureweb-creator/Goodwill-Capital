@@ -11,6 +11,10 @@
 		}
 	}
 
+	.profile-header__lang-buttons{
+		margin-right: 115px;
+	}
+
 	.hero__line{
 		border-bottom: 1px solid #e6e7e8;
 		padding: 16px 0;
@@ -154,18 +158,21 @@
 	margin-top: 24px;
 	border-top: 1px solid #E6E7E8;
 	border-bottom: 1px solid #E6E7E8;
+	width: 100%;
+	transition: .3s;
+	transition-property: width, position, margin-top;
 
 	&.sticky{
 		position: fixed;
 		margin-top: 0;
-		transition: all .3s ease;
+		// transition: all .3s;
 		background: #fafafa;
 		top: 0;
 		left: 0;
 		z-index: 9999;
 		width: 100%;
 		scrollbar-width: none;
-		overflow-x: scroll;
+		overflow-x: hidden;
 
 		&::scrollbar{
 			display: none;
@@ -186,7 +193,7 @@
 		.menu{
 			margin-left: auto;
 			margin-right: auto;
-			width: fit-content;
+			width: fit-content
 		}
 	}
 }
@@ -198,6 +205,7 @@
 	-webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 	scrollbar-width: none;
+	justify-content: space-between;
 
 	&::scrollbar{
 		display: none;
@@ -240,6 +248,29 @@
 		}	
 	}
 }
+
+// .remodal-is-locked{
+// 	.nav.sticky,
+// 	.nav.sticky .menu{
+// 		overflow-y: scroll;
+// 		scrollbar-width: auto;
+// 		&::scrollbar{
+// 			// display: block;
+// 		}
+
+// 		&::-webkit-scrollbar {
+// 			// display: block;
+// 		}
+	
+// 		&::-moz-scrollbar{
+// 			// display: block;
+// 		}
+	
+// 		&::-ms-scrollbar{
+// 			// display: block;
+// 		}
+// 	}
+// }
 
 .menu{
 	li{

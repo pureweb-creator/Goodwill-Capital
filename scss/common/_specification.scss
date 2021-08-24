@@ -26,6 +26,16 @@ body{
 	overflow-y: scroll;
 }
 
+::-webkit-scrollbar{
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+	width: 8px;
+	background: silver;
+	border-radius: 10px
+}
+
 h1{
 	color: $main2;
 	font-size: 6em;
@@ -179,6 +189,14 @@ main.main{
 
 .d-iflex{
 	display: inline-flex;
+}
+
+.flex-end{
+	justify-content: flex-end;
+}
+
+.ml-auto{
+	margin-left: auto
 }
 
 .container{
