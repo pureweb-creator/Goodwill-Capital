@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Bold.otf");src:url("fonts/Montserrat-Bold.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Bold.woff") format("woff"),url("fonts/Montserrat-Bold.woff2") format("woff2"),url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal; font-display: swap;}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>MAIN | Goodwill Capital</title>
+</head>
+
+<body>
+    <header class="hero profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#!"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-2 offset-4 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#!">RU</a></li>
+                        <li><a class="active" href="#!">ENG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-2 offset-md-1 offset-2">
+                    <div class="profile d-flex align-items-center">
+                        <img src="img/img.jpg" alt="Avatar" class="profile__avatar lazy">
+                        <span class="profile__name">Konstantin Konstantinopolsky</span>
+                        <img src="img/arrow.svg" alt="arrow" class="profile__arrow">
+
+
+                        <div class="profile-dropdown">
+                            <h5 class="profile-dropdown__title">Account</h5>
+                            <span class="name">Konstantin Konstantinopolsky</span>
+
+                            <ul class="options">
+                                <li><a href="#!">Option 1</a></li>
+                                <li><a href="#!">Option 2</a></li>
+                                <li><a href="#!">Option 3</a></li>
+                                <li><a href="#!">Option 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <ul class="menu d-flex align-items-center">
+                            <li class="active"><a href="index.html">Main</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="operations.html">Operations</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="help.html">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main main_index">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alerts">
+                        <!-- ALERT SIMPLE WITH BUTTON -->
+                        <div class="info-panel info-panel_alert">
+                            <a href="#!" class="close">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66537 1.27398L8.72537 0.333984L4.9987 4.06065L1.27203 0.333984L0.332031 1.27398L4.0587 5.00065L0.332031 8.72732L1.27203 9.66732L4.9987 5.94065L8.72537 9.66732L9.66537 8.72732L5.9387 5.00065L9.66537 1.27398Z" fill="#A6A8AB"/>
+                                </svg>     
+                            </a>
+
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.0013 0.666016C4.4013 0.666016 0.667969 4.39935 0.667969 8.99935C0.667969 13.5993 4.4013 17.3327 9.0013 17.3327C13.6013 17.3327 17.3346 13.5993 17.3346 8.99935C17.3346 4.39935 13.6013 0.666016 9.0013 0.666016ZM9.83464 13.166H8.16797V11.4993H9.83464V13.166ZM9.83464 9.83268H8.16797V4.83268H9.83464V9.83268Z" fill="#DDBC62"/>
+                                    </svg>
+                                    Attention
+                                </h2>
+                                <p>
+                                    Text messege here
+                                </p>
+                            </div>
+                            <div class="info-panel__right">
+                                <a href="#" class="btn btn_style2">Link button</a>
+                            </div>
+                        </div>
+
+                        <!-- ALERT SIMPLE WITHOUT BUTTON -->
+                        <div class="info-panel info-panel_alert">
+                            <a href="#!" class="close">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66537 1.27398L8.72537 0.333984L4.9987 4.06065L1.27203 0.333984L0.332031 1.27398L4.0587 5.00065L0.332031 8.72732L1.27203 9.66732L4.9987 5.94065L8.72537 9.66732L9.66537 8.72732L5.9387 5.00065L9.66537 1.27398Z" fill="#A6A8AB"/>
+                                </svg>     
+                            </a>
+
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.0013 0.666016C4.4013 0.666016 0.667969 4.39935 0.667969 8.99935C0.667969 13.5993 4.4013 17.3327 9.0013 17.3327C13.6013 17.3327 17.3346 13.5993 17.3346 8.99935C17.3346 4.39935 13.6013 0.666016 9.0013 0.666016ZM9.83464 13.166H8.16797V11.4993H9.83464V13.166ZM9.83464 9.83268H8.16797V4.83268H9.83464V9.83268Z" fill="#DDBC62"/>
+                                    </svg>
+                                    Attention
+                                </h2>
+                                <p>
+                                    Text messege here without button
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title mb60">Main</h1>
+                </div>
+            </div> 
+            
+            <div class="row align-items-stretch">
+                <div class="col-md-6 col-sm-12 col-12">
+                    <div class="short-view">
+                        <div class="short-view__item short-view__item_first">
+                           <div class="short-view__head d-flex align-items-center mb40">
+                                <span class="short-view__title">Portfolio</span>
+                                <a class="short-view__view-more" href="portfolio.html">View more</a>
+                           </div>
+                            
+                            <div class="short-view__caption">All assets</div>
+                            <div class="short-view__content" id="allAssets">$24 681,63</div>
+                        </div>
+                        <div class="short-view__item">
+                            <div class="short-view__caption">Financial result</div>
+                            <div class="short-view__content color-profit">$243,86</div>
+                        </div>
+                        <div class="short-view__item">
+                            <div class="short-view__caption">Directions</div>
+                            <div class="short-view__content color-profit">4,00%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                    
+                    <div class="analytics">
+                        <div class="short-view__head d-flex align-items-center">
+                            <h4 class="analytics__title">Analytics</h4>
+                            <a class="analytics__view-more" href="portfolio.html">View more</a>
+                       </div>
+                       <div class="analytics__wrap d-flex">
+                            <div class="analytics__stat-table">
+                                <div class="analytics__data-row">
+                                    <p class="table-details__title d-flex align-items-center">
+                                        <img src="img/local-police-18-22.svg" class="analytics__data-icon" alt="">
+                                        Cybersecurity Utd <span style="color: #DDBC62">65,43%</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value" data-value="65.43" data-max="100" style="background-color: #DDBC62;"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics__data-row">
+                                    <p class="table-details__title d-flex align-items-center">
+                                        <img src="img/healthcare.svg" class="analytics__data-icon" width="18" height="18" alt="">
+                                        Healthcare Int <span style="color: #7F2253">22,63%</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value" data-value="65.43" data-max="100" style="background-color: #7F2253;"></div>
+                                    </div>
+                                </div>
+                                <div class="analytics__data-row">
+                                    <p class="table-details__title d-flex align-items-center">
+                                        <img src="img/currency_dollar-24-24.svg" class="analytics__data-icon" width="24" height="24" alt="">
+                                        Currency
+                                        <span style="color: #A6A8AB">11,94%</span>
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress__bar"></div>
+                                        <div class="progress__value" data-value="65.43" data-max="100" style="background-color: #A6A8AB;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="analytics__stat-chart">
+                                <div id="analyticsStatChart"></div>
+                            </div>
+                       </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- Desktop table -->
+            <div class="table table_desktop table_portfolio table_main">                
+                <!-- Heading -->
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            Your SPACs
+                        </h4>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                    <div class="row table__head table__head_second">
+                        <div class="col-3">Name</div>
+                        <div class="col-3">Exit stage</div>
+                        <div class="col-3">Status</div>
+                        <div class="col-3"> </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="table__body">
+                    <!-- Table row -->
+                    <div class="row table__row align-items-start">
+                        <!-- Table cell -->
+                        <div class="col-3">
+                            <div class="d-flex align-items-center">
+                                <img class="table__icon" src="img/desktop_windows.svg" alt="">
+                                Cybersecurity  Utd
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <p class="table-details__title">Exit stage:  <span class="color-profit">3/6</span> </p>
+                            <div class="progress">
+                                <div class="progress__bar"></div>
+                                <div class="progress__value progress__value_profit" data-value="3" data-max="6"></div>
+                            </div>
+                        </div>
+                        <div class="col-3 d-flex align-items-center">
+                            Listing on the stock exchange
+                        </div>
+                        <div class="col-3 d-flex align-items-center color-profit">
+                            <a href="#" class="btn fz12 ml-auto">View details</a>
+                        </div>
+                    </div>
+
+                    <div class="row table__row align-items-start">
+                        <!-- Table cell -->
+                        <div class="col-3">
+                            <div class="d-flex align-items-center">
+                                <img class="table__icon" src="img/desktop_windows.svg" alt="">
+                                Healthcare Int
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <p class="table-details__title color-gray">Exit stage:  <span class="color-profit">1/6</span> </p>
+                            <div class="progress">
+                                <div class="progress__bar"></div>
+                                <div class="progress__value progress__value_profit" data-value="1" data-max="6"></div>
+                            </div>
+                        </div>
+                        <div class="col-3 d-flex align-items-center color-gray">
+                            Listing on the stock exchange
+                        </div>
+                        <div class="col-3 d-flex align-items-center color-profit">
+                            <a href="#" class="btn fz12 ml-auto">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop table -->
+            <div class="table table_desktop">
+                <!-- Head -->
+                <div class="table-top">
+                    <a href="#!" class="row table__head table_portfolio__head d-flex align-items-center">
+                        <h4 class="table_portfolio__table-name">
+                            Operations
+                        </h4>
+                        <img src="img/expand_less.svg" alt="" class="table__expand">
+                    </a>
+                    <div class="row table__head table__head_second">
+                        <div class="col-2">Date</div>
+                        <div class="col-2">Name</div>
+                        <div class="col-2">Type</div>
+                        <div class="col-3">Documents</div>
+                        <div class="col-2">Volume</div>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="table__body">
+                    <div class="table__item">
+                        <!-- Table row -->
+                        <div class="row table__row align-items-start">
+                            <div class="col-2 d-flex align-items-center color-gray">June 16, 2021</div>
+                            <div class="col-2 d-flex align-items-center"><img class="table__icon" src="img/icon-withdrawal.svg" alt=""> Withdrawal</div>
+                            <div class="col-2 d-flex align-items-center">BTC</div>
+                            <div class="col-3 d-flex align-items-center"><img class="table__icon" src="img/doc.svg" alt="">Document_file_name_1</div>
+                            <div class="col-2 d-flex align-items-center">
+                                <div class="currency">
+                                    <span class="account-currency">200$</span>
+                                    <span class="transaction-currency">0.000004234 BTC</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row table__row align-items-start">
+                            <div class="col-2 d-flex align-items-center color-gray">June 16, 2021</div>
+                            <div class="col-2 d-flex align-items-center"><img src="img/desktop_windows.svg" class="table__icon" alt="">Cybersecurity  Utd</div>
+                            <div class="col-2 d-flex align-items-center">BTC</div>
+                            <div class="col-3 d-flex align-items-center"><img class="table__icon" src="img/doc.svg" alt="">Document_file_name_1</div>
+                            <div class="col-2 d-flex align-items-center">
+                                <div class="currency">
+                                    <span class="account-currency">200$</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row table__row align-items-start">
+                            <div class="col-2 d-flex align-items-center color-gray">June 16, 2021</div>
+                            <div class="col-2 d-flex align-items-center"><img src="img/desktop_windows.svg" class="table__icon" alt="">Cybersecurity  Utd</div>
+                            <div class="col-2 d-flex align-items-center">BTC</div>
+                            <div class="col-3 d-flex align-items-center"><img class="table__icon" src="img/doc.svg" alt="">Document_file_name_1</div>
+                            <div class="col-2 d-flex align-items-center">
+                                <div class="currency">
+                                    <span class="account-currency">200$</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn_style2 load-more">View all operations</a>
+            
+
+            <!-- Products -->
+            <section class="section section-products">
+                <h2 class="section-title">Products</h2>
+                <div class="row products align-items-stretch">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Cybersecurity Utd
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/desktop_windows.svg" class="icon-right" alt="">Technologies</a>
+                            <p class="product-card__desc">
+                                SPAC builds on promising cyber security companies and a team of specialists with years of experience.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Healthcare Int
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_hospital.svg" class="icon-right" alt="">Helath care</a>
+                            <p class="product-card__desc">
+                                А revolutionary project investing in the implementation of advanced technologies in modern medicine.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Hyperqube Int
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_police.svg" class="icon-right" alt="">Cybersecurity</a>
+                            <p class="product-card__desc">
+                                “Cyber range as a service” offering that enables  enterprises to quickly and easily build an exact  copy of any IT infrastructure.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn_style2 load-more">View all products</a>
+            </section>
+
+            <!-- News -->
+            <section class="section section-news">
+                <h2 class="section-title">News</h2>
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <div class="card d-flex card_size_big">
+                            <div class="card__body">
+                                <img src="img/block-3-img.jpg" alt="" class="lazy card__image">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">We launched new SPAC: how to End-to-End Encrypt in Messages Using Twilio and Virgil Security</h2>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 offset-md-1 offset-0">
+                        <div class="card d-flex">
+                            <div class="card__body">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">How to build a HIPAA-compliant Firebase Chat using security SDK</h2>
+                                <p class="card__text">
+                                    Follow Virgil Security's tutorial to build a secure, HIPAA-compatible in-app chat with Firebase using open source security SDK.
+                                </p>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="card d-flex">
+                            <div class="card__body">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">How to build a HIPAA-compliant Firebase Chat using security SDK</h2>
+                                <p class="card__text">
+                                    Follow Virgil Security's tutorial to build a secure, HIPAA-compatible in-app chat with Firebase using open source security SDK.
+                                </p>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn_style2 load-more">View all News</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12">
+                    <a href="/" class="logo"><img src="img/LOGO.svg" alt=""></a>
+                </div>
+                <div class="rights2 col-12">
+                    © 2021 Goodwill Foundation
+                </div>
+                <div class="col-md-5 col-12 offset-md-1 offset-0">
+                    <ul class="menu d-flex">
+                        <li><a href="#!">About Goodwill</a></li>
+                        <li><a href="#!">Disclaimer</a></li>
+                        <li><a href="#!">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rights">
+                        © 2021 Goodwill Foundation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+    <script>
+        var options = {
+            chart: {
+                type: 'donut',
+                width: '265px'
+            },
+            series: [20.43, 5.12, 5.14,6.58,6.64,5,0.12,20.14,20.5,10.33], // в процентах
+            labels: ['Cybersecurity  Utd', 'Healthcare Int', 'Currency', 'Cybersecurity  Utd', 'Currency', 'Healthcare Int','Cybersecurity  Utd', 'Healthcare Int','Cybersecurity  Utd','Currency'],
+            colors:['#DDBC62', '#7F2253', '#A6A8AB','#1EAB68', '#6ED4D4', '#5770F8', '#A14BE4', '#F57B54', '#90D157', '#E55DA5'],
+            dataLabels: {
+                enabled: true,
+            },
+            stroke:{
+                width: 0
+            },
+            legend: {
+                show: false
+            },
+            plotOptions: {
+                pie: {
+                    // size: 280,
+                    // customScale: 0.865,
+                    customScale: 1,
+                    dataLabels: {
+                        enabled: true,
+                        offset: 100,
+                        minAngleToShowLabel: 100,
+                        formatter: function(val, opts){
+                            return val
+                        },
+                        textAnchor: "middle"
+                    },
+                    offset: 100,
+                    donut: {
+                        size: '87%',
+                        labels: {
+                            show: true,
+                            total: {
+                                show: true,
+                                showAlways: true,
+                                label: "All Assets",
+                                fontSize: 10,
+                                fontFamily: "Montserrat",
+                                color: '#DDBC62',
+                                formatter: function(val){
+                                    return document.getElementById('allAssets').textContent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        var chart = new ApexCharts(document.querySelector("#analyticsStatChart"), options);
+
+        chart.render();
+    </script>
+</body>
+</html>

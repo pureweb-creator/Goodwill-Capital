@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Regular.otf");src:url("fonts/Montserrat-Regular.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Regular.woff") format("woff"),url("fonts/Montserrat-Regular.woff2") format("woff2"),url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat Italic';src:url("fonts/Montserrat-Italic.otf");src:url("fonts/Montserrat-Italic.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Italic.woff") format("woff"),url("fonts/Montserrat-Italic.woff2") format("woff2"),url("fonts/Montserrat-Italic.ttf") format("truetype");font-weight:normal;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Medium.otf");src:url("fonts/Montserrat-Medium.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Medium.woff") format("woff"),url("fonts/Montserrat-Medium.woff2") format("woff2"),url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal; font-display: swap;}
+        @font-face{font-family:'Montserrat';src:url("fonts/Montserrat-Bold.otf");src:url("fonts/Montserrat-Bold.otf?#iefix") format("embedded-opentype"),url("fonts/Montserrat-Bold.woff") format("woff"),url("fonts/Montserrat-Bold.woff2") format("woff2"),url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal; font-display: swap;}
+    </style>
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/bootstrap-grid.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/bootstrap-grid.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+    <title>MAIN | Goodwill Capital</title>
+</head>
+
+<body>
+    <header class="hero profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-8">
+                    <div class="logo">
+                        <a href="#!"><img src="img/LOGO.svg" alt="Home logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-1 col-2 offset-4 d-none d-md-block">
+                    <ul class="lang d-flex">
+                        <li><a href="#!">RU</a></li>
+                        <li><a class="active" href="#!">ENG</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-2 offset-md-1 offset-2">
+                    <div class="profile d-flex align-items-center">
+                        <img src="img/img.jpg" alt="Avatar" class="profile__avatar lazy">
+                        <span class="profile__name">Konstantin Konstantinopolsky</span>
+                        <img src="img/arrow.svg" alt="arrow" class="profile__arrow">
+
+
+                        <div class="profile-dropdown">
+                            <h5 class="profile-dropdown__title">Account</h5>
+                            <span class="name">Konstantin Konstantinopolsky</span>
+
+                            <ul class="options">
+                                <li><a href="#!">Option 1</a></li>
+                                <li><a href="#!">Option 2</a></li>
+                                <li><a href="#!">Option 3</a></li>
+                                <li><a href="#!">Option 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="nav">
+                        <ul class="menu d-flex align-items-center">
+                            <li class="active"><a href="index.html">Main</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="operations.html">Operations</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="help.html">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">            
+            <div class="row">
+                <div class="col-12">
+                    <div class="alerts">
+                        <div class="info-panel info-panel_invest d-flex">
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">Please verify your account and sign agreements</h2>
+                                <a href="#" class="btn btn_style2">Start verification</a>
+                            </div>
+                            <div class="info-panel__right">
+                                <p>For further cooperation and investment, you will need to confirm your identity and sign an agreement.</p>
+                                <p>
+                                    Once you have completed this step, you will have access to all the features of your personal account.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!-- ALERT DANGER -->
+                        <div class="info-panel info-panel_alert info-panel_alert_danger">
+                            <a href="#!" class="close">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66537 1.27398L8.72537 0.333984L4.9987 4.06065L1.27203 0.333984L0.332031 1.27398L4.0587 5.00065L0.332031 8.72732L1.27203 9.66732L4.9987 5.94065L8.72537 9.66732L9.66537 8.72732L5.9387 5.00065L9.66537 1.27398Z" fill="#A6A8AB"/>
+                                </svg>    
+                            </a>
+
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.0013 0.666016C4.4013 0.666016 0.667969 4.39935 0.667969 8.99935C0.667969 13.5993 4.4013 17.3327 9.0013 17.3327C13.6013 17.3327 17.3346 13.5993 17.3346 8.99935C17.3346 4.39935 13.6013 0.666016 9.0013 0.666016ZM9.83464 13.166H8.16797V11.4993H9.83464V13.166ZM9.83464 9.83268H8.16797V4.83268H9.83464V9.83268Z" fill="#F02D3A"/>
+                                    </svg>
+                                    Attention
+                                </h2>
+                                <p>
+                                    You have rejected document on the verification page
+                                </p>
+                            </div>
+                            <div class="info-panel__right">
+                                <a href="#" class="btn btn_style2">go to Verification</a>
+                            </div>
+                        </div>
+
+                        <!-- ALERT SIMPLE WITH BUTTON -->
+                        <div class="info-panel info-panel_alert">
+                            <a href="#!" class="close">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66537 1.27398L8.72537 0.333984L4.9987 4.06065L1.27203 0.333984L0.332031 1.27398L4.0587 5.00065L0.332031 8.72732L1.27203 9.66732L4.9987 5.94065L8.72537 9.66732L9.66537 8.72732L5.9387 5.00065L9.66537 1.27398Z" fill="#A6A8AB"/>
+                                </svg>     
+                            </a>
+
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.0013 0.666016C4.4013 0.666016 0.667969 4.39935 0.667969 8.99935C0.667969 13.5993 4.4013 17.3327 9.0013 17.3327C13.6013 17.3327 17.3346 13.5993 17.3346 8.99935C17.3346 4.39935 13.6013 0.666016 9.0013 0.666016ZM9.83464 13.166H8.16797V11.4993H9.83464V13.166ZM9.83464 9.83268H8.16797V4.83268H9.83464V9.83268Z" fill="#DDBC62"/>
+                                    </svg>
+                                    Attention
+                                </h2>
+                                <p>
+                                    Text messege here
+                                </p>
+                            </div>
+                            <div class="info-panel__right">
+                                <a href="#" class="btn btn_style2">Link button</a>
+                            </div>
+                        </div>
+
+                        <!-- ALERT SIMPLE WITHOUT BUTTON -->
+                        <div class="info-panel info-panel_alert">
+                            <a href="#!" class="close">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.66537 1.27398L8.72537 0.333984L4.9987 4.06065L1.27203 0.333984L0.332031 1.27398L4.0587 5.00065L0.332031 8.72732L1.27203 9.66732L4.9987 5.94065L8.72537 9.66732L9.66537 8.72732L5.9387 5.00065L9.66537 1.27398Z" fill="#A6A8AB"/>
+                                </svg>     
+                            </a>
+
+                            <div class="info-panel__left">
+                                <h2 class="info-panel__title">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.0013 0.666016C4.4013 0.666016 0.667969 4.39935 0.667969 8.99935C0.667969 13.5993 4.4013 17.3327 9.0013 17.3327C13.6013 17.3327 17.3346 13.5993 17.3346 8.99935C17.3346 4.39935 13.6013 0.666016 9.0013 0.666016ZM9.83464 13.166H8.16797V11.4993H9.83464V13.166ZM9.83464 9.83268H8.16797V4.83268H9.83464V9.83268Z" fill="#DDBC62"/>
+                                    </svg>
+                                    Attention
+                                </h2>
+                                <p>
+                                    Text messege here without button
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title mb60">Main</h1>
+                </div>
+            </div> 
+            
+            <!-- Dear User -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="offer d-flex">
+                        <div class="offer__left">
+                            <h2 class="offer__title">Dear User,</h2>
+                            <p class="offer__text">
+                                On this page you can see quick and valuable information about your investments, portfolio and operations.
+                            </p>
+                            <p class="offer__text">
+                                And first, you need to choose your investment product. 
+                                You will find the list of products below or in the separate "Products" page.
+                            </p>
+                            <a href="products.html" class="btn btn_style2 offer__btn">Go to Products</a>
+                        </div>
+                        <div class="offer__right">
+                            <img src="img/offer.jpg" alt="" class="offer__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products -->
+            <section class="section section-products">
+                <h2 class="section-title">Products</h2>
+                <div class="row products align-items-stretch">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Cybersecurity Utd
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/desktop_windows.svg" class="icon-right" alt="">Technologies</a>
+                            <p class="product-card__desc">
+                                SPAC builds on promising cyber security companies and a team of specialists with years of experience.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Healthcare Int
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_hospital.svg" class="icon-right" alt="">Helath care</a>
+                            <p class="product-card__desc">
+                                А revolutionary project investing in the implementation of advanced technologies in modern medicine.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="product-card">
+                            <h3 class="product-card__title">
+                                Hyperqube Int
+                            </h3>
+                            <a href="#" class="product-card__category d-iflex align-items-center"><img src="img/local_police.svg" class="icon-right" alt="">Cybersecurity</a>
+                            <p class="product-card__desc">
+                                “Cyber range as a service” offering that enables  enterprises to quickly and easily build an exact  copy of any IT infrastructure.
+                            </p>
+                            <a href="products-single.html" class="btn text-center">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn_style2 load-more">View all products</a>
+            </section>
+
+
+            <section class="section section-news">
+                <h2 class="section-title">News</h2>
+                <!-- loop -->
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <div class="card d-flex card_size_big">
+                            <div class="card__body">
+                                <img src="img/block-3-img.jpg" alt="" class="lazy card__image">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">We launched new SPAC: how to End-to-End Encrypt in Messages Using Twilio and Virgil Security</h2>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 offset-md-1 offset-0">
+                        <div class="card d-flex">
+                            <div class="card__body">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">How to build a HIPAA-compliant Firebase Chat using security SDK</h2>
+                                <p class="card__text">
+                                    Follow Virgil Security's tutorial to build a secure, HIPAA-compatible in-app chat with Firebase using open source security SDK.
+                                </p>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                        <div class="card d-flex">
+                            <div class="card__body">
+                                <span class="card__date">June 22, 2021</span>
+                                <h2 class="card__title">How to build a HIPAA-compliant Firebase Chat using security SDK</h2>
+                                <p class="card__text">
+                                    Follow Virgil Security's tutorial to build a secure, HIPAA-compatible in-app chat with Firebase using open source security SDK.
+                                </p>
+                                <a href="#" class="btn_style1 d-iflex
+                                align-items-center"><span>Read more</span> <img src="img/read-more-arrow.svg" alt="read more"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn_style2 load-more">View all News</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12">
+                    <a href="/" class="logo"><img src="img/LOGO.svg" alt=""></a>
+                </div>
+                <div class="rights2 col-12">
+                    © 2021 Goodwill Foundation
+                </div>
+                <div class="col-md-5 col-12 offset-md-1 offset-0">
+                    <ul class="menu d-flex">
+                        <li><a href="#!">About Goodwill</a></li>
+                        <li><a href="#!">Disclaimer</a></li>
+                        <li><a href="#!">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rights">
+                        © 2021 Goodwill Foundation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>

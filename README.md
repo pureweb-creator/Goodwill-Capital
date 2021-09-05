@@ -24,3 +24,6 @@
 [INVESTING AGREEGMENT](https://pureweb-creator.github.io/Goodwill-Capital/investing-agreegment.html)
 
 [DOCUMENTS](https://pureweb-creator.github.io/Goodwill-Capital/documents.html)
+
+[MAIN](https://pureweb-creator.github.io/Goodwill-Capital/index.html)\
+[MAIN WORKING](https://pureweb-creator.github.io/Goodwill-Capital/index-working.html)\

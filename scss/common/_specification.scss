@@ -290,6 +290,15 @@ main.main{
 	}
 }
 
+.fz12{
+	font-size: 12px;
+	line-height: 1em;
+}
+
+.color-gray{
+	color: $text3
+}
+
 .btn_disabled{
     color: $text3;
     cursor: not-allowed;
@@ -306,6 +315,10 @@ main.main{
     		fill: $text3;
     	}
     }
+}
+
+.alerts{
+	margin-top: 48px;
 }
 
 .main-title{
@@ -339,6 +352,14 @@ main.main{
 	color: $color_loss;
 }
 
+.color-DDBC62{
+	color: #DDBC62
+}
+
+.bg-DDBC62{
+	background-color: #DDBC62;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -346,3 +367,16 @@ main.main{
 .text-left{
 	text-align: left;
 }
+
+.mb0{
+	margin-bottom: 0;
+}
+
+.mb40{
+	margin-bottom: 40px;
+}
+
+.mb60{
+	margin-bottom: 60px;
+}
+

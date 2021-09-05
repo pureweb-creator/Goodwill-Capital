@@ -11,14 +11,16 @@
 		height: 4px;
 		border-radius: 2px;
 	}
-	&__value_profit{
-		background: $color_profit;
+
+	&__value{
 		position: relative;
 		top: -4px
 	}
+	
+	&__value_profit{
+		background: $color_profit;
+	}
 	&__value_loss{
 		background: $color_loss;
-		position: relative;
-		top: -4px
 	}
 }

@@ -19,6 +19,9 @@
 
 .info-panel__right{
 	width: 50%;
+}
+
+.info-panel{
 	p{
 		margin-bottom: 16px;
 		font-size: 14px;
@@ -26,6 +29,48 @@
 		&:last-child{
 			margin-bottom: 0;
 		}
+	}
+}
+
+.info-panel_invest{
+	margin-bottom: 48px;
+}
+.info-panel_invest .info-panel__title{
+	margin-bottom: 26px;
+}
+
+.info-panel_alert{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 30px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.close{
+		position: absolute;
+		top: 15.33px;
+		right: 15.33px;
+	}
+
+	.info-panel__left,
+	.info-panel__right{
+		width: auto;
+	}
+	.info-panel__title{
+		margin-bottom: 16px;
+		line-height: 1em;
+	}
+}
+
+.info-panel_alert_danger{
+	border: 1px solid $color_loss;
+	background-color: #faf4f4;
+	.info-panel__title{
+		color: $color_loss
 	}
 }
 

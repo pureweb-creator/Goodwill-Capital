@@ -392,7 +392,7 @@ $(document).ready(function(){
 
    	// tables
 	$('.table_desktop .table_portfolio__head').on('click', function(){
-
+		$(this).parent().find('.table__head_second').slideToggle();
 		$(this).parent().parent().find('.table__body').slideToggle();
 		$(this).find('.table__expand').toggleClass('active');
 	});
