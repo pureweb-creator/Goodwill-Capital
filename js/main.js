@@ -394,11 +394,12 @@ $(document).ready(function(){
 	$('.table_desktop .table_portfolio__head').on('click', function(){
 		$(this).parent().find('.table__head_second').slideToggle();
 		$(this).parent().parent().find('.table__body').slideToggle();
+		$(this).toggleClass('hide-border');
 		$(this).find('.table__expand').toggleClass('active');
 	});
 
 	$('.table_mobile .table_portfolio__head').on('click', function(){
-
+		$(this).toggleClass('hide-border');
 		$(this).parent().parent().find('.table__body').slideToggle();
 		$(this).find('img').toggleClass('active');
 	});
